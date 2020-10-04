@@ -1,0 +1,7 @@
+
+State Machine - |Block1|DIVIDER:inst|Y
+Name Y.S3 Y.S2 Y.S1 Y.S0 
+Y.S0 0 0 0 0 
+Y.S1 0 0 1 1 
+Y.S2 0 1 0 1 
+Y.S3 1 0 0 1 

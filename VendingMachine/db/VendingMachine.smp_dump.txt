@@ -1,0 +1,6 @@
+
+State Machine - |Block1|VendingMachine:inst|y
+Name y.S2 y.S1 y.S0 
+y.S0 0 0 0 
+y.S1 0 1 1 
+y.S2 1 0 1 

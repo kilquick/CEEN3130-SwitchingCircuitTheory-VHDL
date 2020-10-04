@@ -1,0 +1,10 @@
+|Moore101
+Clock => y_present.IN1
+Resetn => process_1.IN0
+w => process_0.IN0
+w => y_next.B.DATAB
+w => y_next.D.DATAB
+w => y_next.E.DATAB
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,31 @@
+--Tyler Zoucha
+--CEEN 3130
+
+LIBRARY IEEE;
+USE ieee.std_logic_1164.all;
+
+ENTITY MealyState IS
+	PORT (x, clk, resetn		: IN STD_LOGIC;
+		  Z, Z2, Z1				: OUT STD_LOGIC);
+End MealyState;
+
+ARCHITECTURE Behavior OF MealyState IS
+SIGNAL y2, y1, Dy2, Dy1			: STD_LOGIC;
+BEGIN
+	Dy2 <= x;
+	Dy1 <= x and y1;
+	
+	Z <= (y2 and y1 and not x);
+	Z2 <= y2;
+	Z1 <= y1;	
+	PROCESS(clk, resetn)
+	BEGIN
+		IF resetn = '0' THEN
+			y2 <= '0';
+			y1 <= '0';
+		ELSIF clk'EVENT and clk ='1' THEN
+			y2 <= Dy2;
+			y1 <= Dy1;
+		END IF;
+	END PROCESS;
+END Behavior;

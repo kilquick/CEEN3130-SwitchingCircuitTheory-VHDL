@@ -1,0 +1,477 @@
+Simulator report for FirstASM
+Mon Apr 18 23:57:07 2016
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.5 us       ;
+; Simulation Netlist Size     ; 242 nodes    ;
+; Simulation Coverage         ;      70.54 % ;
+; Total Number of Transitions ; 1467         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
++-----------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                        ;
++--------------------------------------------------------------------------------------------+--------------+---------------+
+; Option                                                                                     ; Setting      ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------+---------------+
+; Simulation mode                                                                            ; Functional   ; Timing        ;
+; Start time                                                                                 ; 0 ns         ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF         ;               ;
+; Vector input source                                                                        ; FirstASM.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On           ; On            ;
+; Check outputs                                                                              ; Off          ; Off           ;
+; Report simulation coverage                                                                 ; On           ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On           ; On            ;
+; Display missing 1-value coverage report                                                    ; On           ; On            ;
+; Display missing 0-value coverage report                                                    ; On           ; On            ;
+; Detect setup and hold time violations                                                      ; Off          ; Off           ;
+; Detect glitches                                                                            ; Off          ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off          ; Off           ;
+; Generate Signal Activity File                                                              ; Off          ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off          ; Off           ;
+; Group bus channels in simulation results                                                   ; Off          ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On           ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE   ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off          ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off          ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto         ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      70.54 % ;
+; Total nodes checked                                 ; 242          ;
+; Total output ports checked                          ; 241          ;
+; Total output ports with complete 1/0-value coverage ; 170          ;
+; Total output ports with no 1/0-value coverage       ; 68           ;
+; Total output ports with no 1-value coverage         ; 70           ;
+; Total output ports with no 0-value coverage         ; 69           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                              ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |Block1|EnMul                     ; |Block1|EnMul                     ; pin_out          ;
+; |Block1|CLK                       ; |Block1|CLK                       ; out              ;
+; |Block1|MUL                       ; |Block1|MUL                       ; out              ;
+; |Block1|SUB                       ; |Block1|SUB                       ; out              ;
+; |Block1|ADD                       ; |Block1|ADD                       ; out              ;
+; |Block1|RESTART                   ; |Block1|RESTART                   ; out              ;
+; |Block1|DONE                      ; |Block1|DONE                      ; pin_out          ;
+; |Block1|FULL                      ; |Block1|FULL                      ; pin_out          ;
+; |Block1|EnAdd/Sub                 ; |Block1|EnAdd/Sub                 ; pin_out          ;
+; |Block1|EnCnt                     ; |Block1|EnCnt                     ; pin_out          ;
+; |Block1|ClMul                     ; |Block1|ClMul                     ; pin_out          ;
+; |Block1|SUBout                    ; |Block1|SUBout                    ; pin_out          ;
+; |Block1|ClCnt                     ; |Block1|ClCnt                     ; pin_out          ;
+; |Block1|Count[2]                  ; |Block1|Count[2]                  ; pin_out          ;
+; |Block1|Count[1]                  ; |Block1|Count[1]                  ; pin_out          ;
+; |Block1|Count[0]                  ; |Block1|Count[0]                  ; pin_out          ;
+; |Block1|Result[4]                 ; |Block1|Result[4]                 ; pin_out          ;
+; |Block1|Result[3]                 ; |Block1|Result[3]                 ; pin_out          ;
+; |Block1|Result[2]                 ; |Block1|Result[2]                 ; pin_out          ;
+; |Block1|Result[1]                 ; |Block1|Result[1]                 ; pin_out          ;
+; |Block1|Result[0]                 ; |Block1|Result[0]                 ; pin_out          ;
+; |Block1|ADDSUB:inst1|TOTAL[4]     ; |Block1|ADDSUB:inst1|TOTAL[4]     ; out              ;
+; |Block1|ADDSUB:inst1|TOTAL[3]     ; |Block1|ADDSUB:inst1|TOTAL[3]     ; out              ;
+; |Block1|ADDSUB:inst1|TOTAL[2]     ; |Block1|ADDSUB:inst1|TOTAL[2]     ; out              ;
+; |Block1|ADDSUB:inst1|TOTAL[1]     ; |Block1|ADDSUB:inst1|TOTAL[1]     ; out              ;
+; |Block1|ADDSUB:inst1|TOTAL[0]     ; |Block1|ADDSUB:inst1|TOTAL[0]     ; out              ;
+; |Block1|MUL:inst3|TMPOUT[0]       ; |Block1|MUL:inst3|TMPOUT[0]       ; regout           ;
+; |Block1|MUL:inst3|TMPOUT~3        ; |Block1|MUL:inst3|TMPOUT~3        ; out              ;
+; |Block1|MUL:inst3|TMPOUT~4        ; |Block1|MUL:inst3|TMPOUT~4        ; out              ;
+; |Block1|MUL:inst3|TMPOUT~5        ; |Block1|MUL:inst3|TMPOUT~5        ; out              ;
+; |Block1|MUL:inst3|TMPOUT~6        ; |Block1|MUL:inst3|TMPOUT~6        ; out              ;
+; |Block1|MUL:inst3|TMPOUT~7        ; |Block1|MUL:inst3|TMPOUT~7        ; out              ;
+; |Block1|MUL:inst3|TMPOUT~11       ; |Block1|MUL:inst3|TMPOUT~11       ; out              ;
+; |Block1|MUL:inst3|TMPOUT~12       ; |Block1|MUL:inst3|TMPOUT~12       ; out              ;
+; |Block1|MUL:inst3|TMPOUT~13       ; |Block1|MUL:inst3|TMPOUT~13       ; out              ;
+; |Block1|MUL:inst3|TMPOUT~14       ; |Block1|MUL:inst3|TMPOUT~14       ; out              ;
+; |Block1|MUL:inst3|TMPOUT~15       ; |Block1|MUL:inst3|TMPOUT~15       ; out              ;
+; |Block1|MUL:inst3|TMPOUT~18       ; |Block1|MUL:inst3|TMPOUT~18       ; out              ;
+; |Block1|MUL:inst3|TMPOUT~19       ; |Block1|MUL:inst3|TMPOUT~19       ; out              ;
+; |Block1|MUL:inst3|TMPOUT~20       ; |Block1|MUL:inst3|TMPOUT~20       ; out              ;
+; |Block1|MUL:inst3|TMPOUT~21       ; |Block1|MUL:inst3|TMPOUT~21       ; out              ;
+; |Block1|MUL:inst3|TMPOUT~22       ; |Block1|MUL:inst3|TMPOUT~22       ; out              ;
+; |Block1|MUL:inst3|TMPOUT~23       ; |Block1|MUL:inst3|TMPOUT~23       ; out              ;
+; |Block1|MUL:inst3|TMPOUT[1]       ; |Block1|MUL:inst3|TMPOUT[1]       ; regout           ;
+; |Block1|MUL:inst3|TMPOUT[2]       ; |Block1|MUL:inst3|TMPOUT[2]       ; regout           ;
+; |Block1|MUL:inst3|TMPOUT[3]       ; |Block1|MUL:inst3|TMPOUT[3]       ; regout           ;
+; |Block1|MUL:inst3|TMPOUT[4]       ; |Block1|MUL:inst3|TMPOUT[4]       ; regout           ;
+; |Block1|COUNT:inst2|TMP~1         ; |Block1|COUNT:inst2|TMP~1         ; out              ;
+; |Block1|COUNT:inst2|TMP~2         ; |Block1|COUNT:inst2|TMP~2         ; out              ;
+; |Block1|COUNT:inst2|TMP~3         ; |Block1|COUNT:inst2|TMP~3         ; out              ;
+; |Block1|COUNT:inst2|TMP~5         ; |Block1|COUNT:inst2|TMP~5         ; out              ;
+; |Block1|COUNT:inst2|TMP~6         ; |Block1|COUNT:inst2|TMP~6         ; out              ;
+; |Block1|COUNT:inst2|TMP~7         ; |Block1|COUNT:inst2|TMP~7         ; out              ;
+; |Block1|COUNT:inst2|TMP[0]        ; |Block1|COUNT:inst2|TMP[0]        ; regout           ;
+; |Block1|COUNT:inst2|TMP[1]        ; |Block1|COUNT:inst2|TMP[1]        ; regout           ;
+; |Block1|COUNT:inst2|TMP[2]        ; |Block1|COUNT:inst2|TMP[2]        ; regout           ;
+; |Block1|FirstASM:inst|y~0         ; |Block1|FirstASM:inst|y~0         ; out              ;
+; |Block1|FirstASM:inst|y~1         ; |Block1|FirstASM:inst|y~1         ; out              ;
+; |Block1|FirstASM:inst|y~2         ; |Block1|FirstASM:inst|y~2         ; out              ;
+; |Block1|FirstASM:inst|y~3         ; |Block1|FirstASM:inst|y~3         ; out              ;
+; |Block1|FirstASM:inst|y~4         ; |Block1|FirstASM:inst|y~4         ; out              ;
+; |Block1|FirstASM:inst|y~5         ; |Block1|FirstASM:inst|y~5         ; out              ;
+; |Block1|FirstASM:inst|y~6         ; |Block1|FirstASM:inst|y~6         ; out              ;
+; |Block1|FirstASM:inst|y~7         ; |Block1|FirstASM:inst|y~7         ; out              ;
+; |Block1|FirstASM:inst|y~8         ; |Block1|FirstASM:inst|y~8         ; out              ;
+; |Block1|FirstASM:inst|y~9         ; |Block1|FirstASM:inst|y~9         ; out              ;
+; |Block1|FirstASM:inst|y~10        ; |Block1|FirstASM:inst|y~10        ; out              ;
+; |Block1|FirstASM:inst|y~11        ; |Block1|FirstASM:inst|y~11        ; out              ;
+; |Block1|FirstASM:inst|y~12        ; |Block1|FirstASM:inst|y~12        ; out              ;
+; |Block1|FirstASM:inst|y~13        ; |Block1|FirstASM:inst|y~13        ; out              ;
+; |Block1|FirstASM:inst|y~14        ; |Block1|FirstASM:inst|y~14        ; out              ;
+; |Block1|FirstASM:inst|y~15        ; |Block1|FirstASM:inst|y~15        ; out              ;
+; |Block1|FirstASM:inst|y~16        ; |Block1|FirstASM:inst|y~16        ; out              ;
+; |Block1|FirstASM:inst|y~17        ; |Block1|FirstASM:inst|y~17        ; out              ;
+; |Block1|FirstASM:inst|y~20        ; |Block1|FirstASM:inst|y~20        ; out              ;
+; |Block1|FirstASM:inst|y~22        ; |Block1|FirstASM:inst|y~22        ; out              ;
+; |Block1|FirstASM:inst|y~24        ; |Block1|FirstASM:inst|y~24        ; out              ;
+; |Block1|FirstASM:inst|y~25        ; |Block1|FirstASM:inst|y~25        ; out              ;
+; |Block1|FirstASM:inst|y~27        ; |Block1|FirstASM:inst|y~27        ; out              ;
+; |Block1|FirstASM:inst|y.S0        ; |Block1|FirstASM:inst|y.S0        ; regout           ;
+; |Block1|FirstASM:inst|y.S1        ; |Block1|FirstASM:inst|y.S1        ; regout           ;
+; |Block1|FirstASM:inst|y.S2        ; |Block1|FirstASM:inst|y.S2        ; regout           ;
+; |Block1|FirstASM:inst|FULL~0      ; |Block1|FirstASM:inst|FULL~0      ; out              ;
+; |Block1|FirstASM:inst|EnAddSub~0  ; |Block1|FirstASM:inst|EnAddSub~0  ; out              ;
+; |Block1|FirstASM:inst|EnAddSub~1  ; |Block1|FirstASM:inst|EnAddSub~1  ; out              ;
+; |Block1|FirstASM:inst|EnAddSub~2  ; |Block1|FirstASM:inst|EnAddSub~2  ; out              ;
+; |Block1|FirstASM:inst|EnCnt~0     ; |Block1|FirstASM:inst|EnCnt~0     ; out              ;
+; |Block1|FirstASM:inst|EnCnt~1     ; |Block1|FirstASM:inst|EnCnt~1     ; out              ;
+; |Block1|FirstASM:inst|EnCnt~2     ; |Block1|FirstASM:inst|EnCnt~2     ; out              ;
+; |Block1|FirstASM:inst|EnCnt~3     ; |Block1|FirstASM:inst|EnCnt~3     ; out              ;
+; |Block1|FirstASM:inst|SUBout~0    ; |Block1|FirstASM:inst|SUBout~0    ; out              ;
+; |Block1|FirstASM:inst|SUBout~1    ; |Block1|FirstASM:inst|SUBout~1    ; out              ;
+; |Block1|FirstASM:inst|SUBout~2    ; |Block1|FirstASM:inst|SUBout~2    ; out              ;
+; |Block1|FirstASM:inst|EnMul~0     ; |Block1|FirstASM:inst|EnMul~0     ; out              ;
+; |Block1|FirstASM:inst|EnMul~1     ; |Block1|FirstASM:inst|EnMul~1     ; out              ;
+; |Block1|FirstASM:inst|EnMul~2     ; |Block1|FirstASM:inst|EnMul~2     ; out              ;
+; |Block1|FirstASM:inst|EnMul~3     ; |Block1|FirstASM:inst|EnMul~3     ; out              ;
+; |Block1|FirstASM:inst|ClCnt       ; |Block1|FirstASM:inst|ClCnt       ; out              ;
+; |Block1|FirstASM:inst|ClMul       ; |Block1|FirstASM:inst|ClMul       ; out              ;
+; |Block1|FirstASM:inst|FULL        ; |Block1|FirstASM:inst|FULL        ; out              ;
+; |Block1|FirstASM:inst|EnAddSub    ; |Block1|FirstASM:inst|EnAddSub    ; out              ;
+; |Block1|FirstASM:inst|EnCnt       ; |Block1|FirstASM:inst|EnCnt       ; out              ;
+; |Block1|FirstASM:inst|y.S3        ; |Block1|FirstASM:inst|y.S3        ; regout           ;
+; |Block1|FirstASM:inst|SUBout      ; |Block1|FirstASM:inst|SUBout      ; out              ;
+; |Block1|FirstASM:inst|EnMul       ; |Block1|FirstASM:inst|EnMul       ; out              ;
+; |Block1|FirstASM:inst|y~28        ; |Block1|FirstASM:inst|y~28        ; out0             ;
+; |Block1|FirstASM:inst|DONE~0      ; |Block1|FirstASM:inst|DONE~0      ; out0             ;
+; |Block1|FirstASM:inst|y~31        ; |Block1|FirstASM:inst|y~31        ; out0             ;
+; |Block1|FirstASM:inst|y~33        ; |Block1|FirstASM:inst|y~33        ; out0             ;
+; |Block1|FirstASM:inst|y~35        ; |Block1|FirstASM:inst|y~35        ; out0             ;
+; |Block1|FirstASM:inst|y~39        ; |Block1|FirstASM:inst|y~39        ; out0             ;
+; |Block1|FirstASM:inst|Selector0~0 ; |Block1|FirstASM:inst|Selector0~0 ; out0             ;
+; |Block1|FirstASM:inst|Selector0~1 ; |Block1|FirstASM:inst|Selector0~1 ; out0             ;
+; |Block1|FirstASM:inst|Selector0~2 ; |Block1|FirstASM:inst|Selector0~2 ; out0             ;
+; |Block1|FirstASM:inst|Selector0~3 ; |Block1|FirstASM:inst|Selector0~3 ; out0             ;
+; |Block1|FirstASM:inst|Selector0~4 ; |Block1|FirstASM:inst|Selector0~4 ; out0             ;
+; |Block1|FirstASM:inst|Selector1~0 ; |Block1|FirstASM:inst|Selector1~0 ; out0             ;
+; |Block1|FirstASM:inst|Selector1~3 ; |Block1|FirstASM:inst|Selector1~3 ; out0             ;
+; |Block1|FirstASM:inst|Selector1~4 ; |Block1|FirstASM:inst|Selector1~4 ; out0             ;
+; |Block1|FirstASM:inst|Selector2~0 ; |Block1|FirstASM:inst|Selector2~0 ; out0             ;
+; |Block1|FirstASM:inst|Selector2~2 ; |Block1|FirstASM:inst|Selector2~2 ; out0             ;
+; |Block1|FirstASM:inst|Selector2~4 ; |Block1|FirstASM:inst|Selector2~4 ; out0             ;
+; |Block1|FirstASM:inst|Selector3~0 ; |Block1|FirstASM:inst|Selector3~0 ; out0             ;
+; |Block1|FirstASM:inst|Selector3~1 ; |Block1|FirstASM:inst|Selector3~1 ; out0             ;
+; |Block1|FirstASM:inst|Selector3~4 ; |Block1|FirstASM:inst|Selector3~4 ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~0       ; |Block1|ADDSUB:inst1|Add0~0       ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~1       ; |Block1|ADDSUB:inst1|Add0~1       ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~2       ; |Block1|ADDSUB:inst1|Add0~2       ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~3       ; |Block1|ADDSUB:inst1|Add0~3       ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~6       ; |Block1|ADDSUB:inst1|Add0~6       ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~7       ; |Block1|ADDSUB:inst1|Add0~7       ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~8       ; |Block1|ADDSUB:inst1|Add0~8       ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~9       ; |Block1|ADDSUB:inst1|Add0~9       ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~10      ; |Block1|ADDSUB:inst1|Add0~10      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~11      ; |Block1|ADDSUB:inst1|Add0~11      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~12      ; |Block1|ADDSUB:inst1|Add0~12      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~13      ; |Block1|ADDSUB:inst1|Add0~13      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~16      ; |Block1|ADDSUB:inst1|Add0~16      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~17      ; |Block1|ADDSUB:inst1|Add0~17      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~0       ; |Block1|ADDSUB:inst1|Add1~0       ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~1       ; |Block1|ADDSUB:inst1|Add1~1       ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~3       ; |Block1|ADDSUB:inst1|Add1~3       ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~4       ; |Block1|ADDSUB:inst1|Add1~4       ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~5       ; |Block1|ADDSUB:inst1|Add1~5       ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~6       ; |Block1|ADDSUB:inst1|Add1~6       ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~7       ; |Block1|ADDSUB:inst1|Add1~7       ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~8       ; |Block1|ADDSUB:inst1|Add1~8       ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~9       ; |Block1|ADDSUB:inst1|Add1~9       ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~10      ; |Block1|ADDSUB:inst1|Add1~10      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~13      ; |Block1|ADDSUB:inst1|Add1~13      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~14      ; |Block1|ADDSUB:inst1|Add1~14      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~15      ; |Block1|ADDSUB:inst1|Add1~15      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~16      ; |Block1|ADDSUB:inst1|Add1~16      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~17      ; |Block1|ADDSUB:inst1|Add1~17      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~18      ; |Block1|ADDSUB:inst1|Add1~18      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~19      ; |Block1|ADDSUB:inst1|Add1~19      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~20      ; |Block1|ADDSUB:inst1|Add1~20      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~21      ; |Block1|ADDSUB:inst1|Add1~21      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~22      ; |Block1|ADDSUB:inst1|Add1~22      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~23      ; |Block1|ADDSUB:inst1|Add1~23      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~24      ; |Block1|ADDSUB:inst1|Add1~24      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~27      ; |Block1|ADDSUB:inst1|Add1~27      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~28      ; |Block1|ADDSUB:inst1|Add1~28      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~29      ; |Block1|ADDSUB:inst1|Add1~29      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~32      ; |Block1|ADDSUB:inst1|Add1~32      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~33      ; |Block1|ADDSUB:inst1|Add1~33      ; out0             ;
+; |Block1|COUNT:inst2|Add0~0        ; |Block1|COUNT:inst2|Add0~0        ; out0             ;
+; |Block1|COUNT:inst2|Add0~1        ; |Block1|COUNT:inst2|Add0~1        ; out0             ;
+; |Block1|COUNT:inst2|Add0~2        ; |Block1|COUNT:inst2|Add0~2        ; out0             ;
+; |Block1|COMPAR:inst4|Equal0~0     ; |Block1|COMPAR:inst4|Equal0~0     ; out0             ;
++-----------------------------------+-----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                 ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |Block1|Count[3]                  ; |Block1|Count[3]                  ; pin_out          ;
+; |Block1|Result[7]                 ; |Block1|Result[7]                 ; pin_out          ;
+; |Block1|Result[6]                 ; |Block1|Result[6]                 ; pin_out          ;
+; |Block1|Result[5]                 ; |Block1|Result[5]                 ; pin_out          ;
+; |Block1|inData[7]                 ; |Block1|inData[7]                 ; out              ;
+; |Block1|inData[6]                 ; |Block1|inData[6]                 ; out              ;
+; |Block1|inData[5]                 ; |Block1|inData[5]                 ; out              ;
+; |Block1|inData[4]                 ; |Block1|inData[4]                 ; out              ;
+; |Block1|inData[3]                 ; |Block1|inData[3]                 ; out              ;
+; |Block1|inData[2]                 ; |Block1|inData[2]                 ; out              ;
+; |Block1|inData[1]                 ; |Block1|inData[1]                 ; out              ;
+; |Block1|inData[0]                 ; |Block1|inData[0]                 ; out              ;
+; |Block1|ADDSUB:inst1|TOTAL[7]     ; |Block1|ADDSUB:inst1|TOTAL[7]     ; out              ;
+; |Block1|ADDSUB:inst1|TOTAL[6]     ; |Block1|ADDSUB:inst1|TOTAL[6]     ; out              ;
+; |Block1|ADDSUB:inst1|TOTAL[5]     ; |Block1|ADDSUB:inst1|TOTAL[5]     ; out              ;
+; |Block1|MUL:inst3|TMPOUT~0        ; |Block1|MUL:inst3|TMPOUT~0        ; out              ;
+; |Block1|MUL:inst3|TMPOUT~1        ; |Block1|MUL:inst3|TMPOUT~1        ; out              ;
+; |Block1|MUL:inst3|TMPOUT~2        ; |Block1|MUL:inst3|TMPOUT~2        ; out              ;
+; |Block1|MUL:inst3|TMPOUT~8        ; |Block1|MUL:inst3|TMPOUT~8        ; out              ;
+; |Block1|MUL:inst3|TMPOUT~9        ; |Block1|MUL:inst3|TMPOUT~9        ; out              ;
+; |Block1|MUL:inst3|TMPOUT~10       ; |Block1|MUL:inst3|TMPOUT~10       ; out              ;
+; |Block1|MUL:inst3|TMPOUT~16       ; |Block1|MUL:inst3|TMPOUT~16       ; out              ;
+; |Block1|MUL:inst3|TMPOUT~17       ; |Block1|MUL:inst3|TMPOUT~17       ; out              ;
+; |Block1|MUL:inst3|TMPOUT[5]       ; |Block1|MUL:inst3|TMPOUT[5]       ; regout           ;
+; |Block1|MUL:inst3|TMPOUT[6]       ; |Block1|MUL:inst3|TMPOUT[6]       ; regout           ;
+; |Block1|MUL:inst3|TMPOUT[7]       ; |Block1|MUL:inst3|TMPOUT[7]       ; regout           ;
+; |Block1|COUNT:inst2|TMP~0         ; |Block1|COUNT:inst2|TMP~0         ; out              ;
+; |Block1|COUNT:inst2|TMP~4         ; |Block1|COUNT:inst2|TMP~4         ; out              ;
+; |Block1|COUNT:inst2|TMP[3]        ; |Block1|COUNT:inst2|TMP[3]        ; regout           ;
+; |Block1|FirstASM:inst|y~18        ; |Block1|FirstASM:inst|y~18        ; out              ;
+; |Block1|FirstASM:inst|y~19        ; |Block1|FirstASM:inst|y~19        ; out              ;
+; |Block1|FirstASM:inst|y~21        ; |Block1|FirstASM:inst|y~21        ; out              ;
+; |Block1|FirstASM:inst|y~23        ; |Block1|FirstASM:inst|y~23        ; out              ;
+; |Block1|FirstASM:inst|y~26        ; |Block1|FirstASM:inst|y~26        ; out              ;
+; |Block1|FirstASM:inst|y~29        ; |Block1|FirstASM:inst|y~29        ; out0             ;
+; |Block1|FirstASM:inst|y~43        ; |Block1|FirstASM:inst|y~43        ; out0             ;
+; |Block1|FirstASM:inst|Selector1~1 ; |Block1|FirstASM:inst|Selector1~1 ; out0             ;
+; |Block1|FirstASM:inst|Selector1~2 ; |Block1|FirstASM:inst|Selector1~2 ; out0             ;
+; |Block1|FirstASM:inst|Selector2~1 ; |Block1|FirstASM:inst|Selector2~1 ; out0             ;
+; |Block1|FirstASM:inst|Selector2~3 ; |Block1|FirstASM:inst|Selector2~3 ; out0             ;
+; |Block1|FirstASM:inst|Selector3~2 ; |Block1|FirstASM:inst|Selector3~2 ; out0             ;
+; |Block1|FirstASM:inst|Selector3~3 ; |Block1|FirstASM:inst|Selector3~3 ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~4       ; |Block1|ADDSUB:inst1|Add0~4       ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~5       ; |Block1|ADDSUB:inst1|Add0~5       ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~14      ; |Block1|ADDSUB:inst1|Add0~14      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~15      ; |Block1|ADDSUB:inst1|Add0~15      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~18      ; |Block1|ADDSUB:inst1|Add0~18      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~19      ; |Block1|ADDSUB:inst1|Add0~19      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~20      ; |Block1|ADDSUB:inst1|Add0~20      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~21      ; |Block1|ADDSUB:inst1|Add0~21      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~22      ; |Block1|ADDSUB:inst1|Add0~22      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~23      ; |Block1|ADDSUB:inst1|Add0~23      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~24      ; |Block1|ADDSUB:inst1|Add0~24      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~25      ; |Block1|ADDSUB:inst1|Add0~25      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~26      ; |Block1|ADDSUB:inst1|Add0~26      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~27      ; |Block1|ADDSUB:inst1|Add0~27      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~28      ; |Block1|ADDSUB:inst1|Add0~28      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~29      ; |Block1|ADDSUB:inst1|Add0~29      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~30      ; |Block1|ADDSUB:inst1|Add0~30      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~31      ; |Block1|ADDSUB:inst1|Add0~31      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~32      ; |Block1|ADDSUB:inst1|Add0~32      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~2       ; |Block1|ADDSUB:inst1|Add1~2       ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~11      ; |Block1|ADDSUB:inst1|Add1~11      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~12      ; |Block1|ADDSUB:inst1|Add1~12      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~25      ; |Block1|ADDSUB:inst1|Add1~25      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~26      ; |Block1|ADDSUB:inst1|Add1~26      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~30      ; |Block1|ADDSUB:inst1|Add1~30      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~31      ; |Block1|ADDSUB:inst1|Add1~31      ; out0             ;
+; |Block1|COUNT:inst2|Add0~3        ; |Block1|COUNT:inst2|Add0~3        ; out0             ;
+; |Block1|COUNT:inst2|Add0~4        ; |Block1|COUNT:inst2|Add0~4        ; out0             ;
++-----------------------------------+-----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                 ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |Block1|RESETn                    ; |Block1|RESETn                    ; out              ;
+; |Block1|Count[3]                  ; |Block1|Count[3]                  ; pin_out          ;
+; |Block1|Result[7]                 ; |Block1|Result[7]                 ; pin_out          ;
+; |Block1|Result[6]                 ; |Block1|Result[6]                 ; pin_out          ;
+; |Block1|Result[5]                 ; |Block1|Result[5]                 ; pin_out          ;
+; |Block1|inData[7]                 ; |Block1|inData[7]                 ; out              ;
+; |Block1|inData[6]                 ; |Block1|inData[6]                 ; out              ;
+; |Block1|inData[5]                 ; |Block1|inData[5]                 ; out              ;
+; |Block1|inData[4]                 ; |Block1|inData[4]                 ; out              ;
+; |Block1|inData[3]                 ; |Block1|inData[3]                 ; out              ;
+; |Block1|inData[2]                 ; |Block1|inData[2]                 ; out              ;
+; |Block1|inData[1]                 ; |Block1|inData[1]                 ; out              ;
+; |Block1|inData[0]                 ; |Block1|inData[0]                 ; out              ;
+; |Block1|ADDSUB:inst1|TOTAL[7]     ; |Block1|ADDSUB:inst1|TOTAL[7]     ; out              ;
+; |Block1|ADDSUB:inst1|TOTAL[6]     ; |Block1|ADDSUB:inst1|TOTAL[6]     ; out              ;
+; |Block1|ADDSUB:inst1|TOTAL[5]     ; |Block1|ADDSUB:inst1|TOTAL[5]     ; out              ;
+; |Block1|MUL:inst3|TMPOUT~0        ; |Block1|MUL:inst3|TMPOUT~0        ; out              ;
+; |Block1|MUL:inst3|TMPOUT~1        ; |Block1|MUL:inst3|TMPOUT~1        ; out              ;
+; |Block1|MUL:inst3|TMPOUT~2        ; |Block1|MUL:inst3|TMPOUT~2        ; out              ;
+; |Block1|MUL:inst3|TMPOUT~8        ; |Block1|MUL:inst3|TMPOUT~8        ; out              ;
+; |Block1|MUL:inst3|TMPOUT~9        ; |Block1|MUL:inst3|TMPOUT~9        ; out              ;
+; |Block1|MUL:inst3|TMPOUT~10       ; |Block1|MUL:inst3|TMPOUT~10       ; out              ;
+; |Block1|MUL:inst3|TMPOUT~16       ; |Block1|MUL:inst3|TMPOUT~16       ; out              ;
+; |Block1|MUL:inst3|TMPOUT~17       ; |Block1|MUL:inst3|TMPOUT~17       ; out              ;
+; |Block1|MUL:inst3|TMPOUT[5]       ; |Block1|MUL:inst3|TMPOUT[5]       ; regout           ;
+; |Block1|MUL:inst3|TMPOUT[6]       ; |Block1|MUL:inst3|TMPOUT[6]       ; regout           ;
+; |Block1|MUL:inst3|TMPOUT[7]       ; |Block1|MUL:inst3|TMPOUT[7]       ; regout           ;
+; |Block1|COUNT:inst2|TMP~0         ; |Block1|COUNT:inst2|TMP~0         ; out              ;
+; |Block1|COUNT:inst2|TMP~4         ; |Block1|COUNT:inst2|TMP~4         ; out              ;
+; |Block1|COUNT:inst2|TMP[3]        ; |Block1|COUNT:inst2|TMP[3]        ; regout           ;
+; |Block1|FirstASM:inst|y~18        ; |Block1|FirstASM:inst|y~18        ; out              ;
+; |Block1|FirstASM:inst|y~19        ; |Block1|FirstASM:inst|y~19        ; out              ;
+; |Block1|FirstASM:inst|y~21        ; |Block1|FirstASM:inst|y~21        ; out              ;
+; |Block1|FirstASM:inst|y~23        ; |Block1|FirstASM:inst|y~23        ; out              ;
+; |Block1|FirstASM:inst|y~26        ; |Block1|FirstASM:inst|y~26        ; out              ;
+; |Block1|FirstASM:inst|Selector1~1 ; |Block1|FirstASM:inst|Selector1~1 ; out0             ;
+; |Block1|FirstASM:inst|Selector1~2 ; |Block1|FirstASM:inst|Selector1~2 ; out0             ;
+; |Block1|FirstASM:inst|Selector2~1 ; |Block1|FirstASM:inst|Selector2~1 ; out0             ;
+; |Block1|FirstASM:inst|Selector2~3 ; |Block1|FirstASM:inst|Selector2~3 ; out0             ;
+; |Block1|FirstASM:inst|Selector3~2 ; |Block1|FirstASM:inst|Selector3~2 ; out0             ;
+; |Block1|FirstASM:inst|Selector3~3 ; |Block1|FirstASM:inst|Selector3~3 ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~4       ; |Block1|ADDSUB:inst1|Add0~4       ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~5       ; |Block1|ADDSUB:inst1|Add0~5       ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~14      ; |Block1|ADDSUB:inst1|Add0~14      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~15      ; |Block1|ADDSUB:inst1|Add0~15      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~18      ; |Block1|ADDSUB:inst1|Add0~18      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~19      ; |Block1|ADDSUB:inst1|Add0~19      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~20      ; |Block1|ADDSUB:inst1|Add0~20      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~21      ; |Block1|ADDSUB:inst1|Add0~21      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~22      ; |Block1|ADDSUB:inst1|Add0~22      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~23      ; |Block1|ADDSUB:inst1|Add0~23      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~24      ; |Block1|ADDSUB:inst1|Add0~24      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~25      ; |Block1|ADDSUB:inst1|Add0~25      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~26      ; |Block1|ADDSUB:inst1|Add0~26      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~27      ; |Block1|ADDSUB:inst1|Add0~27      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~28      ; |Block1|ADDSUB:inst1|Add0~28      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~29      ; |Block1|ADDSUB:inst1|Add0~29      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~30      ; |Block1|ADDSUB:inst1|Add0~30      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~31      ; |Block1|ADDSUB:inst1|Add0~31      ; out0             ;
+; |Block1|ADDSUB:inst1|Add0~32      ; |Block1|ADDSUB:inst1|Add0~32      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~2       ; |Block1|ADDSUB:inst1|Add1~2       ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~11      ; |Block1|ADDSUB:inst1|Add1~11      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~12      ; |Block1|ADDSUB:inst1|Add1~12      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~25      ; |Block1|ADDSUB:inst1|Add1~25      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~26      ; |Block1|ADDSUB:inst1|Add1~26      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~30      ; |Block1|ADDSUB:inst1|Add1~30      ; out0             ;
+; |Block1|ADDSUB:inst1|Add1~31      ; |Block1|ADDSUB:inst1|Add1~31      ; out0             ;
+; |Block1|COUNT:inst2|Add0~3        ; |Block1|COUNT:inst2|Add0~3        ; out0             ;
+; |Block1|COUNT:inst2|Add0~4        ; |Block1|COUNT:inst2|Add0~4        ; out0             ;
++-----------------------------------+-----------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
+    Info: Processing started: Mon Apr 18 23:57:07 2016
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off FirstASM -c FirstASM
+Info: Using vector source file "C:/Users/Tyler/Documents/CEEN 3130/FirstASM/FirstASM.vwf"
+Warning: Can't find signal in vector source file for input pin "|Block1|pin_name21"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning: Found clock-sensitive change during active clock edge at time 220.0 ns on register "|Block1|MUL:inst3|TMPOUT[0]"
+Warning: Found clock-sensitive change during active clock edge at time 220.0 ns on register "|Block1|MUL:inst3|TMPOUT[1]"
+Warning: Found clock-sensitive change during active clock edge at time 220.0 ns on register "|Block1|MUL:inst3|TMPOUT[2]"
+Warning: Found clock-sensitive change during active clock edge at time 220.0 ns on register "|Block1|MUL:inst3|TMPOUT[3]"
+Warning: Found clock-sensitive change during active clock edge at time 220.0 ns on register "|Block1|COUNT:inst2|TMP[0]"
+Warning: Found clock-sensitive change during active clock edge at time 220.0 ns on register "|Block1|COUNT:inst2|TMP[1]"
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      70.54 %
+Info: Number of transitions in simulation is 1467
+Info: Quartus II Simulator was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 169 megabytes
+    Info: Processing ended: Mon Apr 18 23:57:07 2016
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,125 @@
+ispLEVER 6.1.00.37.42.06 Linked Equations File
+Copyright(C), 1992-2006, Lattice Semiconductor Corp.
+All Rights Reserved.
+
+Design lab4_decoder created Mon Feb 08 19:19:36 2016
+
+
+ P-Terms   Fan-in  Fan-out  Type  Name (attributes)
+---------  ------  -------  ----  -----------------
+   4/6        5        1    Pin   seg_6_ 
+   2/1        2        1    Pin-  sign 
+   5/7        5        1    Pin   seg_5_ 
+   4/7        5        1    Pin   seg_4_ 
+   6/7        5        1    Pin   seg_3_ 
+   5/4        5        1    Pin-  seg_2_ 
+   5/5        5        1    Pin   seg_1_ 
+   5/7        5        1    Pin   seg_0_ 
+=========
+  36/44         Best P-Term Total: 34
+                       Total Pins: 13
+                      Total Nodes: 0
+            Average P-Term/Output: 4
+
+
+Equations:
+
+seg_6_ = (!bcd_3_ & !bcd_2_ & !bcd_1_ & bcd_0_
+     # !bcd_3_ & bcd_2_ & !bcd_1_ & !bcd_0_
+     # !hex & bcd_2_ & !bcd_1_ & !bcd_0_
+     # bcd_3_ & !hex & bcd_2_ & bcd_1_ & bcd_0_);
+
+sign = (!bcd_3_
+     # hex);
+
+seg_5_ = (bcd_3_ & hex & bcd_2_ & bcd_1_
+     # bcd_3_ & !hex & !bcd_2_ & bcd_1_
+     # !bcd_3_ & bcd_2_ & !bcd_1_ & bcd_0_
+     # bcd_3_ & hex & bcd_2_ & !bcd_0_
+     # !bcd_3_ & bcd_2_ & bcd_1_ & !bcd_0_);
+
+seg_4_ = (bcd_3_ & hex & bcd_2_ & bcd_1_
+     # bcd_3_ & hex & bcd_2_ & !bcd_0_
+     # bcd_3_ & bcd_2_ & bcd_1_ & !bcd_0_
+     # !bcd_3_ & !bcd_2_ & bcd_1_ & !bcd_0_);
+
+seg_3_ = (bcd_2_ & bcd_1_ & bcd_0_
+     # !bcd_3_ & !bcd_2_ & !bcd_1_ & bcd_0_
+     # !hex & !bcd_2_ & !bcd_1_ & bcd_0_
+     # !bcd_3_ & bcd_2_ & !bcd_1_ & !bcd_0_
+     # !hex & bcd_2_ & !bcd_1_ & !bcd_0_
+     # bcd_3_ & hex & !bcd_2_ & bcd_1_ & !bcd_0_);
+
+seg_2_ = (!bcd_3_ & bcd_0_
+     # !hex & bcd_0_
+     # !bcd_3_ & bcd_2_ & !bcd_1_
+     # !hex & bcd_2_ & !bcd_1_
+     # !bcd_2_ & !bcd_1_ & bcd_0_);
+
+seg_1_ = (!bcd_3_ & !bcd_2_ & bcd_1_
+     # !bcd_3_ & !bcd_2_ & bcd_0_
+     # !bcd_3_ & bcd_1_ & bcd_0_
+     # bcd_3_ & !hex & bcd_2_ & bcd_1_
+     # bcd_3_ & !hex & !bcd_1_ & bcd_0_);
+
+seg_0_ = (!bcd_3_ & !bcd_2_ & !bcd_1_
+     # bcd_3_ & hex & bcd_2_ & !bcd_1_
+     # !bcd_3_ & bcd_2_ & bcd_1_ & bcd_0_
+     # !hex & bcd_2_ & bcd_1_ & bcd_0_
+     # !hex & !bcd_2_ & !bcd_1_ & bcd_0_);
+
+
+Reverse-Polarity Equations:
+
+!seg_6_ = (bcd_3_ & hex
+     # !bcd_2_ & bcd_1_
+     # !bcd_2_ & !bcd_0_
+     # bcd_1_ & !bcd_0_
+     # !bcd_3_ & bcd_2_ & bcd_0_
+     # bcd_3_ & !bcd_1_ & bcd_0_);
+
+!sign = (bcd_3_ & !hex);
+
+!seg_5_ = (!bcd_3_ & !bcd_2_
+     # hex & !bcd_2_
+     # !bcd_2_ & !bcd_1_
+     # bcd_3_ & !hex & bcd_2_
+     # !bcd_3_ & bcd_1_ & bcd_0_
+     # bcd_3_ & !bcd_1_ & bcd_0_
+     # !bcd_3_ & !bcd_1_ & !bcd_0_);
+
+!seg_4_ = (!bcd_3_ & bcd_2_
+     # bcd_3_ & !bcd_2_
+     # !bcd_3_ & !bcd_1_
+     # !hex & !bcd_1_
+     # !bcd_3_ & bcd_0_
+     # !hex & bcd_0_
+     # !bcd_1_ & bcd_0_);
+
+!seg_3_ = (!bcd_3_ & !bcd_2_ & bcd_1_
+     # !hex & !bcd_2_ & bcd_1_
+     # bcd_3_ & hex & !bcd_1_
+     # !bcd_2_ & bcd_1_ & bcd_0_
+     # bcd_2_ & !bcd_1_ & bcd_0_
+     # bcd_2_ & bcd_1_ & !bcd_0_
+     # !bcd_2_ & !bcd_1_ & !bcd_0_);
+
+!seg_2_ = (!bcd_2_ & !bcd_0_
+     # bcd_1_ & !bcd_0_
+     # bcd_3_ & hex & bcd_2_
+     # bcd_3_ & hex & bcd_1_);
+
+!seg_1_ = (bcd_3_ & hex
+     # !bcd_1_ & !bcd_0_
+     # bcd_3_ & !bcd_2_ & bcd_1_
+     # !bcd_3_ & bcd_2_ & !bcd_1_
+     # !bcd_3_ & bcd_2_ & !bcd_0_);
+
+!seg_0_ = (!bcd_2_ & bcd_1_
+     # bcd_1_ & !bcd_0_
+     # bcd_3_ & hex & !bcd_2_
+     # bcd_3_ & hex & bcd_1_
+     # !bcd_3_ & bcd_2_ & !bcd_1_
+     # !hex & bcd_2_ & !bcd_1_
+     # bcd_3_ & !hex & !bcd_0_);
+

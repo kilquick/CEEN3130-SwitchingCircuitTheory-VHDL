@@ -1,0 +1,665 @@
+Classic Timing Analyzer report for LaserTag
+Wed Apr 27 13:53:01 2016
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'CLK'
+  7. tsu
+  8. tco
+  9. tpd
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                          ;
++------------------------------+-------+---------------+----------------------------------+------------------------+------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                   ; To                     ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+------------------------+------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 5.285 ns                         ; Hit_B                  ; LaserTag:inst|Y.S1     ; --         ; CLK      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 8.167 ns                         ; LaserTag:inst|Y.S3     ; StorReg_EN             ; CLK        ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 10.895 ns                        ; Hit_B                  ; StorReg_EN             ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -1.293 ns                        ; RESETn                 ; STOR_REG:inst4|Dout[3] ; --         ; CLK      ; 0            ;
+; Clock Setup: 'CLK'           ; N/A   ; None          ; 373.41 MHz ( period = 2.678 ns ) ; STOR_REG:inst4|Dout[2] ; COUNTER5:inst7|TEMP[3] ; CLK        ; CLK      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                        ;                        ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+------------------------+------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2S15F484C3       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; Off                ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLK             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLK'                                                                                                                                                                                                               ;
++-------+------------------------------------------------+------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                         ; To                           ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 373.41 MHz ( period = 2.678 ns )               ; STOR_REG:inst4|Dout[2]       ; COUNTER5:inst7|TEMP[4]       ; CLK        ; CLK      ; None                        ; None                      ; 2.483 ns                ;
+; N/A   ; 373.41 MHz ( period = 2.678 ns )               ; STOR_REG:inst4|Dout[2]       ; COUNTER5:inst7|TEMP[0]       ; CLK        ; CLK      ; None                        ; None                      ; 2.483 ns                ;
+; N/A   ; 373.41 MHz ( period = 2.678 ns )               ; STOR_REG:inst4|Dout[2]       ; COUNTER5:inst7|TEMP[2]       ; CLK        ; CLK      ; None                        ; None                      ; 2.483 ns                ;
+; N/A   ; 373.41 MHz ( period = 2.678 ns )               ; STOR_REG:inst4|Dout[2]       ; COUNTER5:inst7|TEMP[1]       ; CLK        ; CLK      ; None                        ; None                      ; 2.483 ns                ;
+; N/A   ; 373.41 MHz ( period = 2.678 ns )               ; STOR_REG:inst4|Dout[2]       ; COUNTER5:inst7|TEMP[3]       ; CLK        ; CLK      ; None                        ; None                      ; 2.483 ns                ;
+; N/A   ; 395.10 MHz ( period = 2.531 ns )               ; STOR_REG:inst4|Dout[1]       ; COUNTER5:inst7|TEMP[4]       ; CLK        ; CLK      ; None                        ; None                      ; 2.336 ns                ;
+; N/A   ; 395.10 MHz ( period = 2.531 ns )               ; STOR_REG:inst4|Dout[1]       ; COUNTER5:inst7|TEMP[0]       ; CLK        ; CLK      ; None                        ; None                      ; 2.336 ns                ;
+; N/A   ; 395.10 MHz ( period = 2.531 ns )               ; STOR_REG:inst4|Dout[1]       ; COUNTER5:inst7|TEMP[2]       ; CLK        ; CLK      ; None                        ; None                      ; 2.336 ns                ;
+; N/A   ; 395.10 MHz ( period = 2.531 ns )               ; STOR_REG:inst4|Dout[1]       ; COUNTER5:inst7|TEMP[1]       ; CLK        ; CLK      ; None                        ; None                      ; 2.336 ns                ;
+; N/A   ; 395.10 MHz ( period = 2.531 ns )               ; STOR_REG:inst4|Dout[1]       ; COUNTER5:inst7|TEMP[3]       ; CLK        ; CLK      ; None                        ; None                      ; 2.336 ns                ;
+; N/A   ; 396.98 MHz ( period = 2.519 ns )               ; COUNTER5:inst7|TEMP[4]       ; COUNTER5:inst7|TEMP[4]       ; CLK        ; CLK      ; None                        ; None                      ; 2.335 ns                ;
+; N/A   ; 396.98 MHz ( period = 2.519 ns )               ; COUNTER5:inst7|TEMP[4]       ; COUNTER5:inst7|TEMP[0]       ; CLK        ; CLK      ; None                        ; None                      ; 2.335 ns                ;
+; N/A   ; 396.98 MHz ( period = 2.519 ns )               ; COUNTER5:inst7|TEMP[4]       ; COUNTER5:inst7|TEMP[2]       ; CLK        ; CLK      ; None                        ; None                      ; 2.335 ns                ;
+; N/A   ; 396.98 MHz ( period = 2.519 ns )               ; COUNTER5:inst7|TEMP[4]       ; COUNTER5:inst7|TEMP[1]       ; CLK        ; CLK      ; None                        ; None                      ; 2.335 ns                ;
+; N/A   ; 396.98 MHz ( period = 2.519 ns )               ; COUNTER5:inst7|TEMP[4]       ; COUNTER5:inst7|TEMP[3]       ; CLK        ; CLK      ; None                        ; None                      ; 2.335 ns                ;
+; N/A   ; 400.48 MHz ( period = 2.497 ns )               ; STOR_REG:inst4|Dout[3]       ; COUNTER5:inst7|TEMP[4]       ; CLK        ; CLK      ; None                        ; None                      ; 2.302 ns                ;
+; N/A   ; 400.48 MHz ( period = 2.497 ns )               ; STOR_REG:inst4|Dout[3]       ; COUNTER5:inst7|TEMP[0]       ; CLK        ; CLK      ; None                        ; None                      ; 2.302 ns                ;
+; N/A   ; 400.48 MHz ( period = 2.497 ns )               ; STOR_REG:inst4|Dout[3]       ; COUNTER5:inst7|TEMP[2]       ; CLK        ; CLK      ; None                        ; None                      ; 2.302 ns                ;
+; N/A   ; 400.48 MHz ( period = 2.497 ns )               ; STOR_REG:inst4|Dout[3]       ; COUNTER5:inst7|TEMP[1]       ; CLK        ; CLK      ; None                        ; None                      ; 2.302 ns                ;
+; N/A   ; 400.48 MHz ( period = 2.497 ns )               ; STOR_REG:inst4|Dout[3]       ; COUNTER5:inst7|TEMP[3]       ; CLK        ; CLK      ; None                        ; None                      ; 2.302 ns                ;
+; N/A   ; 401.77 MHz ( period = 2.489 ns )               ; COUNTER5:inst7|TEMP[0]       ; COUNTER5:inst7|TEMP[4]       ; CLK        ; CLK      ; None                        ; None                      ; 2.305 ns                ;
+; N/A   ; 401.77 MHz ( period = 2.489 ns )               ; COUNTER5:inst7|TEMP[0]       ; COUNTER5:inst7|TEMP[0]       ; CLK        ; CLK      ; None                        ; None                      ; 2.305 ns                ;
+; N/A   ; 401.77 MHz ( period = 2.489 ns )               ; COUNTER5:inst7|TEMP[0]       ; COUNTER5:inst7|TEMP[2]       ; CLK        ; CLK      ; None                        ; None                      ; 2.305 ns                ;
+; N/A   ; 401.77 MHz ( period = 2.489 ns )               ; COUNTER5:inst7|TEMP[0]       ; COUNTER5:inst7|TEMP[1]       ; CLK        ; CLK      ; None                        ; None                      ; 2.305 ns                ;
+; N/A   ; 401.77 MHz ( period = 2.489 ns )               ; COUNTER5:inst7|TEMP[0]       ; COUNTER5:inst7|TEMP[3]       ; CLK        ; CLK      ; None                        ; None                      ; 2.305 ns                ;
+; N/A   ; 416.49 MHz ( period = 2.401 ns )               ; STOR_REG:inst4|Dout[2]       ; LaserTag:inst|Y.S1~DUPLICATE ; CLK        ; CLK      ; None                        ; None                      ; 2.217 ns                ;
+; N/A   ; 416.67 MHz ( period = 2.400 ns )               ; STOR_REG:inst4|Dout[2]       ; LaserTag:inst|Y.S1           ; CLK        ; CLK      ; None                        ; None                      ; 2.216 ns                ;
+; N/A   ; 421.41 MHz ( period = 2.373 ns )               ; STOR_REG:inst4|Dout[0]       ; COUNTER5:inst7|TEMP[4]       ; CLK        ; CLK      ; None                        ; None                      ; 2.178 ns                ;
+; N/A   ; 421.41 MHz ( period = 2.373 ns )               ; STOR_REG:inst4|Dout[0]       ; COUNTER5:inst7|TEMP[0]       ; CLK        ; CLK      ; None                        ; None                      ; 2.178 ns                ;
+; N/A   ; 421.41 MHz ( period = 2.373 ns )               ; STOR_REG:inst4|Dout[0]       ; COUNTER5:inst7|TEMP[2]       ; CLK        ; CLK      ; None                        ; None                      ; 2.178 ns                ;
+; N/A   ; 421.41 MHz ( period = 2.373 ns )               ; STOR_REG:inst4|Dout[0]       ; COUNTER5:inst7|TEMP[1]       ; CLK        ; CLK      ; None                        ; None                      ; 2.178 ns                ;
+; N/A   ; 421.41 MHz ( period = 2.373 ns )               ; STOR_REG:inst4|Dout[0]       ; COUNTER5:inst7|TEMP[3]       ; CLK        ; CLK      ; None                        ; None                      ; 2.178 ns                ;
+; N/A   ; 423.91 MHz ( period = 2.359 ns )               ; LaserTag:inst|Y.S0           ; COUNTER5:inst7|TEMP[4]       ; CLK        ; CLK      ; None                        ; None                      ; 2.165 ns                ;
+; N/A   ; 423.91 MHz ( period = 2.359 ns )               ; LaserTag:inst|Y.S0           ; COUNTER5:inst7|TEMP[0]       ; CLK        ; CLK      ; None                        ; None                      ; 2.165 ns                ;
+; N/A   ; 423.91 MHz ( period = 2.359 ns )               ; LaserTag:inst|Y.S0           ; COUNTER5:inst7|TEMP[2]       ; CLK        ; CLK      ; None                        ; None                      ; 2.165 ns                ;
+; N/A   ; 423.91 MHz ( period = 2.359 ns )               ; LaserTag:inst|Y.S0           ; COUNTER5:inst7|TEMP[1]       ; CLK        ; CLK      ; None                        ; None                      ; 2.165 ns                ;
+; N/A   ; 423.91 MHz ( period = 2.359 ns )               ; LaserTag:inst|Y.S0           ; COUNTER5:inst7|TEMP[3]       ; CLK        ; CLK      ; None                        ; None                      ; 2.165 ns                ;
+; N/A   ; 425.17 MHz ( period = 2.352 ns )               ; COUNTER5:inst7|TEMP[2]       ; COUNTER5:inst7|TEMP[4]       ; CLK        ; CLK      ; None                        ; None                      ; 2.168 ns                ;
+; N/A   ; 425.17 MHz ( period = 2.352 ns )               ; COUNTER5:inst7|TEMP[2]       ; COUNTER5:inst7|TEMP[0]       ; CLK        ; CLK      ; None                        ; None                      ; 2.168 ns                ;
+; N/A   ; 425.17 MHz ( period = 2.352 ns )               ; COUNTER5:inst7|TEMP[2]       ; COUNTER5:inst7|TEMP[2]       ; CLK        ; CLK      ; None                        ; None                      ; 2.168 ns                ;
+; N/A   ; 425.17 MHz ( period = 2.352 ns )               ; COUNTER5:inst7|TEMP[2]       ; COUNTER5:inst7|TEMP[1]       ; CLK        ; CLK      ; None                        ; None                      ; 2.168 ns                ;
+; N/A   ; 425.17 MHz ( period = 2.352 ns )               ; COUNTER5:inst7|TEMP[2]       ; COUNTER5:inst7|TEMP[3]       ; CLK        ; CLK      ; None                        ; None                      ; 2.168 ns                ;
+; N/A   ; 430.11 MHz ( period = 2.325 ns )               ; COUNTER5:inst7|TEMP[1]       ; COUNTER5:inst7|TEMP[4]       ; CLK        ; CLK      ; None                        ; None                      ; 2.141 ns                ;
+; N/A   ; 430.11 MHz ( period = 2.325 ns )               ; COUNTER5:inst7|TEMP[1]       ; COUNTER5:inst7|TEMP[0]       ; CLK        ; CLK      ; None                        ; None                      ; 2.141 ns                ;
+; N/A   ; 430.11 MHz ( period = 2.325 ns )               ; COUNTER5:inst7|TEMP[1]       ; COUNTER5:inst7|TEMP[2]       ; CLK        ; CLK      ; None                        ; None                      ; 2.141 ns                ;
+; N/A   ; 430.11 MHz ( period = 2.325 ns )               ; COUNTER5:inst7|TEMP[1]       ; COUNTER5:inst7|TEMP[1]       ; CLK        ; CLK      ; None                        ; None                      ; 2.141 ns                ;
+; N/A   ; 430.11 MHz ( period = 2.325 ns )               ; COUNTER5:inst7|TEMP[1]       ; COUNTER5:inst7|TEMP[3]       ; CLK        ; CLK      ; None                        ; None                      ; 2.141 ns                ;
+; N/A   ; 442.87 MHz ( period = 2.258 ns )               ; LaserTag:inst|Y.S1~DUPLICATE ; COUNTER5:inst7|TEMP[4]       ; CLK        ; CLK      ; None                        ; None                      ; 2.063 ns                ;
+; N/A   ; 442.87 MHz ( period = 2.258 ns )               ; LaserTag:inst|Y.S1~DUPLICATE ; COUNTER5:inst7|TEMP[0]       ; CLK        ; CLK      ; None                        ; None                      ; 2.063 ns                ;
+; N/A   ; 442.87 MHz ( period = 2.258 ns )               ; LaserTag:inst|Y.S1~DUPLICATE ; COUNTER5:inst7|TEMP[2]       ; CLK        ; CLK      ; None                        ; None                      ; 2.063 ns                ;
+; N/A   ; 442.87 MHz ( period = 2.258 ns )               ; LaserTag:inst|Y.S1~DUPLICATE ; COUNTER5:inst7|TEMP[1]       ; CLK        ; CLK      ; None                        ; None                      ; 2.063 ns                ;
+; N/A   ; 442.87 MHz ( period = 2.258 ns )               ; LaserTag:inst|Y.S1~DUPLICATE ; COUNTER5:inst7|TEMP[3]       ; CLK        ; CLK      ; None                        ; None                      ; 2.063 ns                ;
+; N/A   ; 444.64 MHz ( period = 2.249 ns )               ; STOR_REG:inst4|Dout[2]       ; LaserTag:inst|Y.S6           ; CLK        ; CLK      ; None                        ; None                      ; 2.064 ns                ;
+; N/A   ; 444.64 MHz ( period = 2.249 ns )               ; LaserTag:inst|Y.S2           ; COUNTER5:inst7|TEMP[4]       ; CLK        ; CLK      ; None                        ; None                      ; 2.055 ns                ;
+; N/A   ; 444.64 MHz ( period = 2.249 ns )               ; LaserTag:inst|Y.S2           ; COUNTER5:inst7|TEMP[0]       ; CLK        ; CLK      ; None                        ; None                      ; 2.055 ns                ;
+; N/A   ; 444.64 MHz ( period = 2.249 ns )               ; LaserTag:inst|Y.S2           ; COUNTER5:inst7|TEMP[2]       ; CLK        ; CLK      ; None                        ; None                      ; 2.055 ns                ;
+; N/A   ; 444.64 MHz ( period = 2.249 ns )               ; LaserTag:inst|Y.S2           ; COUNTER5:inst7|TEMP[1]       ; CLK        ; CLK      ; None                        ; None                      ; 2.055 ns                ;
+; N/A   ; 444.64 MHz ( period = 2.249 ns )               ; LaserTag:inst|Y.S2           ; COUNTER5:inst7|TEMP[3]       ; CLK        ; CLK      ; None                        ; None                      ; 2.055 ns                ;
+; N/A   ; 445.04 MHz ( period = 2.247 ns )               ; COUNTER5:inst7|TEMP[3]       ; COUNTER5:inst7|TEMP[4]       ; CLK        ; CLK      ; None                        ; None                      ; 2.063 ns                ;
+; N/A   ; 445.04 MHz ( period = 2.247 ns )               ; COUNTER5:inst7|TEMP[3]       ; COUNTER5:inst7|TEMP[0]       ; CLK        ; CLK      ; None                        ; None                      ; 2.063 ns                ;
+; N/A   ; 445.04 MHz ( period = 2.247 ns )               ; COUNTER5:inst7|TEMP[3]       ; COUNTER5:inst7|TEMP[2]       ; CLK        ; CLK      ; None                        ; None                      ; 2.063 ns                ;
+; N/A   ; 445.04 MHz ( period = 2.247 ns )               ; COUNTER5:inst7|TEMP[3]       ; COUNTER5:inst7|TEMP[1]       ; CLK        ; CLK      ; None                        ; None                      ; 2.063 ns                ;
+; N/A   ; 445.04 MHz ( period = 2.247 ns )               ; COUNTER5:inst7|TEMP[3]       ; COUNTER5:inst7|TEMP[3]       ; CLK        ; CLK      ; None                        ; None                      ; 2.063 ns                ;
+; N/A   ; 450.45 MHz ( period = 2.220 ns )               ; STOR_REG:inst4|Dout[3]       ; LaserTag:inst|Y.S1~DUPLICATE ; CLK        ; CLK      ; None                        ; None                      ; 2.036 ns                ;
+; N/A   ; 450.65 MHz ( period = 2.219 ns )               ; STOR_REG:inst4|Dout[3]       ; LaserTag:inst|Y.S1           ; CLK        ; CLK      ; None                        ; None                      ; 2.035 ns                ;
+; N/A   ; 451.88 MHz ( period = 2.213 ns )               ; STOR_REG:inst4|Dout[1]       ; LaserTag:inst|Y.S1~DUPLICATE ; CLK        ; CLK      ; None                        ; None                      ; 2.029 ns                ;
+; N/A   ; 452.08 MHz ( period = 2.212 ns )               ; STOR_REG:inst4|Dout[1]       ; LaserTag:inst|Y.S1           ; CLK        ; CLK      ; None                        ; None                      ; 2.028 ns                ;
+; N/A   ; 477.78 MHz ( period = 2.093 ns )               ; COUNTER5:inst7|TEMP[4]       ; LaserTag:inst|Y.S1           ; CLK        ; CLK      ; None                        ; None                      ; 1.920 ns                ;
+; N/A   ; 478.01 MHz ( period = 2.092 ns )               ; COUNTER5:inst7|TEMP[4]       ; LaserTag:inst|Y.S1~DUPLICATE ; CLK        ; CLK      ; None                        ; None                      ; 1.919 ns                ;
+; N/A   ; 483.56 MHz ( period = 2.068 ns )               ; STOR_REG:inst4|Dout[3]       ; LaserTag:inst|Y.S6           ; CLK        ; CLK      ; None                        ; None                      ; 1.883 ns                ;
+; N/A   ; 484.73 MHz ( period = 2.063 ns )               ; COUNTER5:inst7|TEMP[0]       ; LaserTag:inst|Y.S1           ; CLK        ; CLK      ; None                        ; None                      ; 1.890 ns                ;
+; N/A   ; 484.97 MHz ( period = 2.062 ns )               ; COUNTER5:inst7|TEMP[0]       ; LaserTag:inst|Y.S1~DUPLICATE ; CLK        ; CLK      ; None                        ; None                      ; 1.889 ns                ;
+; N/A   ; 485.20 MHz ( period = 2.061 ns )               ; STOR_REG:inst4|Dout[1]       ; LaserTag:inst|Y.S6           ; CLK        ; CLK      ; None                        ; None                      ; 1.876 ns                ;
+; N/A   ; 486.38 MHz ( period = 2.056 ns )               ; LaserTag:inst|Y.S0           ; STOR_REG:inst4|Dout[1]       ; CLK        ; CLK      ; None                        ; None                      ; 1.873 ns                ;
+; N/A   ; 486.38 MHz ( period = 2.056 ns )               ; LaserTag:inst|Y.S0           ; STOR_REG:inst4|Dout[0]       ; CLK        ; CLK      ; None                        ; None                      ; 1.873 ns                ;
+; N/A   ; 486.38 MHz ( period = 2.056 ns )               ; LaserTag:inst|Y.S0           ; STOR_REG:inst4|Dout[2]       ; CLK        ; CLK      ; None                        ; None                      ; 1.873 ns                ;
+; N/A   ; 486.38 MHz ( period = 2.056 ns )               ; LaserTag:inst|Y.S0           ; STOR_REG:inst4|Dout[3]       ; CLK        ; CLK      ; None                        ; None                      ; 1.873 ns                ;
+; N/A   ; 486.62 MHz ( period = 2.055 ns )               ; STOR_REG:inst4|Dout[0]       ; LaserTag:inst|Y.S1~DUPLICATE ; CLK        ; CLK      ; None                        ; None                      ; 1.871 ns                ;
+; N/A   ; 486.85 MHz ( period = 2.054 ns )               ; LaserTag:inst|Y.S6           ; STOR_REG:inst4|Dout[1]       ; CLK        ; CLK      ; None                        ; None                      ; 1.871 ns                ;
+; N/A   ; 486.85 MHz ( period = 2.054 ns )               ; STOR_REG:inst4|Dout[0]       ; LaserTag:inst|Y.S1           ; CLK        ; CLK      ; None                        ; None                      ; 1.870 ns                ;
+; N/A   ; 486.85 MHz ( period = 2.054 ns )               ; LaserTag:inst|Y.S6           ; STOR_REG:inst4|Dout[0]       ; CLK        ; CLK      ; None                        ; None                      ; 1.871 ns                ;
+; N/A   ; 486.85 MHz ( period = 2.054 ns )               ; LaserTag:inst|Y.S6           ; STOR_REG:inst4|Dout[2]       ; CLK        ; CLK      ; None                        ; None                      ; 1.871 ns                ;
+; N/A   ; 486.85 MHz ( period = 2.054 ns )               ; LaserTag:inst|Y.S6           ; STOR_REG:inst4|Dout[3]       ; CLK        ; CLK      ; None                        ; None                      ; 1.871 ns                ;
+; N/A   ; 495.54 MHz ( period = 2.018 ns )               ; COUNTER5:inst7|TEMP[4]       ; LaserTag:inst|Y.S6           ; CLK        ; CLK      ; None                        ; None                      ; 1.844 ns                ;
+; N/A   ; 498.26 MHz ( period = 2.007 ns )               ; LaserTag:inst|Y.S3           ; STOR_REG:inst4|Dout[1]       ; CLK        ; CLK      ; None                        ; None                      ; 1.825 ns                ;
+; N/A   ; 498.26 MHz ( period = 2.007 ns )               ; LaserTag:inst|Y.S3           ; STOR_REG:inst4|Dout[0]       ; CLK        ; CLK      ; None                        ; None                      ; 1.825 ns                ;
+; N/A   ; 498.26 MHz ( period = 2.007 ns )               ; LaserTag:inst|Y.S3           ; STOR_REG:inst4|Dout[2]       ; CLK        ; CLK      ; None                        ; None                      ; 1.825 ns                ;
+; N/A   ; 498.26 MHz ( period = 2.007 ns )               ; LaserTag:inst|Y.S3           ; STOR_REG:inst4|Dout[3]       ; CLK        ; CLK      ; None                        ; None                      ; 1.825 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[4]       ; LaserTag:inst|Y.S3           ; CLK        ; CLK      ; None                        ; None                      ; 1.819 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[0]       ; LaserTag:inst|Y.S6           ; CLK        ; CLK      ; None                        ; None                      ; 1.814 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S4           ; STOR_REG:inst4|Dout[1]       ; CLK        ; CLK      ; None                        ; None                      ; 1.801 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S4           ; STOR_REG:inst4|Dout[0]       ; CLK        ; CLK      ; None                        ; None                      ; 1.801 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S4           ; STOR_REG:inst4|Dout[2]       ; CLK        ; CLK      ; None                        ; None                      ; 1.801 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S4           ; STOR_REG:inst4|Dout[3]       ; CLK        ; CLK      ; None                        ; None                      ; 1.801 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[0]       ; LaserTag:inst|Y.S3           ; CLK        ; CLK      ; None                        ; None                      ; 1.789 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[4]       ; LaserTag:inst|Y.S5           ; CLK        ; CLK      ; None                        ; None                      ; 1.764 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[2]       ; LaserTag:inst|Y.S1           ; CLK        ; CLK      ; None                        ; None                      ; 1.753 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[2]       ; LaserTag:inst|Y.S1~DUPLICATE ; CLK        ; CLK      ; None                        ; None                      ; 1.752 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S1~DUPLICATE ; LaserTag:inst|Y.S6           ; CLK        ; CLK      ; None                        ; None                      ; 1.735 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[0]       ; LaserTag:inst|Y.S5           ; CLK        ; CLK      ; None                        ; None                      ; 1.734 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; STOR_REG:inst4|Dout[0]       ; LaserTag:inst|Y.S6           ; CLK        ; CLK      ; None                        ; None                      ; 1.718 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[1]       ; LaserTag:inst|Y.S1           ; CLK        ; CLK      ; None                        ; None                      ; 1.726 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S1~DUPLICATE ; STOR_REG:inst4|Dout[3]       ; CLK        ; CLK      ; None                        ; None                      ; 1.715 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[1]       ; LaserTag:inst|Y.S1~DUPLICATE ; CLK        ; CLK      ; None                        ; None                      ; 1.725 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[2]       ; LaserTag:inst|Y.S6           ; CLK        ; CLK      ; None                        ; None                      ; 1.677 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S1~DUPLICATE ; STOR_REG:inst4|Dout[2]       ; CLK        ; CLK      ; None                        ; None                      ; 1.645 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[2]       ; LaserTag:inst|Y.S3           ; CLK        ; CLK      ; None                        ; None                      ; 1.652 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[1]       ; LaserTag:inst|Y.S6           ; CLK        ; CLK      ; None                        ; None                      ; 1.650 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[3]       ; LaserTag:inst|Y.S1           ; CLK        ; CLK      ; None                        ; None                      ; 1.648 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[3]       ; LaserTag:inst|Y.S1~DUPLICATE ; CLK        ; CLK      ; None                        ; None                      ; 1.647 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S1           ; STOR_REG:inst4|Dout[3]       ; CLK        ; CLK      ; None                        ; None                      ; 1.631 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[1]       ; LaserTag:inst|Y.S3           ; CLK        ; CLK      ; None                        ; None                      ; 1.625 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S1           ; STOR_REG:inst4|Dout[2]       ; CLK        ; CLK      ; None                        ; None                      ; 1.596 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[2]       ; LaserTag:inst|Y.S5           ; CLK        ; CLK      ; None                        ; None                      ; 1.597 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[4]       ; LaserTag:inst|Y.S2           ; CLK        ; CLK      ; None                        ; None                      ; 1.596 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[3]       ; LaserTag:inst|Y.S6           ; CLK        ; CLK      ; None                        ; None                      ; 1.572 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S1           ; STOR_REG:inst4|Dout[1]       ; CLK        ; CLK      ; None                        ; None                      ; 1.561 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[1]       ; LaserTag:inst|Y.S5           ; CLK        ; CLK      ; None                        ; None                      ; 1.570 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[0]       ; LaserTag:inst|Y.S2           ; CLK        ; CLK      ; None                        ; None                      ; 1.566 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[3]       ; LaserTag:inst|Y.S3           ; CLK        ; CLK      ; None                        ; None                      ; 1.547 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S1           ; STOR_REG:inst4|Dout[0]       ; CLK        ; CLK      ; None                        ; None                      ; 1.498 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[3]       ; LaserTag:inst|Y.S5           ; CLK        ; CLK      ; None                        ; None                      ; 1.492 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S5           ; STOR_REG:inst4|Dout[1]       ; CLK        ; CLK      ; None                        ; None                      ; 1.450 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S5           ; STOR_REG:inst4|Dout[0]       ; CLK        ; CLK      ; None                        ; None                      ; 1.450 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S5           ; STOR_REG:inst4|Dout[2]       ; CLK        ; CLK      ; None                        ; None                      ; 1.450 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S5           ; STOR_REG:inst4|Dout[3]       ; CLK        ; CLK      ; None                        ; None                      ; 1.450 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S3           ; LaserTag:inst|Y.S1           ; CLK        ; CLK      ; None                        ; None                      ; 1.451 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S3           ; LaserTag:inst|Y.S1~DUPLICATE ; CLK        ; CLK      ; None                        ; None                      ; 1.451 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S1~DUPLICATE ; LaserTag:inst|Y.S1           ; CLK        ; CLK      ; None                        ; None                      ; 1.440 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S1~DUPLICATE ; LaserTag:inst|Y.S1~DUPLICATE ; CLK        ; CLK      ; None                        ; None                      ; 1.439 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S4           ; LaserTag:inst|Y.S1           ; CLK        ; CLK      ; None                        ; None                      ; 1.427 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S4           ; LaserTag:inst|Y.S1~DUPLICATE ; CLK        ; CLK      ; None                        ; None                      ; 1.427 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S5           ; LaserTag:inst|Y.S1           ; CLK        ; CLK      ; None                        ; None                      ; 1.420 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[2]       ; LaserTag:inst|Y.S2           ; CLK        ; CLK      ; None                        ; None                      ; 1.429 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S5           ; LaserTag:inst|Y.S1~DUPLICATE ; CLK        ; CLK      ; None                        ; None                      ; 1.419 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[4]       ; LaserTag:inst|Y.S4           ; CLK        ; CLK      ; None                        ; None                      ; 1.404 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[1]       ; LaserTag:inst|Y.S2           ; CLK        ; CLK      ; None                        ; None                      ; 1.402 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[0]       ; LaserTag:inst|Y.S4           ; CLK        ; CLK      ; None                        ; None                      ; 1.374 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[3]       ; LaserTag:inst|Y.S2           ; CLK        ; CLK      ; None                        ; None                      ; 1.324 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[2]       ; LaserTag:inst|Y.S4           ; CLK        ; CLK      ; None                        ; None                      ; 1.237 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[1]       ; LaserTag:inst|Y.S4           ; CLK        ; CLK      ; None                        ; None                      ; 1.210 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; COUNTER5:inst7|TEMP[3]       ; LaserTag:inst|Y.S4           ; CLK        ; CLK      ; None                        ; None                      ; 1.132 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S0           ; LaserTag:inst|Y.S1           ; CLK        ; CLK      ; None                        ; None                      ; 1.084 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S0           ; LaserTag:inst|Y.S1~DUPLICATE ; CLK        ; CLK      ; None                        ; None                      ; 1.084 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S1~DUPLICATE ; LaserTag:inst|Y.S3           ; CLK        ; CLK      ; None                        ; None                      ; 1.048 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S2           ; LaserTag:inst|Y.S1           ; CLK        ; CLK      ; None                        ; None                      ; 0.995 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S2           ; LaserTag:inst|Y.S1~DUPLICATE ; CLK        ; CLK      ; None                        ; None                      ; 0.995 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S1~DUPLICATE ; LaserTag:inst|Y.S5           ; CLK        ; CLK      ; None                        ; None                      ; 0.989 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S6           ; LaserTag:inst|Y.S0           ; CLK        ; CLK      ; None                        ; None                      ; 0.898 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S1~DUPLICATE ; LaserTag:inst|Y.S4           ; CLK        ; CLK      ; None                        ; None                      ; 0.804 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S2           ; LaserTag:inst|Y.S6           ; CLK        ; CLK      ; None                        ; None                      ; 0.773 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; STOR_REG:inst4|Dout[0]       ; STOR_REG:inst4|Dout[3]       ; CLK        ; CLK      ; None                        ; None                      ; 0.750 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; STOR_REG:inst4|Dout[0]       ; STOR_REG:inst4|Dout[2]       ; CLK        ; CLK      ; None                        ; None                      ; 0.715 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; STOR_REG:inst4|Dout[1]       ; STOR_REG:inst4|Dout[3]       ; CLK        ; CLK      ; None                        ; None                      ; 0.715 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; STOR_REG:inst4|Dout[0]       ; STOR_REG:inst4|Dout[1]       ; CLK        ; CLK      ; None                        ; None                      ; 0.680 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; STOR_REG:inst4|Dout[1]       ; STOR_REG:inst4|Dout[2]       ; CLK        ; CLK      ; None                        ; None                      ; 0.680 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; STOR_REG:inst4|Dout[2]       ; STOR_REG:inst4|Dout[3]       ; CLK        ; CLK      ; None                        ; None                      ; 0.680 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; STOR_REG:inst4|Dout[1]       ; STOR_REG:inst4|Dout[1]       ; CLK        ; CLK      ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; STOR_REG:inst4|Dout[0]       ; STOR_REG:inst4|Dout[0]       ; CLK        ; CLK      ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; STOR_REG:inst4|Dout[2]       ; STOR_REG:inst4|Dout[2]       ; CLK        ; CLK      ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; STOR_REG:inst4|Dout[3]       ; STOR_REG:inst4|Dout[3]       ; CLK        ; CLK      ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S1~DUPLICATE ; LaserTag:inst|Y.S2           ; CLK        ; CLK      ; None                        ; None                      ; 0.536 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S6           ; LaserTag:inst|Y.S6           ; CLK        ; CLK      ; None                        ; None                      ; 0.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S5           ; LaserTag:inst|Y.S5           ; CLK        ; CLK      ; None                        ; None                      ; 0.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S3           ; LaserTag:inst|Y.S3           ; CLK        ; CLK      ; None                        ; None                      ; 0.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; LaserTag:inst|Y.S4           ; LaserTag:inst|Y.S4           ; CLK        ; CLK      ; None                        ; None                      ; 0.396 ns                ;
++-------+------------------------------------------------+------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; tsu                                                                                      ;
++-------+--------------+------------+------------+------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From       ; To                           ; To Clock ;
++-------+--------------+------------+------------+------------------------------+----------+
+; N/A   ; None         ; 5.285 ns   ; Hit_B      ; LaserTag:inst|Y.S1           ; CLK      ;
+; N/A   ; None         ; 5.284 ns   ; Hit_B      ; LaserTag:inst|Y.S1~DUPLICATE ; CLK      ;
+; N/A   ; None         ; 5.194 ns   ; COMPB[0]   ; COUNTER5:inst7|TEMP[4]       ; CLK      ;
+; N/A   ; None         ; 5.194 ns   ; COMPB[0]   ; COUNTER5:inst7|TEMP[0]       ; CLK      ;
+; N/A   ; None         ; 5.194 ns   ; COMPB[0]   ; COUNTER5:inst7|TEMP[2]       ; CLK      ;
+; N/A   ; None         ; 5.194 ns   ; COMPB[0]   ; COUNTER5:inst7|TEMP[1]       ; CLK      ;
+; N/A   ; None         ; 5.194 ns   ; COMPB[0]   ; COUNTER5:inst7|TEMP[3]       ; CLK      ;
+; N/A   ; None         ; 5.157 ns   ; COMPB[2]   ; COUNTER5:inst7|TEMP[4]       ; CLK      ;
+; N/A   ; None         ; 5.157 ns   ; COMPB[2]   ; COUNTER5:inst7|TEMP[0]       ; CLK      ;
+; N/A   ; None         ; 5.157 ns   ; COMPB[2]   ; COUNTER5:inst7|TEMP[2]       ; CLK      ;
+; N/A   ; None         ; 5.157 ns   ; COMPB[2]   ; COUNTER5:inst7|TEMP[1]       ; CLK      ;
+; N/A   ; None         ; 5.157 ns   ; COMPB[2]   ; COUNTER5:inst7|TEMP[3]       ; CLK      ;
+; N/A   ; None         ; 4.951 ns   ; Hit_B      ; COUNTER5:inst7|TEMP[4]       ; CLK      ;
+; N/A   ; None         ; 4.951 ns   ; Hit_B      ; COUNTER5:inst7|TEMP[0]       ; CLK      ;
+; N/A   ; None         ; 4.951 ns   ; Hit_B      ; COUNTER5:inst7|TEMP[2]       ; CLK      ;
+; N/A   ; None         ; 4.951 ns   ; Hit_B      ; COUNTER5:inst7|TEMP[1]       ; CLK      ;
+; N/A   ; None         ; 4.951 ns   ; Hit_B      ; COUNTER5:inst7|TEMP[3]       ; CLK      ;
+; N/A   ; None         ; 4.926 ns   ; Strike     ; COUNTER5:inst7|TEMP[4]       ; CLK      ;
+; N/A   ; None         ; 4.926 ns   ; Strike     ; COUNTER5:inst7|TEMP[0]       ; CLK      ;
+; N/A   ; None         ; 4.926 ns   ; Strike     ; COUNTER5:inst7|TEMP[2]       ; CLK      ;
+; N/A   ; None         ; 4.926 ns   ; Strike     ; COUNTER5:inst7|TEMP[1]       ; CLK      ;
+; N/A   ; None         ; 4.926 ns   ; Strike     ; COUNTER5:inst7|TEMP[3]       ; CLK      ;
+; N/A   ; None         ; 4.909 ns   ; Hit_A      ; LaserTag:inst|Y.S1           ; CLK      ;
+; N/A   ; None         ; 4.908 ns   ; Hit_A      ; LaserTag:inst|Y.S1~DUPLICATE ; CLK      ;
+; N/A   ; None         ; 4.886 ns   ; COMPB[3]   ; COUNTER5:inst7|TEMP[4]       ; CLK      ;
+; N/A   ; None         ; 4.886 ns   ; COMPB[3]   ; COUNTER5:inst7|TEMP[0]       ; CLK      ;
+; N/A   ; None         ; 4.886 ns   ; COMPB[3]   ; COUNTER5:inst7|TEMP[2]       ; CLK      ;
+; N/A   ; None         ; 4.886 ns   ; COMPB[3]   ; COUNTER5:inst7|TEMP[1]       ; CLK      ;
+; N/A   ; None         ; 4.886 ns   ; COMPB[3]   ; COUNTER5:inst7|TEMP[3]       ; CLK      ;
+; N/A   ; None         ; 4.880 ns   ; COMPB[2]   ; LaserTag:inst|Y.S1~DUPLICATE ; CLK      ;
+; N/A   ; None         ; 4.879 ns   ; COMPB[2]   ; LaserTag:inst|Y.S1           ; CLK      ;
+; N/A   ; None         ; 4.876 ns   ; COMPB[0]   ; LaserTag:inst|Y.S1~DUPLICATE ; CLK      ;
+; N/A   ; None         ; 4.875 ns   ; COMPB[0]   ; LaserTag:inst|Y.S1           ; CLK      ;
+; N/A   ; None         ; 4.844 ns   ; COMPB[1]   ; COUNTER5:inst7|TEMP[4]       ; CLK      ;
+; N/A   ; None         ; 4.844 ns   ; COMPB[1]   ; COUNTER5:inst7|TEMP[0]       ; CLK      ;
+; N/A   ; None         ; 4.844 ns   ; COMPB[1]   ; COUNTER5:inst7|TEMP[2]       ; CLK      ;
+; N/A   ; None         ; 4.844 ns   ; COMPB[1]   ; COUNTER5:inst7|TEMP[1]       ; CLK      ;
+; N/A   ; None         ; 4.844 ns   ; COMPB[1]   ; COUNTER5:inst7|TEMP[3]       ; CLK      ;
+; N/A   ; None         ; 4.743 ns   ; Hit_B      ; STOR_REG:inst4|Dout[3]       ; CLK      ;
+; N/A   ; None         ; 4.740 ns   ; New_Game   ; STOR_REG:inst4|Dout[1]       ; CLK      ;
+; N/A   ; None         ; 4.740 ns   ; New_Game   ; STOR_REG:inst4|Dout[0]       ; CLK      ;
+; N/A   ; None         ; 4.740 ns   ; New_Game   ; STOR_REG:inst4|Dout[2]       ; CLK      ;
+; N/A   ; None         ; 4.740 ns   ; New_Game   ; STOR_REG:inst4|Dout[3]       ; CLK      ;
+; N/A   ; None         ; 4.735 ns   ; Hit_B      ; STOR_REG:inst4|Dout[1]       ; CLK      ;
+; N/A   ; None         ; 4.735 ns   ; Hit_B      ; STOR_REG:inst4|Dout[0]       ; CLK      ;
+; N/A   ; None         ; 4.735 ns   ; Hit_B      ; STOR_REG:inst4|Dout[2]       ; CLK      ;
+; N/A   ; None         ; 4.728 ns   ; COMPB[2]   ; LaserTag:inst|Y.S6           ; CLK      ;
+; N/A   ; None         ; 4.724 ns   ; COMPB[0]   ; LaserTag:inst|Y.S6           ; CLK      ;
+; N/A   ; None         ; 4.672 ns   ; Strike     ; STOR_REG:inst4|Dout[3]       ; CLK      ;
+; N/A   ; None         ; 4.637 ns   ; Strike     ; STOR_REG:inst4|Dout[2]       ; CLK      ;
+; N/A   ; None         ; 4.609 ns   ; COMPB[3]   ; LaserTag:inst|Y.S1~DUPLICATE ; CLK      ;
+; N/A   ; None         ; 4.608 ns   ; COMPB[3]   ; LaserTag:inst|Y.S1           ; CLK      ;
+; N/A   ; None         ; 4.602 ns   ; Strike     ; STOR_REG:inst4|Dout[1]       ; CLK      ;
+; N/A   ; None         ; 4.540 ns   ; Strike     ; STOR_REG:inst4|Dout[0]       ; CLK      ;
+; N/A   ; None         ; 4.526 ns   ; COMPB[1]   ; LaserTag:inst|Y.S1~DUPLICATE ; CLK      ;
+; N/A   ; None         ; 4.525 ns   ; COMPB[1]   ; LaserTag:inst|Y.S1           ; CLK      ;
+; N/A   ; None         ; 4.457 ns   ; COMPB[3]   ; LaserTag:inst|Y.S6           ; CLK      ;
+; N/A   ; None         ; 4.374 ns   ; COMPB[1]   ; LaserTag:inst|Y.S6           ; CLK      ;
+; N/A   ; None         ; 4.275 ns   ; Hit_A      ; COUNTER5:inst7|TEMP[4]       ; CLK      ;
+; N/A   ; None         ; 4.275 ns   ; Hit_A      ; COUNTER5:inst7|TEMP[0]       ; CLK      ;
+; N/A   ; None         ; 4.275 ns   ; Hit_A      ; COUNTER5:inst7|TEMP[2]       ; CLK      ;
+; N/A   ; None         ; 4.275 ns   ; Hit_A      ; COUNTER5:inst7|TEMP[1]       ; CLK      ;
+; N/A   ; None         ; 4.275 ns   ; Hit_A      ; COUNTER5:inst7|TEMP[3]       ; CLK      ;
+; N/A   ; None         ; 4.227 ns   ; Hit_A      ; STOR_REG:inst4|Dout[3]       ; CLK      ;
+; N/A   ; None         ; 4.192 ns   ; Hit_A      ; STOR_REG:inst4|Dout[2]       ; CLK      ;
+; N/A   ; None         ; 4.143 ns   ; Hit_A      ; STOR_REG:inst4|Dout[1]       ; CLK      ;
+; N/A   ; None         ; 4.112 ns   ; Hit_A      ; STOR_REG:inst4|Dout[0]       ; CLK      ;
+; N/A   ; None         ; 3.872 ns   ; Hit_B      ; LaserTag:inst|Y.S5           ; CLK      ;
+; N/A   ; None         ; 3.816 ns   ; Hit_B      ; LaserTag:inst|Y.S4           ; CLK      ;
+; N/A   ; None         ; 3.768 ns   ; New_Game   ; LaserTag:inst|Y.S0           ; CLK      ;
+; N/A   ; None         ; 3.737 ns   ; Strike     ; LaserTag:inst|Y.S5           ; CLK      ;
+; N/A   ; None         ; 3.664 ns   ; TimerIN[3] ; COUNTER5:inst7|TEMP[3]       ; CLK      ;
+; N/A   ; None         ; 3.650 ns   ; Strike     ; LaserTag:inst|Y.S1           ; CLK      ;
+; N/A   ; None         ; 3.650 ns   ; Strike     ; LaserTag:inst|Y.S1~DUPLICATE ; CLK      ;
+; N/A   ; None         ; 3.584 ns   ; TimerIN[1] ; COUNTER5:inst7|TEMP[1]       ; CLK      ;
+; N/A   ; None         ; 3.519 ns   ; New_Game   ; LaserTag:inst|Y.S6           ; CLK      ;
+; N/A   ; None         ; 3.451 ns   ; TimerIN[0] ; COUNTER5:inst7|TEMP[0]       ; CLK      ;
+; N/A   ; None         ; 3.386 ns   ; Hit_A      ; LaserTag:inst|Y.S5           ; CLK      ;
+; N/A   ; None         ; 3.318 ns   ; TimerIN[2] ; COUNTER5:inst7|TEMP[2]       ; CLK      ;
+; N/A   ; None         ; 2.934 ns   ; Hit_A      ; LaserTag:inst|Y.S4           ; CLK      ;
+; N/A   ; None         ; 2.836 ns   ; Hit_A      ; LaserTag:inst|Y.S3           ; CLK      ;
+; N/A   ; None         ; 2.624 ns   ; TimerIN[4] ; COUNTER5:inst7|TEMP[4]       ; CLK      ;
+; N/A   ; None         ; 2.219 ns   ; RESETn     ; COUNTER5:inst7|TEMP[4]       ; CLK      ;
+; N/A   ; None         ; 2.219 ns   ; RESETn     ; COUNTER5:inst7|TEMP[0]       ; CLK      ;
+; N/A   ; None         ; 2.219 ns   ; RESETn     ; COUNTER5:inst7|TEMP[2]       ; CLK      ;
+; N/A   ; None         ; 2.219 ns   ; RESETn     ; COUNTER5:inst7|TEMP[1]       ; CLK      ;
+; N/A   ; None         ; 2.219 ns   ; RESETn     ; COUNTER5:inst7|TEMP[3]       ; CLK      ;
+; N/A   ; None         ; 1.532 ns   ; RESETn     ; STOR_REG:inst4|Dout[1]       ; CLK      ;
+; N/A   ; None         ; 1.532 ns   ; RESETn     ; STOR_REG:inst4|Dout[0]       ; CLK      ;
+; N/A   ; None         ; 1.532 ns   ; RESETn     ; STOR_REG:inst4|Dout[2]       ; CLK      ;
+; N/A   ; None         ; 1.532 ns   ; RESETn     ; STOR_REG:inst4|Dout[3]       ; CLK      ;
++-------+--------------+------------+------------+------------------------------+----------+
+
+
++----------------------------------------------------------------------------------------------+
+; tco                                                                                          ;
++-------+--------------+------------+------------------------------+--------------+------------+
+; Slack ; Required tco ; Actual tco ; From                         ; To           ; From Clock ;
++-------+--------------+------------+------------------------------+--------------+------------+
+; N/A   ; None         ; 8.167 ns   ; LaserTag:inst|Y.S3           ; StorReg_EN   ; CLK        ;
+; N/A   ; None         ; 8.145 ns   ; LaserTag:inst|Y.S4           ; StorReg_EN   ; CLK        ;
+; N/A   ; None         ; 7.545 ns   ; COUNTER5:inst7|TEMP[4]       ; CTR_TCDn     ; CLK        ;
+; N/A   ; None         ; 7.515 ns   ; COUNTER5:inst7|TEMP[0]       ; CTR_TCDn     ; CLK        ;
+; N/A   ; None         ; 7.429 ns   ; LaserTag:inst|Y.S5           ; StorReg_EN   ; CLK        ;
+; N/A   ; None         ; 7.378 ns   ; COUNTER5:inst7|TEMP[2]       ; CTR_TCDn     ; CLK        ;
+; N/A   ; None         ; 7.351 ns   ; COUNTER5:inst7|TEMP[1]       ; CTR_TCDn     ; CLK        ;
+; N/A   ; None         ; 7.273 ns   ; COUNTER5:inst7|TEMP[3]       ; CTR_TCDn     ; CLK        ;
+; N/A   ; None         ; 7.166 ns   ; LaserTag:inst|Y.S0           ; StorReg_EN   ; CLK        ;
+; N/A   ; None         ; 6.825 ns   ; COUNTER5:inst7|TEMP[4]       ; TIMER[4]     ; CLK        ;
+; N/A   ; None         ; 6.606 ns   ; STOR_REG:inst4|Dout[3]       ; SCORE[3]     ; CLK        ;
+; N/A   ; None         ; 6.541 ns   ; COUNTER5:inst7|TEMP[4]       ; CTR_ENn      ; CLK        ;
+; N/A   ; None         ; 6.511 ns   ; COUNTER5:inst7|TEMP[0]       ; CTR_ENn      ; CLK        ;
+; N/A   ; None         ; 6.446 ns   ; STOR_REG:inst4|Dout[2]       ; CompB_GTn    ; CLK        ;
+; N/A   ; None         ; 6.374 ns   ; COUNTER5:inst7|TEMP[2]       ; CTR_ENn      ; CLK        ;
+; N/A   ; None         ; 6.347 ns   ; COUNTER5:inst7|TEMP[1]       ; CTR_ENn      ; CLK        ;
+; N/A   ; None         ; 6.342 ns   ; STOR_REG:inst4|Dout[2]       ; CTR_LDn      ; CLK        ;
+; N/A   ; None         ; 6.282 ns   ; LaserTag:inst|Y.S1~DUPLICATE ; CTR_ENn      ; CLK        ;
+; N/A   ; None         ; 6.269 ns   ; COUNTER5:inst7|TEMP[3]       ; CTR_ENn      ; CLK        ;
+; N/A   ; None         ; 6.265 ns   ; STOR_REG:inst4|Dout[3]       ; CompB_GTn    ; CLK        ;
+; N/A   ; None         ; 6.258 ns   ; STOR_REG:inst4|Dout[1]       ; CompB_GTn    ; CLK        ;
+; N/A   ; None         ; 6.195 ns   ; STOR_REG:inst4|Dout[1]       ; CTR_LDn      ; CLK        ;
+; N/A   ; None         ; 6.161 ns   ; STOR_REG:inst4|Dout[3]       ; CTR_LDn      ; CLK        ;
+; N/A   ; None         ; 6.100 ns   ; STOR_REG:inst4|Dout[0]       ; CompB_GTn    ; CLK        ;
+; N/A   ; None         ; 6.037 ns   ; STOR_REG:inst4|Dout[0]       ; CTR_LDn      ; CLK        ;
+; N/A   ; None         ; 6.023 ns   ; LaserTag:inst|Y.S0           ; CTR_LDn      ; CLK        ;
+; N/A   ; None         ; 5.932 ns   ; LaserTag:inst|Y.S1~DUPLICATE ; CODd0        ; CLK        ;
+; N/A   ; None         ; 5.932 ns   ; LaserTag:inst|Y.S1~DUPLICATE ; SUB          ; CLK        ;
+; N/A   ; None         ; 5.913 ns   ; LaserTag:inst|Y.S2           ; CTR_LDn      ; CLK        ;
+; N/A   ; None         ; 5.863 ns   ; LaserTag:inst|Y.S4           ; Done_B       ; CLK        ;
+; N/A   ; None         ; 5.785 ns   ; LaserTag:inst|Y.S4           ; CODd0        ; CLK        ;
+; N/A   ; None         ; 5.785 ns   ; LaserTag:inst|Y.S4           ; SUB          ; CLK        ;
+; N/A   ; None         ; 5.769 ns   ; LaserTag:inst|Y.S3           ; CODd0        ; CLK        ;
+; N/A   ; None         ; 5.769 ns   ; LaserTag:inst|Y.S3           ; SUB          ; CLK        ;
+; N/A   ; None         ; 5.724 ns   ; LaserTag:inst|Y.S0           ; StorReg_CLRn ; CLK        ;
+; N/A   ; None         ; 5.640 ns   ; LaserTag:inst|Y.S1           ; CODd1        ; CLK        ;
+; N/A   ; None         ; 5.622 ns   ; COUNTER5:inst7|TEMP[3]       ; TIMER[3]     ; CLK        ;
+; N/A   ; None         ; 5.615 ns   ; LaserTag:inst|Y.S6           ; StorReg_CLRn ; CLK        ;
+; N/A   ; None         ; 5.579 ns   ; LaserTag:inst|Y.S4           ; CODd1        ; CLK        ;
+; N/A   ; None         ; 5.476 ns   ; STOR_REG:inst4|Dout[0]       ; SCORE[0]     ; CLK        ;
+; N/A   ; None         ; 5.372 ns   ; LaserTag:inst|Y.S5           ; CODd1        ; CLK        ;
+; N/A   ; None         ; 5.362 ns   ; LaserTag:inst|Y.S3           ; Done_A       ; CLK        ;
+; N/A   ; None         ; 5.313 ns   ; STOR_REG:inst4|Dout[1]       ; SCORE[1]     ; CLK        ;
+; N/A   ; None         ; 5.199 ns   ; STOR_REG:inst4|Dout[2]       ; SCORE[2]     ; CLK        ;
+; N/A   ; None         ; 5.144 ns   ; LaserTag:inst|Y.S6           ; Game_Over    ; CLK        ;
+; N/A   ; None         ; 5.140 ns   ; COUNTER5:inst7|TEMP[0]       ; TIMER[0]     ; CLK        ;
+; N/A   ; None         ; 5.133 ns   ; COUNTER5:inst7|TEMP[2]       ; TIMER[2]     ; CLK        ;
+; N/A   ; None         ; 5.102 ns   ; LaserTag:inst|Y.S5           ; Done_S       ; CLK        ;
+; N/A   ; None         ; 5.100 ns   ; COUNTER5:inst7|TEMP[1]       ; TIMER[1]     ; CLK        ;
++-------+--------------+------------+------------------------------+--------------+------------+
+
+
++-----------------------------------------------------------------------+
+; tpd                                                                   ;
++-------+-------------------+-----------------+----------+--------------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From     ; To           ;
++-------+-------------------+-----------------+----------+--------------+
+; N/A   ; None              ; 10.895 ns       ; Hit_B    ; StorReg_EN   ;
+; N/A   ; None              ; 10.272 ns       ; Hit_A    ; StorReg_EN   ;
+; N/A   ; None              ; 9.892 ns        ; Strike   ; StorReg_EN   ;
+; N/A   ; None              ; 8.974 ns        ; Hit_B    ; CTR_ENn      ;
+; N/A   ; None              ; 8.949 ns        ; Strike   ; CTR_ENn      ;
+; N/A   ; None              ; 8.925 ns        ; COMPB[2] ; CompB_GTn    ;
+; N/A   ; None              ; 8.921 ns        ; COMPB[0] ; CompB_GTn    ;
+; N/A   ; None              ; 8.858 ns        ; COMPB[0] ; CTR_LDn      ;
+; N/A   ; None              ; 8.821 ns        ; COMPB[2] ; CTR_LDn      ;
+; N/A   ; None              ; 8.654 ns        ; COMPB[3] ; CompB_GTn    ;
+; N/A   ; None              ; 8.571 ns        ; COMPB[1] ; CompB_GTn    ;
+; N/A   ; None              ; 8.568 ns        ; Hit_B    ; CODd1        ;
+; N/A   ; None              ; 8.550 ns        ; COMPB[3] ; CTR_LDn      ;
+; N/A   ; None              ; 8.508 ns        ; COMPB[1] ; CTR_LDn      ;
+; N/A   ; None              ; 8.497 ns        ; Strike   ; CODd1        ;
+; N/A   ; None              ; 8.439 ns        ; Hit_B    ; CODd0        ;
+; N/A   ; None              ; 8.439 ns        ; Hit_B    ; SUB          ;
+; N/A   ; None              ; 8.430 ns        ; New_Game ; StorReg_CLRn ;
+; N/A   ; None              ; 8.298 ns        ; Hit_A    ; CTR_ENn      ;
+; N/A   ; None              ; 8.068 ns        ; Hit_A    ; CODd0        ;
+; N/A   ; None              ; 8.068 ns        ; Hit_A    ; SUB          ;
+; N/A   ; None              ; 7.686 ns        ; Hit_A    ; CODd1        ;
+; N/A   ; None              ; 7.461 ns        ; RESETn   ; StorReg_EN   ;
+; N/A   ; None              ; 5.883 ns        ; RESETn   ; CTR_LDn      ;
+; N/A   ; None              ; 5.873 ns        ; RESETn   ; StorReg_CLRn ;
++-------+-------------------+-----------------+----------+--------------+
+
+
++------------------------------------------------------------------------------------------------+
+; th                                                                                             ;
++---------------+-------------+-----------+------------+------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From       ; To                           ; To Clock ;
++---------------+-------------+-----------+------------+------------------------------+----------+
+; N/A           ; None        ; -1.293 ns ; RESETn     ; STOR_REG:inst4|Dout[1]       ; CLK      ;
+; N/A           ; None        ; -1.293 ns ; RESETn     ; STOR_REG:inst4|Dout[0]       ; CLK      ;
+; N/A           ; None        ; -1.293 ns ; RESETn     ; STOR_REG:inst4|Dout[2]       ; CLK      ;
+; N/A           ; None        ; -1.293 ns ; RESETn     ; STOR_REG:inst4|Dout[3]       ; CLK      ;
+; N/A           ; None        ; -1.980 ns ; RESETn     ; COUNTER5:inst7|TEMP[4]       ; CLK      ;
+; N/A           ; None        ; -1.980 ns ; RESETn     ; COUNTER5:inst7|TEMP[0]       ; CLK      ;
+; N/A           ; None        ; -1.980 ns ; RESETn     ; COUNTER5:inst7|TEMP[2]       ; CLK      ;
+; N/A           ; None        ; -1.980 ns ; RESETn     ; COUNTER5:inst7|TEMP[1]       ; CLK      ;
+; N/A           ; None        ; -1.980 ns ; RESETn     ; COUNTER5:inst7|TEMP[3]       ; CLK      ;
+; N/A           ; None        ; -2.385 ns ; TimerIN[4] ; COUNTER5:inst7|TEMP[4]       ; CLK      ;
+; N/A           ; None        ; -2.597 ns ; Hit_A      ; LaserTag:inst|Y.S3           ; CLK      ;
+; N/A           ; None        ; -2.695 ns ; Hit_A      ; LaserTag:inst|Y.S4           ; CLK      ;
+; N/A           ; None        ; -3.079 ns ; TimerIN[2] ; COUNTER5:inst7|TEMP[2]       ; CLK      ;
+; N/A           ; None        ; -3.147 ns ; Hit_A      ; LaserTag:inst|Y.S5           ; CLK      ;
+; N/A           ; None        ; -3.161 ns ; Hit_A      ; STOR_REG:inst4|Dout[0]       ; CLK      ;
+; N/A           ; None        ; -3.212 ns ; TimerIN[0] ; COUNTER5:inst7|TEMP[0]       ; CLK      ;
+; N/A           ; None        ; -3.224 ns ; Hit_A      ; STOR_REG:inst4|Dout[1]       ; CLK      ;
+; N/A           ; None        ; -3.259 ns ; Hit_A      ; STOR_REG:inst4|Dout[2]       ; CLK      ;
+; N/A           ; None        ; -3.280 ns ; New_Game   ; LaserTag:inst|Y.S6           ; CLK      ;
+; N/A           ; None        ; -3.294 ns ; Hit_A      ; STOR_REG:inst4|Dout[3]       ; CLK      ;
+; N/A           ; None        ; -3.345 ns ; TimerIN[1] ; COUNTER5:inst7|TEMP[1]       ; CLK      ;
+; N/A           ; None        ; -3.411 ns ; Strike     ; LaserTag:inst|Y.S1           ; CLK      ;
+; N/A           ; None        ; -3.411 ns ; Strike     ; LaserTag:inst|Y.S1~DUPLICATE ; CLK      ;
+; N/A           ; None        ; -3.425 ns ; TimerIN[3] ; COUNTER5:inst7|TEMP[3]       ; CLK      ;
+; N/A           ; None        ; -3.498 ns ; Strike     ; LaserTag:inst|Y.S5           ; CLK      ;
+; N/A           ; None        ; -3.499 ns ; Hit_A      ; LaserTag:inst|Y.S1           ; CLK      ;
+; N/A           ; None        ; -3.499 ns ; Hit_A      ; LaserTag:inst|Y.S1~DUPLICATE ; CLK      ;
+; N/A           ; None        ; -3.529 ns ; New_Game   ; LaserTag:inst|Y.S0           ; CLK      ;
+; N/A           ; None        ; -3.530 ns ; Hit_A      ; COUNTER5:inst7|TEMP[4]       ; CLK      ;
+; N/A           ; None        ; -3.530 ns ; Hit_A      ; COUNTER5:inst7|TEMP[0]       ; CLK      ;
+; N/A           ; None        ; -3.530 ns ; Hit_A      ; COUNTER5:inst7|TEMP[2]       ; CLK      ;
+; N/A           ; None        ; -3.530 ns ; Hit_A      ; COUNTER5:inst7|TEMP[1]       ; CLK      ;
+; N/A           ; None        ; -3.530 ns ; Hit_A      ; COUNTER5:inst7|TEMP[3]       ; CLK      ;
+; N/A           ; None        ; -3.577 ns ; Hit_B      ; LaserTag:inst|Y.S4           ; CLK      ;
+; N/A           ; None        ; -3.633 ns ; Hit_B      ; LaserTag:inst|Y.S5           ; CLK      ;
+; N/A           ; None        ; -3.850 ns ; New_Game   ; STOR_REG:inst4|Dout[1]       ; CLK      ;
+; N/A           ; None        ; -3.850 ns ; New_Game   ; STOR_REG:inst4|Dout[0]       ; CLK      ;
+; N/A           ; None        ; -3.850 ns ; New_Game   ; STOR_REG:inst4|Dout[2]       ; CLK      ;
+; N/A           ; None        ; -3.850 ns ; New_Game   ; STOR_REG:inst4|Dout[3]       ; CLK      ;
+; N/A           ; None        ; -3.884 ns ; Hit_B      ; STOR_REG:inst4|Dout[0]       ; CLK      ;
+; N/A           ; None        ; -3.947 ns ; Hit_B      ; STOR_REG:inst4|Dout[1]       ; CLK      ;
+; N/A           ; None        ; -3.982 ns ; Hit_B      ; STOR_REG:inst4|Dout[2]       ; CLK      ;
+; N/A           ; None        ; -4.015 ns ; Hit_B      ; STOR_REG:inst4|Dout[3]       ; CLK      ;
+; N/A           ; None        ; -4.122 ns ; Hit_B      ; LaserTag:inst|Y.S1           ; CLK      ;
+; N/A           ; None        ; -4.122 ns ; Hit_B      ; LaserTag:inst|Y.S1~DUPLICATE ; CLK      ;
+; N/A           ; None        ; -4.132 ns ; Strike     ; STOR_REG:inst4|Dout[2]       ; CLK      ;
+; N/A           ; None        ; -4.135 ns ; COMPB[1]   ; LaserTag:inst|Y.S6           ; CLK      ;
+; N/A           ; None        ; -4.146 ns ; COMPB[3]   ; LaserTag:inst|Y.S6           ; CLK      ;
+; N/A           ; None        ; -4.181 ns ; Strike     ; COUNTER5:inst7|TEMP[4]       ; CLK      ;
+; N/A           ; None        ; -4.181 ns ; Strike     ; COUNTER5:inst7|TEMP[0]       ; CLK      ;
+; N/A           ; None        ; -4.181 ns ; Strike     ; COUNTER5:inst7|TEMP[2]       ; CLK      ;
+; N/A           ; None        ; -4.181 ns ; Strike     ; COUNTER5:inst7|TEMP[1]       ; CLK      ;
+; N/A           ; None        ; -4.181 ns ; Strike     ; COUNTER5:inst7|TEMP[3]       ; CLK      ;
+; N/A           ; None        ; -4.202 ns ; Strike     ; STOR_REG:inst4|Dout[3]       ; CLK      ;
+; N/A           ; None        ; -4.206 ns ; Hit_B      ; COUNTER5:inst7|TEMP[4]       ; CLK      ;
+; N/A           ; None        ; -4.206 ns ; Hit_B      ; COUNTER5:inst7|TEMP[0]       ; CLK      ;
+; N/A           ; None        ; -4.206 ns ; Hit_B      ; COUNTER5:inst7|TEMP[2]       ; CLK      ;
+; N/A           ; None        ; -4.206 ns ; Hit_B      ; COUNTER5:inst7|TEMP[1]       ; CLK      ;
+; N/A           ; None        ; -4.206 ns ; Hit_B      ; COUNTER5:inst7|TEMP[3]       ; CLK      ;
+; N/A           ; None        ; -4.206 ns ; Strike     ; STOR_REG:inst4|Dout[1]       ; CLK      ;
+; N/A           ; None        ; -4.286 ns ; COMPB[1]   ; LaserTag:inst|Y.S1           ; CLK      ;
+; N/A           ; None        ; -4.287 ns ; COMPB[1]   ; LaserTag:inst|Y.S1~DUPLICATE ; CLK      ;
+; N/A           ; None        ; -4.297 ns ; COMPB[3]   ; LaserTag:inst|Y.S1           ; CLK      ;
+; N/A           ; None        ; -4.298 ns ; COMPB[3]   ; LaserTag:inst|Y.S1~DUPLICATE ; CLK      ;
+; N/A           ; None        ; -4.300 ns ; Strike     ; STOR_REG:inst4|Dout[0]       ; CLK      ;
+; N/A           ; None        ; -4.393 ns ; COMPB[3]   ; COUNTER5:inst7|TEMP[4]       ; CLK      ;
+; N/A           ; None        ; -4.393 ns ; COMPB[3]   ; COUNTER5:inst7|TEMP[0]       ; CLK      ;
+; N/A           ; None        ; -4.393 ns ; COMPB[3]   ; COUNTER5:inst7|TEMP[2]       ; CLK      ;
+; N/A           ; None        ; -4.393 ns ; COMPB[3]   ; COUNTER5:inst7|TEMP[1]       ; CLK      ;
+; N/A           ; None        ; -4.393 ns ; COMPB[3]   ; COUNTER5:inst7|TEMP[3]       ; CLK      ;
+; N/A           ; None        ; -4.417 ns ; COMPB[2]   ; LaserTag:inst|Y.S6           ; CLK      ;
+; N/A           ; None        ; -4.485 ns ; COMPB[0]   ; LaserTag:inst|Y.S6           ; CLK      ;
+; N/A           ; None        ; -4.568 ns ; COMPB[2]   ; LaserTag:inst|Y.S1           ; CLK      ;
+; N/A           ; None        ; -4.569 ns ; COMPB[2]   ; LaserTag:inst|Y.S1~DUPLICATE ; CLK      ;
+; N/A           ; None        ; -4.605 ns ; COMPB[1]   ; COUNTER5:inst7|TEMP[4]       ; CLK      ;
+; N/A           ; None        ; -4.605 ns ; COMPB[1]   ; COUNTER5:inst7|TEMP[0]       ; CLK      ;
+; N/A           ; None        ; -4.605 ns ; COMPB[1]   ; COUNTER5:inst7|TEMP[2]       ; CLK      ;
+; N/A           ; None        ; -4.605 ns ; COMPB[1]   ; COUNTER5:inst7|TEMP[1]       ; CLK      ;
+; N/A           ; None        ; -4.605 ns ; COMPB[1]   ; COUNTER5:inst7|TEMP[3]       ; CLK      ;
+; N/A           ; None        ; -4.636 ns ; COMPB[0]   ; LaserTag:inst|Y.S1           ; CLK      ;
+; N/A           ; None        ; -4.637 ns ; COMPB[0]   ; LaserTag:inst|Y.S1~DUPLICATE ; CLK      ;
+; N/A           ; None        ; -4.664 ns ; COMPB[2]   ; COUNTER5:inst7|TEMP[4]       ; CLK      ;
+; N/A           ; None        ; -4.664 ns ; COMPB[2]   ; COUNTER5:inst7|TEMP[0]       ; CLK      ;
+; N/A           ; None        ; -4.664 ns ; COMPB[2]   ; COUNTER5:inst7|TEMP[2]       ; CLK      ;
+; N/A           ; None        ; -4.664 ns ; COMPB[2]   ; COUNTER5:inst7|TEMP[1]       ; CLK      ;
+; N/A           ; None        ; -4.664 ns ; COMPB[2]   ; COUNTER5:inst7|TEMP[3]       ; CLK      ;
+; N/A           ; None        ; -4.955 ns ; COMPB[0]   ; COUNTER5:inst7|TEMP[4]       ; CLK      ;
+; N/A           ; None        ; -4.955 ns ; COMPB[0]   ; COUNTER5:inst7|TEMP[0]       ; CLK      ;
+; N/A           ; None        ; -4.955 ns ; COMPB[0]   ; COUNTER5:inst7|TEMP[2]       ; CLK      ;
+; N/A           ; None        ; -4.955 ns ; COMPB[0]   ; COUNTER5:inst7|TEMP[1]       ; CLK      ;
+; N/A           ; None        ; -4.955 ns ; COMPB[0]   ; COUNTER5:inst7|TEMP[3]       ; CLK      ;
++---------------+-------------+-----------+------------+------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
+    Info: Processing started: Wed Apr 27 13:53:01 2016
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off LaserTag -c LaserTag --timing_analysis_only
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "COMPAR:inst5|EQn" is a latch
+    Warning: Node "COMPAR:inst5|LTn" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLK" is an undefined clock
+Info: Clock "CLK" has Internal fmax of 373.41 MHz between source register "STOR_REG:inst4|Dout[2]" and destination register "COUNTER5:inst7|TEMP[4]" (period= 2.678 ns)
+    Info: + Longest register to register delay is 2.483 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X27_Y2_N7; Fanout = 8; REG Node = 'STOR_REG:inst4|Dout[2]'
+        Info: 2: + IC(0.508 ns) + CELL(0.225 ns) = 0.733 ns; Loc. = LCCOMB_X29_Y2_N18; Fanout = 2; COMB Node = 'COMPAR:inst6|comb~2'
+        Info: 3: + IC(0.245 ns) + CELL(0.272 ns) = 1.250 ns; Loc. = LCCOMB_X29_Y2_N20; Fanout = 2; COMB Node = 'LaserTag:inst|Selector8~0'
+        Info: 4: + IC(0.218 ns) + CELL(0.053 ns) = 1.521 ns; Loc. = LCCOMB_X29_Y2_N24; Fanout = 5; COMB Node = 'COUNTER5:inst7|TEMP[4]~0'
+        Info: 5: + IC(0.216 ns) + CELL(0.746 ns) = 2.483 ns; Loc. = LCFF_X29_Y2_N9; Fanout = 3; REG Node = 'COUNTER5:inst7|TEMP[4]'
+        Info: Total cell delay = 1.296 ns ( 52.19 % )
+        Info: Total interconnect delay = 1.187 ns ( 47.81 % )
+    Info: - Smallest clock skew is -0.011 ns
+        Info: + Shortest clock path from clock "CLK" to destination register is 2.484 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'CLK'
+            Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 17; COMB Node = 'CLK~clkctrl'
+            Info: 3: + IC(0.669 ns) + CELL(0.618 ns) = 2.484 ns; Loc. = LCFF_X29_Y2_N9; Fanout = 3; REG Node = 'COUNTER5:inst7|TEMP[4]'
+            Info: Total cell delay = 1.472 ns ( 59.26 % )
+            Info: Total interconnect delay = 1.012 ns ( 40.74 % )
+        Info: - Longest clock path from clock "CLK" to source register is 2.495 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'CLK'
+            Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 17; COMB Node = 'CLK~clkctrl'
+            Info: 3: + IC(0.680 ns) + CELL(0.618 ns) = 2.495 ns; Loc. = LCFF_X27_Y2_N7; Fanout = 8; REG Node = 'STOR_REG:inst4|Dout[2]'
+            Info: Total cell delay = 1.472 ns ( 59.00 % )
+            Info: Total interconnect delay = 1.023 ns ( 41.00 % )
+    Info: + Micro clock to output delay of source is 0.094 ns
+    Info: + Micro setup delay of destination is 0.090 ns
+Info: tsu for register "LaserTag:inst|Y.S1" (data pin = "Hit_B", clock pin = "CLK") is 5.285 ns
+    Info: + Longest pin to register delay is 7.690 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.857 ns) = 0.857 ns; Loc. = PIN_A8; Fanout = 10; PIN Node = 'Hit_B'
+        Info: 2: + IC(4.727 ns) + CELL(0.053 ns) = 5.637 ns; Loc. = LCCOMB_X26_Y2_N6; Fanout = 7; COMB Node = 'LaserTag:inst|SUB~0'
+        Info: 3: + IC(1.035 ns) + CELL(0.346 ns) = 7.018 ns; Loc. = LCCOMB_X25_Y2_N20; Fanout = 2; COMB Node = 'LaserTag:inst|Selector1~0'
+        Info: 4: + IC(0.464 ns) + CELL(0.053 ns) = 7.535 ns; Loc. = LCCOMB_X27_Y2_N16; Fanout = 1; COMB Node = 'LaserTag:inst|Selector1~1'
+        Info: 5: + IC(0.000 ns) + CELL(0.155 ns) = 7.690 ns; Loc. = LCFF_X27_Y2_N17; Fanout = 8; REG Node = 'LaserTag:inst|Y.S1'
+        Info: Total cell delay = 1.464 ns ( 19.04 % )
+        Info: Total interconnect delay = 6.226 ns ( 80.96 % )
+    Info: + Micro setup delay of destination is 0.090 ns
+    Info: - Shortest clock path from clock "CLK" to destination register is 2.495 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 17; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(0.680 ns) + CELL(0.618 ns) = 2.495 ns; Loc. = LCFF_X27_Y2_N17; Fanout = 8; REG Node = 'LaserTag:inst|Y.S1'
+        Info: Total cell delay = 1.472 ns ( 59.00 % )
+        Info: Total interconnect delay = 1.023 ns ( 41.00 % )
+Info: tco from clock "CLK" to destination pin "StorReg_EN" through register "LaserTag:inst|Y.S3" is 8.167 ns
+    Info: + Longest clock path from clock "CLK" to source register is 2.493 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 17; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(0.678 ns) + CELL(0.618 ns) = 2.493 ns; Loc. = LCFF_X25_Y2_N1; Fanout = 8; REG Node = 'LaserTag:inst|Y.S3'
+        Info: Total cell delay = 1.472 ns ( 59.05 % )
+        Info: Total interconnect delay = 1.021 ns ( 40.95 % )
+    Info: + Micro clock to output delay of source is 0.094 ns
+    Info: + Longest register to pin delay is 5.580 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X25_Y2_N1; Fanout = 8; REG Node = 'LaserTag:inst|Y.S3'
+        Info: 2: + IC(0.528 ns) + CELL(0.053 ns) = 0.581 ns; Loc. = LCCOMB_X27_Y2_N20; Fanout = 4; COMB Node = 'LaserTag:inst|Selector7~0'
+        Info: 3: + IC(0.388 ns) + CELL(0.366 ns) = 1.335 ns; Loc. = LCCOMB_X26_Y2_N4; Fanout = 1; COMB Node = 'LaserTag:inst|Selector7~1'
+        Info: 4: + IC(2.263 ns) + CELL(1.982 ns) = 5.580 ns; Loc. = PIN_B8; Fanout = 0; PIN Node = 'StorReg_EN'
+        Info: Total cell delay = 2.401 ns ( 43.03 % )
+        Info: Total interconnect delay = 3.179 ns ( 56.97 % )
+Info: Longest tpd from source pin "Hit_B" to destination pin "StorReg_EN" is 10.895 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.857 ns) = 0.857 ns; Loc. = PIN_A8; Fanout = 10; PIN Node = 'Hit_B'
+    Info: 2: + IC(4.811 ns) + CELL(0.228 ns) = 5.896 ns; Loc. = LCCOMB_X27_Y2_N20; Fanout = 4; COMB Node = 'LaserTag:inst|Selector7~0'
+    Info: 3: + IC(0.388 ns) + CELL(0.366 ns) = 6.650 ns; Loc. = LCCOMB_X26_Y2_N4; Fanout = 1; COMB Node = 'LaserTag:inst|Selector7~1'
+    Info: 4: + IC(2.263 ns) + CELL(1.982 ns) = 10.895 ns; Loc. = PIN_B8; Fanout = 0; PIN Node = 'StorReg_EN'
+    Info: Total cell delay = 3.433 ns ( 31.51 % )
+    Info: Total interconnect delay = 7.462 ns ( 68.49 % )
+Info: th for register "STOR_REG:inst4|Dout[1]" (data pin = "RESETn", clock pin = "CLK") is -1.293 ns
+    Info: + Longest clock path from clock "CLK" to destination register is 2.495 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 17; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(0.680 ns) + CELL(0.618 ns) = 2.495 ns; Loc. = LCFF_X27_Y2_N5; Fanout = 7; REG Node = 'STOR_REG:inst4|Dout[1]'
+        Info: Total cell delay = 1.472 ns ( 59.00 % )
+        Info: Total interconnect delay = 1.023 ns ( 41.00 % )
+    Info: + Micro hold delay of destination is 0.149 ns
+    Info: - Shortest pin to register delay is 3.937 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_M21; Fanout = 4; PIN Node = 'RESETn'
+        Info: 2: + IC(2.003 ns) + CELL(0.346 ns) = 3.213 ns; Loc. = LCCOMB_X26_Y2_N30; Fanout = 5; COMB Node = 'LaserTag:inst|Selector6~0'
+        Info: 3: + IC(0.327 ns) + CELL(0.397 ns) = 3.937 ns; Loc. = LCFF_X27_Y2_N5; Fanout = 7; REG Node = 'STOR_REG:inst4|Dout[1]'
+        Info: Total cell delay = 1.607 ns ( 40.82 % )
+        Info: Total interconnect delay = 2.330 ns ( 59.18 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 206 megabytes
+    Info: Processing ended: Wed Apr 27 13:53:01 2016
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,672 @@
+Simulator report for LaserTag
+Wed Apr 27 19:13:48 2016
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.2 us       ;
+; Simulation Netlist Size     ; 442 nodes    ;
+; Simulation Coverage         ;      83.03 % ;
+; Total Number of Transitions ; 3709         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                             ;
++--------------------------------------------------------------------------------------------+-------------------+---------------+
+; Option                                                                                     ; Setting           ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------+---------------+
+; Simulation mode                                                                            ; Functional        ; Timing        ;
+; Start time                                                                                 ; 0 ns              ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF              ;               ;
+; Vector input source                                                                        ; LaserTagThree.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                ; On            ;
+; Check outputs                                                                              ; Off               ; Off           ;
+; Report simulation coverage                                                                 ; On                ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                ; On            ;
+; Display missing 1-value coverage report                                                    ; On                ; On            ;
+; Display missing 0-value coverage report                                                    ; On                ; On            ;
+; Detect setup and hold time violations                                                      ; Off               ; Off           ;
+; Detect glitches                                                                            ; Off               ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off               ; Off           ;
+; Generate Signal Activity File                                                              ; Off               ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off               ; Off           ;
+; Group bus channels in simulation results                                                   ; Off               ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE        ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off               ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off               ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto              ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      83.03 % ;
+; Total nodes checked                                 ; 442          ;
+; Total output ports checked                          ; 442          ;
+; Total output ports with complete 1/0-value coverage ; 367          ;
+; Total output ports with no 1/0-value coverage       ; 69           ;
+; Total output ports with no 1-value coverage         ; 72           ;
+; Total output ports with no 0-value coverage         ; 72           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                ;
++------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                          ; Output Port Name                                                                   ; Output Port Type ;
++------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+
+; |Block1|SUB                                                                        ; |Block1|SUB                                                                        ; pin_out          ;
+; |Block1|New_Game                                                                   ; |Block1|New_Game                                                                   ; out              ;
+; |Block1|Hit_A                                                                      ; |Block1|Hit_A                                                                      ; out              ;
+; |Block1|Hit_B                                                                      ; |Block1|Hit_B                                                                      ; out              ;
+; |Block1|Strike                                                                     ; |Block1|Strike                                                                     ; out              ;
+; |Block1|CLK                                                                        ; |Block1|CLK                                                                        ; out              ;
+; |Block1|StorReg_EN                                                                 ; |Block1|StorReg_EN                                                                 ; pin_out          ;
+; |Block1|StorReg_CLRn                                                               ; |Block1|StorReg_CLRn                                                               ; pin_out          ;
+; |Block1|CTR_LDn                                                                    ; |Block1|CTR_LDn                                                                    ; pin_out          ;
+; |Block1|CTR_ENn                                                                    ; |Block1|CTR_ENn                                                                    ; pin_out          ;
+; |Block1|CODd0                                                                      ; |Block1|CODd0                                                                      ; pin_out          ;
+; |Block1|CODd1                                                                      ; |Block1|CODd1                                                                      ; pin_out          ;
+; |Block1|CompA_EQn                                                                  ; |Block1|CompA_EQn                                                                  ; pin_out          ;
+; |Block1|CompB_GTn                                                                  ; |Block1|CompB_GTn                                                                  ; pin_out          ;
+; |Block1|CTR_TCDn                                                                   ; |Block1|CTR_TCDn                                                                   ; pin_out          ;
+; |Block1|Done_A                                                                     ; |Block1|Done_A                                                                     ; pin_out          ;
+; |Block1|Done_B                                                                     ; |Block1|Done_B                                                                     ; pin_out          ;
+; |Block1|Done_S                                                                     ; |Block1|Done_S                                                                     ; pin_out          ;
+; |Block1|Game_Over                                                                  ; |Block1|Game_Over                                                                  ; pin_out          ;
+; |Block1|SCORE[2]                                                                   ; |Block1|SCORE[2]                                                                   ; pin_out          ;
+; |Block1|SCORE[1]                                                                   ; |Block1|SCORE[1]                                                                   ; pin_out          ;
+; |Block1|SCORE[0]                                                                   ; |Block1|SCORE[0]                                                                   ; pin_out          ;
+; |Block1|TIMER[3]                                                                   ; |Block1|TIMER[3]                                                                   ; pin_out          ;
+; |Block1|TIMER[2]                                                                   ; |Block1|TIMER[2]                                                                   ; pin_out          ;
+; |Block1|TIMER[1]                                                                   ; |Block1|TIMER[1]                                                                   ; pin_out          ;
+; |Block1|TIMER[0]                                                                   ; |Block1|TIMER[0]                                                                   ; pin_out          ;
+; |Block1|COUNTER5:inst7|TEMP[0]                                                     ; |Block1|COUNTER5:inst7|TEMP[0]                                                     ; regout           ;
+; |Block1|COUNTER5:inst7|TEMP~6                                                      ; |Block1|COUNTER5:inst7|TEMP~6                                                      ; out              ;
+; |Block1|COUNTER5:inst7|TEMP~7                                                      ; |Block1|COUNTER5:inst7|TEMP~7                                                      ; out              ;
+; |Block1|COUNTER5:inst7|TEMP~8                                                      ; |Block1|COUNTER5:inst7|TEMP~8                                                      ; out              ;
+; |Block1|COUNTER5:inst7|TEMP~9                                                      ; |Block1|COUNTER5:inst7|TEMP~9                                                      ; out              ;
+; |Block1|COUNTER5:inst7|TEMP~11                                                     ; |Block1|COUNTER5:inst7|TEMP~11                                                     ; out              ;
+; |Block1|COUNTER5:inst7|TEMP~12                                                     ; |Block1|COUNTER5:inst7|TEMP~12                                                     ; out              ;
+; |Block1|COUNTER5:inst7|TEMP~13                                                     ; |Block1|COUNTER5:inst7|TEMP~13                                                     ; out              ;
+; |Block1|COUNTER5:inst7|TEMP~14                                                     ; |Block1|COUNTER5:inst7|TEMP~14                                                     ; out              ;
+; |Block1|COUNTER5:inst7|TEMP[1]                                                     ; |Block1|COUNTER5:inst7|TEMP[1]                                                     ; regout           ;
+; |Block1|COUNTER5:inst7|TEMP[2]                                                     ; |Block1|COUNTER5:inst7|TEMP[2]                                                     ; regout           ;
+; |Block1|COUNTER5:inst7|TEMP[3]                                                     ; |Block1|COUNTER5:inst7|TEMP[3]                                                     ; regout           ;
+; |Block1|COMPAR:inst6|GTn~0                                                         ; |Block1|COMPAR:inst6|GTn~0                                                         ; out              ;
+; |Block1|COMPAR:inst6|comb~0                                                        ; |Block1|COMPAR:inst6|comb~0                                                        ; out0             ;
+; |Block1|COMPAR:inst6|comb~1                                                        ; |Block1|COMPAR:inst6|comb~1                                                        ; out0             ;
+; |Block1|COMPAR:inst6|EQn~0                                                         ; |Block1|COMPAR:inst6|EQn~0                                                         ; out0             ;
+; |Block1|COMPAR:inst6|EQn~1                                                         ; |Block1|COMPAR:inst6|EQn~1                                                         ; out0             ;
+; |Block1|COMPAR:inst6|GTn                                                           ; |Block1|COMPAR:inst6|GTn                                                           ; out              ;
+; |Block1|ADD_SUB:inst3|TOTAL[3]                                                     ; |Block1|ADD_SUB:inst3|TOTAL[3]                                                     ; out              ;
+; |Block1|ADD_SUB:inst3|TOTAL[2]                                                     ; |Block1|ADD_SUB:inst3|TOTAL[2]                                                     ; out              ;
+; |Block1|ADD_SUB:inst3|TOTAL[1]                                                     ; |Block1|ADD_SUB:inst3|TOTAL[1]                                                     ; out              ;
+; |Block1|ADD_SUB:inst3|TOTAL[0]                                                     ; |Block1|ADD_SUB:inst3|TOTAL[0]                                                     ; out              ;
+; |Block1|STOR_REG:inst4|Dout~1                                                      ; |Block1|STOR_REG:inst4|Dout~1                                                      ; out              ;
+; |Block1|STOR_REG:inst4|Dout~2                                                      ; |Block1|STOR_REG:inst4|Dout~2                                                      ; out              ;
+; |Block1|STOR_REG:inst4|Dout~3                                                      ; |Block1|STOR_REG:inst4|Dout~3                                                      ; out              ;
+; |Block1|STOR_REG:inst4|Dout~5                                                      ; |Block1|STOR_REG:inst4|Dout~5                                                      ; out              ;
+; |Block1|STOR_REG:inst4|Dout~6                                                      ; |Block1|STOR_REG:inst4|Dout~6                                                      ; out              ;
+; |Block1|STOR_REG:inst4|Dout~7                                                      ; |Block1|STOR_REG:inst4|Dout~7                                                      ; out              ;
+; |Block1|STOR_REG:inst4|Dout[0]                                                     ; |Block1|STOR_REG:inst4|Dout[0]                                                     ; regout           ;
+; |Block1|STOR_REG:inst4|Dout[1]                                                     ; |Block1|STOR_REG:inst4|Dout[1]                                                     ; regout           ;
+; |Block1|STOR_REG:inst4|Dout[2]                                                     ; |Block1|STOR_REG:inst4|Dout[2]                                                     ; regout           ;
+; |Block1|COMPAR:inst5|EQn~0                                                         ; |Block1|COMPAR:inst5|EQn~0                                                         ; out0             ;
+; |Block1|COMPAR:inst5|EQn~1                                                         ; |Block1|COMPAR:inst5|EQn~1                                                         ; out0             ;
+; |Block1|COMPAR:inst5|LTn~0                                                         ; |Block1|COMPAR:inst5|LTn~0                                                         ; out              ;
+; |Block1|COMPAR:inst5|comb~2                                                        ; |Block1|COMPAR:inst5|comb~2                                                        ; out0             ;
+; |Block1|COMPAR:inst5|comb~3                                                        ; |Block1|COMPAR:inst5|comb~3                                                        ; out0             ;
+; |Block1|COMPAR:inst5|comb~5                                                        ; |Block1|COMPAR:inst5|comb~5                                                        ; out0             ;
+; |Block1|COMPAR:inst5|EQn                                                           ; |Block1|COMPAR:inst5|EQn                                                           ; out              ;
+; |Block1|LaserTag:inst|Y~0                                                          ; |Block1|LaserTag:inst|Y~0                                                          ; out              ;
+; |Block1|LaserTag:inst|Y~1                                                          ; |Block1|LaserTag:inst|Y~1                                                          ; out              ;
+; |Block1|LaserTag:inst|Y~3                                                          ; |Block1|LaserTag:inst|Y~3                                                          ; out              ;
+; |Block1|LaserTag:inst|Y~4                                                          ; |Block1|LaserTag:inst|Y~4                                                          ; out              ;
+; |Block1|LaserTag:inst|Y~5                                                          ; |Block1|LaserTag:inst|Y~5                                                          ; out              ;
+; |Block1|LaserTag:inst|Y~6                                                          ; |Block1|LaserTag:inst|Y~6                                                          ; out              ;
+; |Block1|LaserTag:inst|Y~7                                                          ; |Block1|LaserTag:inst|Y~7                                                          ; out              ;
+; |Block1|LaserTag:inst|Y~8                                                          ; |Block1|LaserTag:inst|Y~8                                                          ; out              ;
+; |Block1|LaserTag:inst|Y~10                                                         ; |Block1|LaserTag:inst|Y~10                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~11                                                         ; |Block1|LaserTag:inst|Y~11                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~12                                                         ; |Block1|LaserTag:inst|Y~12                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~13                                                         ; |Block1|LaserTag:inst|Y~13                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~14                                                         ; |Block1|LaserTag:inst|Y~14                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~15                                                         ; |Block1|LaserTag:inst|Y~15                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~17                                                         ; |Block1|LaserTag:inst|Y~17                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~18                                                         ; |Block1|LaserTag:inst|Y~18                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~19                                                         ; |Block1|LaserTag:inst|Y~19                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~20                                                         ; |Block1|LaserTag:inst|Y~20                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~22                                                         ; |Block1|LaserTag:inst|Y~22                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~24                                                         ; |Block1|LaserTag:inst|Y~24                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~25                                                         ; |Block1|LaserTag:inst|Y~25                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~26                                                         ; |Block1|LaserTag:inst|Y~26                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~27                                                         ; |Block1|LaserTag:inst|Y~27                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~29                                                         ; |Block1|LaserTag:inst|Y~29                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~30                                                         ; |Block1|LaserTag:inst|Y~30                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~31                                                         ; |Block1|LaserTag:inst|Y~31                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~32                                                         ; |Block1|LaserTag:inst|Y~32                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~33                                                         ; |Block1|LaserTag:inst|Y~33                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~34                                                         ; |Block1|LaserTag:inst|Y~34                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~35                                                         ; |Block1|LaserTag:inst|Y~35                                                         ; out              ;
+; |Block1|LaserTag:inst|Y.S0                                                         ; |Block1|LaserTag:inst|Y.S0                                                         ; regout           ;
+; |Block1|LaserTag:inst|Y.S1                                                         ; |Block1|LaserTag:inst|Y.S1                                                         ; regout           ;
+; |Block1|LaserTag:inst|Y.S3                                                         ; |Block1|LaserTag:inst|Y.S3                                                         ; regout           ;
+; |Block1|LaserTag:inst|Y.S4                                                         ; |Block1|LaserTag:inst|Y.S4                                                         ; regout           ;
+; |Block1|LaserTag:inst|Y.S5                                                         ; |Block1|LaserTag:inst|Y.S5                                                         ; regout           ;
+; |Block1|LaserTag:inst|process_1~0                                                  ; |Block1|LaserTag:inst|process_1~0                                                  ; out0             ;
+; |Block1|LaserTag:inst|SUB~0                                                        ; |Block1|LaserTag:inst|SUB~0                                                        ; out              ;
+; |Block1|LaserTag:inst|CODd1~0                                                      ; |Block1|LaserTag:inst|CODd1~0                                                      ; out              ;
+; |Block1|LaserTag:inst|CODd1~1                                                      ; |Block1|LaserTag:inst|CODd1~1                                                      ; out              ;
+; |Block1|LaserTag:inst|CTR_ENn~0                                                    ; |Block1|LaserTag:inst|CTR_ENn~0                                                    ; out              ;
+; |Block1|LaserTag:inst|CTR_ENn~1                                                    ; |Block1|LaserTag:inst|CTR_ENn~1                                                    ; out              ;
+; |Block1|LaserTag:inst|CTR_ENn~2                                                    ; |Block1|LaserTag:inst|CTR_ENn~2                                                    ; out              ;
+; |Block1|LaserTag:inst|CTR_ENn~3                                                    ; |Block1|LaserTag:inst|CTR_ENn~3                                                    ; out              ;
+; |Block1|LaserTag:inst|SUB~1                                                        ; |Block1|LaserTag:inst|SUB~1                                                        ; out0             ;
+; |Block1|LaserTag:inst|CODd1~2                                                      ; |Block1|LaserTag:inst|CODd1~2                                                      ; out0             ;
+; |Block1|LaserTag:inst|CTR_ENn                                                      ; |Block1|LaserTag:inst|CTR_ENn                                                      ; out              ;
+; |Block1|LaserTag:inst|Y.S6                                                         ; |Block1|LaserTag:inst|Y.S6                                                         ; regout           ;
+; |Block1|LaserTag:inst|Y~36                                                         ; |Block1|LaserTag:inst|Y~36                                                         ; out0             ;
+; |Block1|LaserTag:inst|Y~39                                                         ; |Block1|LaserTag:inst|Y~39                                                         ; out0             ;
+; |Block1|LaserTag:inst|Y~41                                                         ; |Block1|LaserTag:inst|Y~41                                                         ; out0             ;
+; |Block1|LaserTag:inst|Y.S2~0                                                       ; |Block1|LaserTag:inst|Y.S2~0                                                       ; out0             ;
+; |Block1|LaserTag:inst|Done_A                                                       ; |Block1|LaserTag:inst|Done_A                                                       ; out0             ;
+; |Block1|LaserTag:inst|Done_B                                                       ; |Block1|LaserTag:inst|Done_B                                                       ; out0             ;
+; |Block1|LaserTag:inst|Done_S                                                       ; |Block1|LaserTag:inst|Done_S                                                       ; out0             ;
+; |Block1|LaserTag:inst|Game_Over                                                    ; |Block1|LaserTag:inst|Game_Over                                                    ; out0             ;
+; |Block1|LaserTag:inst|Y~55                                                         ; |Block1|LaserTag:inst|Y~55                                                         ; out0             ;
+; |Block1|LaserTag:inst|Selector0~0                                                  ; |Block1|LaserTag:inst|Selector0~0                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector0~1                                                  ; |Block1|LaserTag:inst|Selector0~1                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector1~0                                                  ; |Block1|LaserTag:inst|Selector1~0                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector1~1                                                  ; |Block1|LaserTag:inst|Selector1~1                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector1~2                                                  ; |Block1|LaserTag:inst|Selector1~2                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector1~3                                                  ; |Block1|LaserTag:inst|Selector1~3                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector1~5                                                  ; |Block1|LaserTag:inst|Selector1~5                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector2~0                                                  ; |Block1|LaserTag:inst|Selector2~0                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector2~1                                                  ; |Block1|LaserTag:inst|Selector2~1                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector2~2                                                  ; |Block1|LaserTag:inst|Selector2~2                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector3~0                                                  ; |Block1|LaserTag:inst|Selector3~0                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector3~1                                                  ; |Block1|LaserTag:inst|Selector3~1                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector3~2                                                  ; |Block1|LaserTag:inst|Selector3~2                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector4~0                                                  ; |Block1|LaserTag:inst|Selector4~0                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector4~1                                                  ; |Block1|LaserTag:inst|Selector4~1                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector4~2                                                  ; |Block1|LaserTag:inst|Selector4~2                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector5~0                                                  ; |Block1|LaserTag:inst|Selector5~0                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector5~1                                                  ; |Block1|LaserTag:inst|Selector5~1                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector5~3                                                  ; |Block1|LaserTag:inst|Selector5~3                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector6~0                                                  ; |Block1|LaserTag:inst|Selector6~0                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector6~1                                                  ; |Block1|LaserTag:inst|Selector6~1                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector7~0                                                  ; |Block1|LaserTag:inst|Selector7~0                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector7~1                                                  ; |Block1|LaserTag:inst|Selector7~1                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector7~2                                                  ; |Block1|LaserTag:inst|Selector7~2                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector7~3                                                  ; |Block1|LaserTag:inst|Selector7~3                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector7~4                                                  ; |Block1|LaserTag:inst|Selector7~4                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector8~0                                                  ; |Block1|LaserTag:inst|Selector8~0                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector8~2                                                  ; |Block1|LaserTag:inst|Selector8~2                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector9~0                                                  ; |Block1|LaserTag:inst|Selector9~0                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector9~1                                                  ; |Block1|LaserTag:inst|Selector9~1                                                  ; out0             ;
+; |Block1|LaserTag:inst|Selector10~0                                                 ; |Block1|LaserTag:inst|Selector10~0                                                 ; out0             ;
+; |Block1|LaserTag:inst|Selector10~1                                                 ; |Block1|LaserTag:inst|Selector10~1                                                 ; out0             ;
+; |Block1|LaserTag:inst|Selector11~0                                                 ; |Block1|LaserTag:inst|Selector11~0                                                 ; out0             ;
+; |Block1|LaserTag:inst|Selector11~1                                                 ; |Block1|LaserTag:inst|Selector11~1                                                 ; out0             ;
+; |Block1|COMPAR:inst6|LessThan0~1                                                   ; |Block1|COMPAR:inst6|LessThan0~1                                                   ; out0             ;
+; |Block1|COMPAR:inst6|LessThan0~2                                                   ; |Block1|COMPAR:inst6|LessThan0~2                                                   ; out0             ;
+; |Block1|COMPAR:inst6|LessThan0~3                                                   ; |Block1|COMPAR:inst6|LessThan0~3                                                   ; out0             ;
+; |Block1|COMPAR:inst6|LessThan0~6                                                   ; |Block1|COMPAR:inst6|LessThan0~6                                                   ; out0             ;
+; |Block1|COMPAR:inst6|LessThan0~7                                                   ; |Block1|COMPAR:inst6|LessThan0~7                                                   ; out0             ;
+; |Block1|COMPAR:inst6|LessThan0~8                                                   ; |Block1|COMPAR:inst6|LessThan0~8                                                   ; out0             ;
+; |Block1|COMPAR:inst6|LessThan0~10                                                  ; |Block1|COMPAR:inst6|LessThan0~10                                                  ; out0             ;
+; |Block1|COMPAR:inst6|LessThan0~12                                                  ; |Block1|COMPAR:inst6|LessThan0~12                                                  ; out0             ;
+; |Block1|COMPAR:inst6|LessThan1~0                                                   ; |Block1|COMPAR:inst6|LessThan1~0                                                   ; out0             ;
+; |Block1|COMPAR:inst6|LessThan1~2                                                   ; |Block1|COMPAR:inst6|LessThan1~2                                                   ; out0             ;
+; |Block1|COMPAR:inst6|LessThan1~3                                                   ; |Block1|COMPAR:inst6|LessThan1~3                                                   ; out0             ;
+; |Block1|COMPAR:inst6|LessThan1~4                                                   ; |Block1|COMPAR:inst6|LessThan1~4                                                   ; out0             ;
+; |Block1|COMPAR:inst6|LessThan1~5                                                   ; |Block1|COMPAR:inst6|LessThan1~5                                                   ; out0             ;
+; |Block1|COMPAR:inst6|LessThan1~6                                                   ; |Block1|COMPAR:inst6|LessThan1~6                                                   ; out0             ;
+; |Block1|COMPAR:inst6|LessThan1~7                                                   ; |Block1|COMPAR:inst6|LessThan1~7                                                   ; out0             ;
+; |Block1|COMPAR:inst6|LessThan1~8                                                   ; |Block1|COMPAR:inst6|LessThan1~8                                                   ; out0             ;
+; |Block1|COMPAR:inst6|LessThan1~10                                                  ; |Block1|COMPAR:inst6|LessThan1~10                                                  ; out0             ;
+; |Block1|COMPAR:inst6|LessThan1~12                                                  ; |Block1|COMPAR:inst6|LessThan1~12                                                  ; out0             ;
+; |Block1|COMPAR:inst5|LessThan0~0                                                   ; |Block1|COMPAR:inst5|LessThan0~0                                                   ; out0             ;
+; |Block1|COMPAR:inst5|LessThan0~1                                                   ; |Block1|COMPAR:inst5|LessThan0~1                                                   ; out0             ;
+; |Block1|COMPAR:inst5|LessThan0~2                                                   ; |Block1|COMPAR:inst5|LessThan0~2                                                   ; out0             ;
+; |Block1|COMPAR:inst5|LessThan0~3                                                   ; |Block1|COMPAR:inst5|LessThan0~3                                                   ; out0             ;
+; |Block1|COMPAR:inst5|LessThan0~4                                                   ; |Block1|COMPAR:inst5|LessThan0~4                                                   ; out0             ;
+; |Block1|COMPAR:inst5|LessThan0~5                                                   ; |Block1|COMPAR:inst5|LessThan0~5                                                   ; out0             ;
+; |Block1|COMPAR:inst5|LessThan0~6                                                   ; |Block1|COMPAR:inst5|LessThan0~6                                                   ; out0             ;
+; |Block1|COMPAR:inst5|LessThan0~7                                                   ; |Block1|COMPAR:inst5|LessThan0~7                                                   ; out0             ;
+; |Block1|COMPAR:inst5|LessThan0~8                                                   ; |Block1|COMPAR:inst5|LessThan0~8                                                   ; out0             ;
+; |Block1|COMPAR:inst5|LessThan0~10                                                  ; |Block1|COMPAR:inst5|LessThan0~10                                                  ; out0             ;
+; |Block1|COMPAR:inst5|LessThan0~12                                                  ; |Block1|COMPAR:inst5|LessThan0~12                                                  ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~3                                                   ; |Block1|COMPAR:inst5|LessThan1~3                                                   ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~7                                                   ; |Block1|COMPAR:inst5|LessThan1~7                                                   ; out0             ;
+; |Block1|COUNTER5:inst7|Add1~0                                                      ; |Block1|COUNTER5:inst7|Add1~0                                                      ; out0             ;
+; |Block1|COUNTER5:inst7|Add1~1                                                      ; |Block1|COUNTER5:inst7|Add1~1                                                      ; out0             ;
+; |Block1|COUNTER5:inst7|Add1~2                                                      ; |Block1|COUNTER5:inst7|Add1~2                                                      ; out0             ;
+; |Block1|COUNTER5:inst7|Add1~3                                                      ; |Block1|COUNTER5:inst7|Add1~3                                                      ; out0             ;
+; |Block1|COUNTER5:inst7|Add1~4                                                      ; |Block1|COUNTER5:inst7|Add1~4                                                      ; out0             ;
+; |Block1|COUNTER5:inst7|Add1~5                                                      ; |Block1|COUNTER5:inst7|Add1~5                                                      ; out0             ;
+; |Block1|COUNTER5:inst7|Add1~6                                                      ; |Block1|COUNTER5:inst7|Add1~6                                                      ; out0             ;
+; |Block1|COUNTER5:inst7|Add1~8                                                      ; |Block1|COUNTER5:inst7|Add1~8                                                      ; out0             ;
+; |Block1|ADD_SUB:inst3|Add0~0                                                       ; |Block1|ADD_SUB:inst3|Add0~0                                                       ; out0             ;
+; |Block1|ADD_SUB:inst3|Add0~1                                                       ; |Block1|ADD_SUB:inst3|Add0~1                                                       ; out0             ;
+; |Block1|ADD_SUB:inst3|Add0~2                                                       ; |Block1|ADD_SUB:inst3|Add0~2                                                       ; out0             ;
+; |Block1|ADD_SUB:inst3|Add0~3                                                       ; |Block1|ADD_SUB:inst3|Add0~3                                                       ; out0             ;
+; |Block1|ADD_SUB:inst3|Add0~4                                                       ; |Block1|ADD_SUB:inst3|Add0~4                                                       ; out0             ;
+; |Block1|ADD_SUB:inst3|Add0~5                                                       ; |Block1|ADD_SUB:inst3|Add0~5                                                       ; out0             ;
+; |Block1|ADD_SUB:inst3|Add0~6                                                       ; |Block1|ADD_SUB:inst3|Add0~6                                                       ; out0             ;
+; |Block1|ADD_SUB:inst3|Add0~7                                                       ; |Block1|ADD_SUB:inst3|Add0~7                                                       ; out0             ;
+; |Block1|ADD_SUB:inst3|Add0~8                                                       ; |Block1|ADD_SUB:inst3|Add0~8                                                       ; out0             ;
+; |Block1|ADD_SUB:inst3|Add0~9                                                       ; |Block1|ADD_SUB:inst3|Add0~9                                                       ; out0             ;
+; |Block1|ADD_SUB:inst3|Add0~10                                                      ; |Block1|ADD_SUB:inst3|Add0~10                                                      ; out0             ;
+; |Block1|ADD_SUB:inst3|Add0~11                                                      ; |Block1|ADD_SUB:inst3|Add0~11                                                      ; out0             ;
+; |Block1|ADD_SUB:inst3|Add0~12                                                      ; |Block1|ADD_SUB:inst3|Add0~12                                                      ; out0             ;
+; |Block1|ADD_SUB:inst3|Add1~0                                                       ; |Block1|ADD_SUB:inst3|Add1~0                                                       ; out0             ;
+; |Block1|ADD_SUB:inst3|Add1~1                                                       ; |Block1|ADD_SUB:inst3|Add1~1                                                       ; out0             ;
+; |Block1|ADD_SUB:inst3|Add1~2                                                       ; |Block1|ADD_SUB:inst3|Add1~2                                                       ; out0             ;
+; |Block1|ADD_SUB:inst3|Add1~3                                                       ; |Block1|ADD_SUB:inst3|Add1~3                                                       ; out0             ;
+; |Block1|ADD_SUB:inst3|Add1~4                                                       ; |Block1|ADD_SUB:inst3|Add1~4                                                       ; out0             ;
+; |Block1|ADD_SUB:inst3|Add1~5                                                       ; |Block1|ADD_SUB:inst3|Add1~5                                                       ; out0             ;
+; |Block1|ADD_SUB:inst3|Add1~6                                                       ; |Block1|ADD_SUB:inst3|Add1~6                                                       ; out0             ;
+; |Block1|ADD_SUB:inst3|Add1~7                                                       ; |Block1|ADD_SUB:inst3|Add1~7                                                       ; out0             ;
+; |Block1|ADD_SUB:inst3|Add1~8                                                       ; |Block1|ADD_SUB:inst3|Add1~8                                                       ; out0             ;
+; |Block1|ADD_SUB:inst3|Add1~9                                                       ; |Block1|ADD_SUB:inst3|Add1~9                                                       ; out0             ;
+; |Block1|ADD_SUB:inst3|Add1~10                                                      ; |Block1|ADD_SUB:inst3|Add1~10                                                      ; out0             ;
+; |Block1|ADD_SUB:inst3|Add1~11                                                      ; |Block1|ADD_SUB:inst3|Add1~11                                                      ; out0             ;
+; |Block1|ADD_SUB:inst3|Add1~12                                                      ; |Block1|ADD_SUB:inst3|Add1~12                                                      ; out0             ;
+; |Block1|ADD_SUB:inst3|Add1~13                                                      ; |Block1|ADD_SUB:inst3|Add1~13                                                      ; out0             ;
+; |Block1|COMPAR:inst6|Equal0~0                                                      ; |Block1|COMPAR:inst6|Equal0~0                                                      ; out0             ;
+; |Block1|COMPAR:inst6|Equal0~1                                                      ; |Block1|COMPAR:inst6|Equal0~1                                                      ; out0             ;
+; |Block1|COMPAR:inst6|Equal0~2                                                      ; |Block1|COMPAR:inst6|Equal0~2                                                      ; out0             ;
+; |Block1|COMPAR:inst6|Equal0~4                                                      ; |Block1|COMPAR:inst6|Equal0~4                                                      ; out0             ;
+; |Block1|COMPAR:inst5|Equal0~0                                                      ; |Block1|COMPAR:inst5|Equal0~0                                                      ; out0             ;
+; |Block1|COMPAR:inst5|Equal0~1                                                      ; |Block1|COMPAR:inst5|Equal0~1                                                      ; out0             ;
+; |Block1|COMPAR:inst5|Equal0~2                                                      ; |Block1|COMPAR:inst5|Equal0~2                                                      ; out0             ;
+; |Block1|COMPAR:inst5|Equal0~4                                                      ; |Block1|COMPAR:inst5|Equal0~4                                                      ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0   ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|_~0                      ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|_~0                      ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~1   ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~1   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|l1_w0_n0_mux_dataout     ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|l1_w0_n0_mux_dataout     ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0   ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|_~1                      ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|_~1                      ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|l1_w0_n1_mux_dataout     ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|l1_w0_n1_mux_dataout     ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~0   ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~0   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|_~2                      ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|_~2                      ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~1   ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~1   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|l2_w0_n0_mux_dataout     ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|l2_w0_n0_mux_dataout     ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|_~0                      ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|_~0                      ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~1   ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~1   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout     ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout     ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|_~1                      ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|_~1                      ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|_~2                      ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|_~2                      ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~1   ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~1   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout     ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout     ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n0_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n0_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~0                     ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~0                     ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n0_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n0_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n10_mux_dataout~0 ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n10_mux_dataout~0 ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~1                     ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~1                     ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n10_mux_dataout~1 ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n10_mux_dataout~1 ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n10_mux_dataout   ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n10_mux_dataout   ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n11_mux_dataout~0 ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n11_mux_dataout~0 ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~2                     ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~2                     ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n11_mux_dataout~1 ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n11_mux_dataout~1 ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n11_mux_dataout   ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n11_mux_dataout   ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n12_mux_dataout~0 ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n12_mux_dataout~0 ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~3                     ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~3                     ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n12_mux_dataout~1 ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n12_mux_dataout~1 ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n12_mux_dataout   ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n12_mux_dataout   ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n13_mux_dataout~0 ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n13_mux_dataout~0 ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~4                     ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~4                     ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n13_mux_dataout~1 ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n13_mux_dataout~1 ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n13_mux_dataout   ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n13_mux_dataout   ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n14_mux_dataout~0 ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n14_mux_dataout~0 ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~5                     ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~5                     ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n14_mux_dataout~1 ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n14_mux_dataout~1 ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n14_mux_dataout   ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n14_mux_dataout   ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n15_mux_dataout~0 ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n15_mux_dataout~0 ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~6                     ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~6                     ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n15_mux_dataout~1 ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n15_mux_dataout~1 ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n15_mux_dataout   ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n15_mux_dataout   ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n1_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n1_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~7                     ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~7                     ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n1_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n1_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n1_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n1_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n2_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n2_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~8                     ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~8                     ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n2_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n2_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n2_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n2_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n3_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n3_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~9                     ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~9                     ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n3_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n3_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n3_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n3_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n4_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n4_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~10                    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~10                    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n4_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n4_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n4_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n4_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n5_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n5_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~11                    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~11                    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n5_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n5_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n5_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n5_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n6_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n6_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~12                    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~12                    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n6_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n6_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n6_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n6_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n7_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n7_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~13                    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~13                    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n7_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n7_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n7_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n7_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n8_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n8_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~14                    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~14                    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n8_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n8_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n8_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n8_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n9_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n9_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~15                    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~15                    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n9_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n9_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n9_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n9_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n0_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n0_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~16                    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~16                    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n0_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n0_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n0_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n0_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n1_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n1_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~17                    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~17                    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n1_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n1_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n1_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n1_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n2_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n2_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~18                    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~18                    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n2_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n2_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n2_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n2_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n3_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n3_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~19                    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~19                    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n3_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n3_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n3_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n3_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n4_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n4_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~20                    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~20                    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n4_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n4_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n4_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n4_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n5_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n5_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~21                    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~21                    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n5_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n5_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n5_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n5_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n6_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n6_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~22                    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~22                    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n6_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n6_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n6_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n6_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n7_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n7_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~23                    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~23                    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n7_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n7_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n7_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l2_w0_n7_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n0_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n0_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~24                    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~24                    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n0_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n0_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n0_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n0_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n1_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n1_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~25                    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~25                    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n1_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n1_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n1_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n1_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n2_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n2_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~26                    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~26                    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n2_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n2_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n2_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n2_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n3_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n3_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~27                    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~27                    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n3_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n3_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n3_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l3_w0_n3_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l4_w0_n0_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l4_w0_n0_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~28                    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~28                    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l4_w0_n0_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l4_w0_n0_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l4_w0_n0_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l4_w0_n0_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l4_w0_n1_mux_dataout~0  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l4_w0_n1_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~29                    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~29                    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l4_w0_n1_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l4_w0_n1_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l4_w0_n1_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l4_w0_n1_mux_dataout    ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l5_w0_n0_mux_dataout~1  ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l5_w0_n0_mux_dataout~1  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l5_w0_n0_mux_dataout    ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l5_w0_n0_mux_dataout    ; out0             ;
++------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                 ;
++-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+------------------+
+; Node Name                                                                         ; Output Port Name                                                                  ; Output Port Type ;
++-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+------------------+
+; |Block1|COMPA[3]                                                                  ; |Block1|COMPA[3]                                                                  ; out              ;
+; |Block1|COMPA[2]                                                                  ; |Block1|COMPA[2]                                                                  ; out              ;
+; |Block1|COMPA[1]                                                                  ; |Block1|COMPA[1]                                                                  ; out              ;
+; |Block1|COMPA[0]                                                                  ; |Block1|COMPA[0]                                                                  ; out              ;
+; |Block1|COMPB[3]                                                                  ; |Block1|COMPB[3]                                                                  ; out              ;
+; |Block1|COMPB[2]                                                                  ; |Block1|COMPB[2]                                                                  ; out              ;
+; |Block1|COMPB[1]                                                                  ; |Block1|COMPB[1]                                                                  ; out              ;
+; |Block1|COMPB[0]                                                                  ; |Block1|COMPB[0]                                                                  ; out              ;
+; |Block1|TimerIN[4]                                                                ; |Block1|TimerIN[4]                                                                ; out              ;
+; |Block1|TimerIN[3]                                                                ; |Block1|TimerIN[3]                                                                ; out              ;
+; |Block1|TimerIN[2]                                                                ; |Block1|TimerIN[2]                                                                ; out              ;
+; |Block1|TimerIN[1]                                                                ; |Block1|TimerIN[1]                                                                ; out              ;
+; |Block1|TimerIN[0]                                                                ; |Block1|TimerIN[0]                                                                ; out              ;
+; |Block1|CTR_UP                                                                    ; |Block1|CTR_UP                                                                    ; pin_out          ;
+; |Block1|CompA_LTn                                                                 ; |Block1|CompA_LTn                                                                 ; pin_out          ;
+; |Block1|SCORE[3]                                                                  ; |Block1|SCORE[3]                                                                  ; pin_out          ;
+; |Block1|TIMER[4]                                                                  ; |Block1|TIMER[4]                                                                  ; pin_out          ;
+; |Block1|COUNTER5:inst7|TEMP~5                                                     ; |Block1|COUNTER5:inst7|TEMP~5                                                     ; out              ;
+; |Block1|COUNTER5:inst7|TEMP~10                                                    ; |Block1|COUNTER5:inst7|TEMP~10                                                    ; out              ;
+; |Block1|COUNTER5:inst7|TEMP[4]                                                    ; |Block1|COUNTER5:inst7|TEMP[4]                                                    ; regout           ;
+; |Block1|STOR_REG:inst4|Dout~0                                                     ; |Block1|STOR_REG:inst4|Dout~0                                                     ; out              ;
+; |Block1|STOR_REG:inst4|Dout~4                                                     ; |Block1|STOR_REG:inst4|Dout~4                                                     ; out              ;
+; |Block1|STOR_REG:inst4|Dout[3]                                                    ; |Block1|STOR_REG:inst4|Dout[3]                                                    ; regout           ;
+; |Block1|COMPAR:inst5|comb~4                                                       ; |Block1|COMPAR:inst5|comb~4                                                       ; out0             ;
+; |Block1|COMPAR:inst5|LTn                                                          ; |Block1|COMPAR:inst5|LTn                                                          ; out              ;
+; |Block1|LaserTag:inst|Y~2                                                         ; |Block1|LaserTag:inst|Y~2                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~9                                                         ; |Block1|LaserTag:inst|Y~9                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~16                                                        ; |Block1|LaserTag:inst|Y~16                                                        ; out              ;
+; |Block1|LaserTag:inst|Y~21                                                        ; |Block1|LaserTag:inst|Y~21                                                        ; out              ;
+; |Block1|LaserTag:inst|Y~23                                                        ; |Block1|LaserTag:inst|Y~23                                                        ; out              ;
+; |Block1|LaserTag:inst|Y~28                                                        ; |Block1|LaserTag:inst|Y~28                                                        ; out              ;
+; |Block1|LaserTag:inst|Y.S2                                                        ; |Block1|LaserTag:inst|Y.S2                                                        ; regout           ;
+; |Block1|LaserTag:inst|Y~37                                                        ; |Block1|LaserTag:inst|Y~37                                                        ; out0             ;
+; |Block1|LaserTag:inst|Y~43                                                        ; |Block1|LaserTag:inst|Y~43                                                        ; out0             ;
+; |Block1|LaserTag:inst|Y~59                                                        ; |Block1|LaserTag:inst|Y~59                                                        ; out0             ;
+; |Block1|LaserTag:inst|Selector0~2                                                 ; |Block1|LaserTag:inst|Selector0~2                                                 ; out0             ;
+; |Block1|LaserTag:inst|Selector1~4                                                 ; |Block1|LaserTag:inst|Selector1~4                                                 ; out0             ;
+; |Block1|LaserTag:inst|Selector5~2                                                 ; |Block1|LaserTag:inst|Selector5~2                                                 ; out0             ;
+; |Block1|LaserTag:inst|Selector8~1                                                 ; |Block1|LaserTag:inst|Selector8~1                                                 ; out0             ;
+; |Block1|COMPAR:inst6|LessThan0~0                                                  ; |Block1|COMPAR:inst6|LessThan0~0                                                  ; out0             ;
+; |Block1|COMPAR:inst6|LessThan0~4                                                  ; |Block1|COMPAR:inst6|LessThan0~4                                                  ; out0             ;
+; |Block1|COMPAR:inst6|LessThan0~5                                                  ; |Block1|COMPAR:inst6|LessThan0~5                                                  ; out0             ;
+; |Block1|COMPAR:inst6|LessThan0~9                                                  ; |Block1|COMPAR:inst6|LessThan0~9                                                  ; out0             ;
+; |Block1|COMPAR:inst6|LessThan0~11                                                 ; |Block1|COMPAR:inst6|LessThan0~11                                                 ; out0             ;
+; |Block1|COMPAR:inst6|LessThan1~1                                                  ; |Block1|COMPAR:inst6|LessThan1~1                                                  ; out0             ;
+; |Block1|COMPAR:inst6|LessThan1~9                                                  ; |Block1|COMPAR:inst6|LessThan1~9                                                  ; out0             ;
+; |Block1|COMPAR:inst6|LessThan1~11                                                 ; |Block1|COMPAR:inst6|LessThan1~11                                                 ; out0             ;
+; |Block1|COMPAR:inst5|LessThan0~9                                                  ; |Block1|COMPAR:inst5|LessThan0~9                                                  ; out0             ;
+; |Block1|COMPAR:inst5|LessThan0~11                                                 ; |Block1|COMPAR:inst5|LessThan0~11                                                 ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~0                                                  ; |Block1|COMPAR:inst5|LessThan1~0                                                  ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~1                                                  ; |Block1|COMPAR:inst5|LessThan1~1                                                  ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~2                                                  ; |Block1|COMPAR:inst5|LessThan1~2                                                  ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~4                                                  ; |Block1|COMPAR:inst5|LessThan1~4                                                  ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~5                                                  ; |Block1|COMPAR:inst5|LessThan1~5                                                  ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~6                                                  ; |Block1|COMPAR:inst5|LessThan1~6                                                  ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~8                                                  ; |Block1|COMPAR:inst5|LessThan1~8                                                  ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~9                                                  ; |Block1|COMPAR:inst5|LessThan1~9                                                  ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~10                                                 ; |Block1|COMPAR:inst5|LessThan1~10                                                 ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~11                                                 ; |Block1|COMPAR:inst5|LessThan1~11                                                 ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~12                                                 ; |Block1|COMPAR:inst5|LessThan1~12                                                 ; out0             ;
+; |Block1|COUNTER5:inst7|Add1~9                                                     ; |Block1|COUNTER5:inst7|Add1~9                                                     ; out0             ;
+; |Block1|COMPAR:inst6|Equal0~3                                                     ; |Block1|COMPAR:inst6|Equal0~3                                                     ; out0             ;
+; |Block1|COMPAR:inst5|Equal0~3                                                     ; |Block1|COMPAR:inst5|Equal0~3                                                     ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~1  ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~1  ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0  ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0  ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0  ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0  ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~1  ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~1  ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout    ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~0  ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n0_mux_dataout~1 ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l5_w0_n0_mux_dataout~0 ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l5_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~30                   ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~30                   ; out0             ;
++-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                 ;
++-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+------------------+
+; Node Name                                                                         ; Output Port Name                                                                  ; Output Port Type ;
++-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+------------------+
+; |Block1|RESETn                                                                    ; |Block1|RESETn                                                                    ; out              ;
+; |Block1|COMPA[3]                                                                  ; |Block1|COMPA[3]                                                                  ; out              ;
+; |Block1|COMPA[2]                                                                  ; |Block1|COMPA[2]                                                                  ; out              ;
+; |Block1|COMPA[1]                                                                  ; |Block1|COMPA[1]                                                                  ; out              ;
+; |Block1|COMPA[0]                                                                  ; |Block1|COMPA[0]                                                                  ; out              ;
+; |Block1|COMPB[3]                                                                  ; |Block1|COMPB[3]                                                                  ; out              ;
+; |Block1|COMPB[2]                                                                  ; |Block1|COMPB[2]                                                                  ; out              ;
+; |Block1|COMPB[1]                                                                  ; |Block1|COMPB[1]                                                                  ; out              ;
+; |Block1|COMPB[0]                                                                  ; |Block1|COMPB[0]                                                                  ; out              ;
+; |Block1|TimerIN[4]                                                                ; |Block1|TimerIN[4]                                                                ; out              ;
+; |Block1|TimerIN[3]                                                                ; |Block1|TimerIN[3]                                                                ; out              ;
+; |Block1|TimerIN[2]                                                                ; |Block1|TimerIN[2]                                                                ; out              ;
+; |Block1|TimerIN[1]                                                                ; |Block1|TimerIN[1]                                                                ; out              ;
+; |Block1|TimerIN[0]                                                                ; |Block1|TimerIN[0]                                                                ; out              ;
+; |Block1|CTR_UP                                                                    ; |Block1|CTR_UP                                                                    ; pin_out          ;
+; |Block1|CompA_LTn                                                                 ; |Block1|CompA_LTn                                                                 ; pin_out          ;
+; |Block1|SCORE[3]                                                                  ; |Block1|SCORE[3]                                                                  ; pin_out          ;
+; |Block1|TIMER[4]                                                                  ; |Block1|TIMER[4]                                                                  ; pin_out          ;
+; |Block1|COUNTER5:inst7|TEMP~5                                                     ; |Block1|COUNTER5:inst7|TEMP~5                                                     ; out              ;
+; |Block1|COUNTER5:inst7|TEMP~10                                                    ; |Block1|COUNTER5:inst7|TEMP~10                                                    ; out              ;
+; |Block1|COUNTER5:inst7|TEMP[4]                                                    ; |Block1|COUNTER5:inst7|TEMP[4]                                                    ; regout           ;
+; |Block1|STOR_REG:inst4|Dout~0                                                     ; |Block1|STOR_REG:inst4|Dout~0                                                     ; out              ;
+; |Block1|STOR_REG:inst4|Dout~4                                                     ; |Block1|STOR_REG:inst4|Dout~4                                                     ; out              ;
+; |Block1|STOR_REG:inst4|Dout[3]                                                    ; |Block1|STOR_REG:inst4|Dout[3]                                                    ; regout           ;
+; |Block1|COMPAR:inst5|comb~4                                                       ; |Block1|COMPAR:inst5|comb~4                                                       ; out0             ;
+; |Block1|COMPAR:inst5|LTn                                                          ; |Block1|COMPAR:inst5|LTn                                                          ; out              ;
+; |Block1|LaserTag:inst|Y~2                                                         ; |Block1|LaserTag:inst|Y~2                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~9                                                         ; |Block1|LaserTag:inst|Y~9                                                         ; out              ;
+; |Block1|LaserTag:inst|Y~16                                                        ; |Block1|LaserTag:inst|Y~16                                                        ; out              ;
+; |Block1|LaserTag:inst|Y~21                                                        ; |Block1|LaserTag:inst|Y~21                                                        ; out              ;
+; |Block1|LaserTag:inst|Y~23                                                        ; |Block1|LaserTag:inst|Y~23                                                        ; out              ;
+; |Block1|LaserTag:inst|Y~28                                                        ; |Block1|LaserTag:inst|Y~28                                                        ; out              ;
+; |Block1|LaserTag:inst|Y.S2                                                        ; |Block1|LaserTag:inst|Y.S2                                                        ; regout           ;
+; |Block1|LaserTag:inst|Y~43                                                        ; |Block1|LaserTag:inst|Y~43                                                        ; out0             ;
+; |Block1|LaserTag:inst|Selector0~2                                                 ; |Block1|LaserTag:inst|Selector0~2                                                 ; out0             ;
+; |Block1|LaserTag:inst|Selector1~4                                                 ; |Block1|LaserTag:inst|Selector1~4                                                 ; out0             ;
+; |Block1|LaserTag:inst|Selector5~2                                                 ; |Block1|LaserTag:inst|Selector5~2                                                 ; out0             ;
+; |Block1|LaserTag:inst|Selector6~2                                                 ; |Block1|LaserTag:inst|Selector6~2                                                 ; out0             ;
+; |Block1|LaserTag:inst|Selector8~1                                                 ; |Block1|LaserTag:inst|Selector8~1                                                 ; out0             ;
+; |Block1|COMPAR:inst6|LessThan0~0                                                  ; |Block1|COMPAR:inst6|LessThan0~0                                                  ; out0             ;
+; |Block1|COMPAR:inst6|LessThan0~4                                                  ; |Block1|COMPAR:inst6|LessThan0~4                                                  ; out0             ;
+; |Block1|COMPAR:inst6|LessThan0~5                                                  ; |Block1|COMPAR:inst6|LessThan0~5                                                  ; out0             ;
+; |Block1|COMPAR:inst6|LessThan0~9                                                  ; |Block1|COMPAR:inst6|LessThan0~9                                                  ; out0             ;
+; |Block1|COMPAR:inst6|LessThan0~11                                                 ; |Block1|COMPAR:inst6|LessThan0~11                                                 ; out0             ;
+; |Block1|COMPAR:inst6|LessThan1~1                                                  ; |Block1|COMPAR:inst6|LessThan1~1                                                  ; out0             ;
+; |Block1|COMPAR:inst6|LessThan1~9                                                  ; |Block1|COMPAR:inst6|LessThan1~9                                                  ; out0             ;
+; |Block1|COMPAR:inst6|LessThan1~11                                                 ; |Block1|COMPAR:inst6|LessThan1~11                                                 ; out0             ;
+; |Block1|COMPAR:inst5|LessThan0~9                                                  ; |Block1|COMPAR:inst5|LessThan0~9                                                  ; out0             ;
+; |Block1|COMPAR:inst5|LessThan0~11                                                 ; |Block1|COMPAR:inst5|LessThan0~11                                                 ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~0                                                  ; |Block1|COMPAR:inst5|LessThan1~0                                                  ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~1                                                  ; |Block1|COMPAR:inst5|LessThan1~1                                                  ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~2                                                  ; |Block1|COMPAR:inst5|LessThan1~2                                                  ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~4                                                  ; |Block1|COMPAR:inst5|LessThan1~4                                                  ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~5                                                  ; |Block1|COMPAR:inst5|LessThan1~5                                                  ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~6                                                  ; |Block1|COMPAR:inst5|LessThan1~6                                                  ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~8                                                  ; |Block1|COMPAR:inst5|LessThan1~8                                                  ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~9                                                  ; |Block1|COMPAR:inst5|LessThan1~9                                                  ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~10                                                 ; |Block1|COMPAR:inst5|LessThan1~10                                                 ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~11                                                 ; |Block1|COMPAR:inst5|LessThan1~11                                                 ; out0             ;
+; |Block1|COMPAR:inst5|LessThan1~12                                                 ; |Block1|COMPAR:inst5|LessThan1~12                                                 ; out0             ;
+; |Block1|COUNTER5:inst7|Add1~7                                                     ; |Block1|COUNTER5:inst7|Add1~7                                                     ; out0             ;
+; |Block1|COMPAR:inst6|Equal0~3                                                     ; |Block1|COMPAR:inst6|Equal0~3                                                     ; out0             ;
+; |Block1|COMPAR:inst5|Equal0~3                                                     ; |Block1|COMPAR:inst5|Equal0~3                                                     ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~1  ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~1  ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0  ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0  ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0  ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0  ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~1  ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~1  ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout    ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~0  ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~0  ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n0_mux_dataout~1 ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l1_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l5_w0_n0_mux_dataout~0 ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|l5_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~30                   ; |Block1|COUNTER5:inst7|lpm_mux:Mux0|mux_kpc:auto_generated|_~30                   ; out0             ;
++-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
+    Info: Processing started: Wed Apr 27 19:13:47 2016
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off LaserTag -c LaserTag
+Info: Using vector source file "C:/Users/Tyler/Documents/CEEN 3130/LaserTag/LaserTagThree.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      83.03 %
+Info: Number of transitions in simulation is 3709
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 169 megabytes
+    Info: Processing ended: Wed Apr 27 19:13:48 2016
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

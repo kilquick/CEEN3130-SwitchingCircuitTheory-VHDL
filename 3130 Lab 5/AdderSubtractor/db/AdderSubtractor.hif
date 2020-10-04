@@ -1,0 +1,196 @@
+Quartus II
+Version 9.1 Build 222 10/21/2009 SJ Web Edition
+11
+3500
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+adder
+# storage
+db|AdderSubtractor.(3).cnf
+db|AdderSubtractor.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+adder.vhd
+62cba35b53e8d77668839a4c90c9229a
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+AdderSubtractor:inst|adder:stage0
+AdderSubtractor:inst|adder:stage1
+AdderSubtractor:inst|adder:stage2
+AdderSubtractor:inst|adder:stage3
+}
+# lmf
+|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Schematic
+# storage
+db|AdderSubtractor.(0).cnf
+db|AdderSubtractor.(0).cnf
+# case_insensitive
+# source_file
+schematic.bdf
+9a8c14c5d4d198a4a8b7f347c7bd36a
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+AdderSubtractor
+# storage
+db|AdderSubtractor.(1).cnf
+db|AdderSubtractor.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+addersubtractor.vhd
+c554894721ac8aa45e7ca61c41f63f18
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+adder.vhd
+62cba35b53e8d77668839a4c90c9229a
+}
+# hierarchies {
+AdderSubtractor:inst
+}
+# lmf
+|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+XORGate
+# storage
+db|AdderSubtractor.(2).cnf
+db|AdderSubtractor.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+addersubtractor.vhd
+c554894721ac8aa45e7ca61c41f63f18
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+adder.vhd
+62cba35b53e8d77668839a4c90c9229a
+}
+# hierarchies {
+AdderSubtractor:inst|XORGate:gate0
+AdderSubtractor:inst|XORGate:gate1
+AdderSubtractor:inst|XORGate:gate2
+AdderSubtractor:inst|XORGate:gate3
+}
+# lmf
+|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+flipflop
+# storage
+db|AdderSubtractor.(5).cnf
+db|AdderSubtractor.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+addersubtractor.vhd
+c554894721ac8aa45e7ca61c41f63f18
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+adder.vhd
+62cba35b53e8d77668839a4c90c9229a
+}
+# hierarchies {
+AdderSubtractor:inst|flipflop:ff0
+AdderSubtractor:inst|flipflop:ff1
+AdderSubtractor:inst|flipflop:ff2
+AdderSubtractor:inst|flipflop:ff3
+}
+# lmf
+|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+

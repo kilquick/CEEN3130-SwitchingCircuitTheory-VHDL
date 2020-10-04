@@ -1,0 +1,134 @@
+|Schematic
+Co <= AdderSubtractor:inst.Co3
+B3 => AdderSubtractor:inst.B3
+B2 => AdderSubtractor:inst.B2
+B1 => AdderSubtractor:inst.B1
+B0 => AdderSubtractor:inst.B0
+~ADD/SUB => AdderSubtractor:inst.Ci0
+~ADD/SUB => AdderSubtractor:inst.SUB
+Clk => AdderSubtractor:inst.CLK
+S0 <= AdderSubtractor:inst.S0
+S1 <= AdderSubtractor:inst.S1
+S2 <= AdderSubtractor:inst.S2
+S3 <= AdderSubtractor:inst.S3
+
+
+|Schematic|AdderSubtractor:inst
+B3 => XORGate:gate3.X
+B2 => XORGate:gate2.X
+B1 => XORGate:gate1.X
+B0 => XORGate:gate0.X
+Ci0 => adder:stage0.Cin
+Ci1 => adder:stage1.Cin
+Ci2 => adder:stage2.Cin
+Ci3 => adder:stage3.Cin
+SUB => XORGate:gate0.Y
+SUB => XORGate:gate1.Y
+SUB => XORGate:gate2.Y
+SUB => XORGate:gate3.Y
+CLK => flipflop:ff0.Clk
+CLK => flipflop:ff1.Clk
+CLK => flipflop:ff2.Clk
+CLK => flipflop:ff3.Clk
+S3 <= flipflop:ff3.Q
+S2 <= flipflop:ff2.Q
+S1 <= flipflop:ff1.Q
+S0 <= flipflop:ff0.Q
+Co3 <= adder:stage3.Cout
+Co2 <= adder:stage2.Cout
+Co1 <= adder:stage1.Cout
+Co0 <= adder:stage0.Cout
+
+
+|Schematic|AdderSubtractor:inst|XORGate:gate0
+X => F.IN0
+Y => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Schematic|AdderSubtractor:inst|XORGate:gate1
+X => F.IN0
+Y => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Schematic|AdderSubtractor:inst|XORGate:gate2
+X => F.IN0
+Y => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Schematic|AdderSubtractor:inst|XORGate:gate3
+X => F.IN0
+Y => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Schematic|AdderSubtractor:inst|adder:stage0
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Schematic|AdderSubtractor:inst|adder:stage1
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Schematic|AdderSubtractor:inst|adder:stage2
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Schematic|AdderSubtractor:inst|adder:stage3
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Schematic|AdderSubtractor:inst|flipflop:ff0
+D => Q~reg0.DATAIN
+Clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Schematic|AdderSubtractor:inst|flipflop:ff1
+D => Q~reg0.DATAIN
+Clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Schematic|AdderSubtractor:inst|flipflop:ff2
+D => Q~reg0.DATAIN
+Clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Schematic|AdderSubtractor:inst|flipflop:ff3
+D => Q~reg0.DATAIN
+Clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

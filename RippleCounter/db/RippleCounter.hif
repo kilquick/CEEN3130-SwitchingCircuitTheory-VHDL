@@ -1,0 +1,63 @@
+Quartus II
+Version 9.1 Build 222 10/21/2009 SJ Web Edition
+33
+1894
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+74138
+# storage
+db|RippleCounter.(1).cnf
+db|RippleCounter.(1).cnf
+# case_insensitive
+# source_file
+|altera|91|quartus|libraries|others|maxplus2|74138.bdf
+32dc8fd1db23180dae8214abe35379
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+74138:inst11
+}
+# macro_sequence
+
+# end
+# entity
+RippleCounter
+# storage
+db|RippleCounter.(0).cnf
+db|RippleCounter.(0).cnf
+# case_insensitive
+# source_file
+ripplecounter.bdf
+c05e9575b2429f1bf587c8b785f1330
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

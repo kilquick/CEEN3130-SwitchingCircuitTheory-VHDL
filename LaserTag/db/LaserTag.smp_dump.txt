@@ -1,0 +1,10 @@
+
+State Machine - |Block1|LaserTag:inst|Y
+Name Y.S6 Y.S5 Y.S4 Y.S3 Y.S2 Y.S1 Y.S0 
+Y.S0 0 0 0 0 0 0 0 
+Y.S1 0 0 0 0 0 1 1 
+Y.S2 0 0 0 0 1 0 1 
+Y.S3 0 0 0 1 0 0 1 
+Y.S4 0 0 1 0 0 0 1 
+Y.S5 0 1 0 0 0 0 1 
+Y.S6 1 0 0 0 0 0 1 

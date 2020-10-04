@@ -1,0 +1,7 @@
+|Mealy110
+Clock => ~NO_FANOUT~
+Resetn => ~NO_FANOUT~
+w => ~NO_FANOUT~
+z <= <GND>
+
+

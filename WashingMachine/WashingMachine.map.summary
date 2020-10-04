@@ -1,0 +1,15 @@
+Analysis & Synthesis Status : Successful - Thu Mar 31 22:27:31 2016
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Web Edition
+Revision Name : WashingMachine
+Top-level Entity Name : WashingMachineSchematic
+Family : Stratix II
+Logic utilization : N/A
+    Combinational ALUTs : 16
+    Dedicated logic registers : 9
+Total registers : 9
+Total pins : 20
+Total virtual pins : 0
+Total block memory bits : 0
+DSP block 9-bit elements : 0
+Total PLLs : 0
+Total DLLs : 0

@@ -1,0 +1,169 @@
+ispLEVER 6.1.00.37.42.06 Linked Equations File
+Copyright(C), 1992-2006, Lattice Semiconductor Corp.
+All Rights Reserved.
+
+Design addersubtractor created Mon Feb 15 17:02:19 2016
+
+
+ P-Terms   Fan-in  Fan-out  Type  Name (attributes)
+---------  ------  -------  ----  -----------------
+   5/5        4        1    Pin   Co3 
+   5/5        4        1    Pin   Co2 
+   5/5        4        1    Pin   Co1 
+   5/5        4        1    Pin   Co0 
+   8/8        4        1    Pin   S3.D 
+   1/1        1        1    Pin   S3.C 
+   8/8        4        1    Pin   S2.D 
+   1/1        1        1    Pin   S2.C 
+   8/8        4        1    Pin   S1.D 
+   1/1        1        1    Pin   S1.C 
+   8/8        4        1    Pin   S0.D 
+   1/1        1        1    Pin   S0.C 
+=========
+  56/56         Best P-Term Total: 56
+                       Total Pins: 18
+                      Total Nodes: 0
+            Average P-Term/Output: 6
+
+
+Equations:
+
+Co3 = (Ci3 & S3.Q
+     # !B3 & Ci3 & SUB
+     # B3 & Ci3 & !SUB
+     # !B3 & SUB & S3.Q
+     # B3 & !SUB & S3.Q);
+
+Co2 = (Ci2 & S2.Q
+     # !B2 & Ci2 & SUB
+     # B2 & Ci2 & !SUB
+     # !B2 & SUB & S2.Q
+     # B2 & !SUB & S2.Q);
+
+Co1 = (Ci1 & S1.Q
+     # !B1 & Ci1 & SUB
+     # B1 & Ci1 & !SUB
+     # !B1 & SUB & S1.Q
+     # B1 & !SUB & S1.Q);
+
+Co0 = (Ci0 & S0.Q
+     # !B0 & Ci0 & SUB
+     # B0 & Ci0 & !SUB
+     # !B0 & SUB & S0.Q
+     # B0 & !SUB & S0.Q);
+
+S3.D = (!B3 & Ci3 & SUB & S3.Q
+     # B3 & !Ci3 & SUB & S3.Q
+     # B3 & Ci3 & !SUB & S3.Q
+     # !B3 & !Ci3 & !SUB & S3.Q
+     # B3 & Ci3 & SUB & !S3.Q
+     # !B3 & !Ci3 & SUB & !S3.Q
+     # !B3 & Ci3 & !SUB & !S3.Q
+     # B3 & !Ci3 & !SUB & !S3.Q);
+
+S3.C = (CLK);
+
+S2.D = (!B2 & Ci2 & SUB & S2.Q
+     # B2 & !Ci2 & SUB & S2.Q
+     # B2 & Ci2 & !SUB & S2.Q
+     # !B2 & !Ci2 & !SUB & S2.Q
+     # B2 & Ci2 & SUB & !S2.Q
+     # !B2 & !Ci2 & SUB & !S2.Q
+     # !B2 & Ci2 & !SUB & !S2.Q
+     # B2 & !Ci2 & !SUB & !S2.Q);
+
+S2.C = (CLK);
+
+S1.D = (!B1 & Ci1 & SUB & S1.Q
+     # B1 & !Ci1 & SUB & S1.Q
+     # B1 & Ci1 & !SUB & S1.Q
+     # !B1 & !Ci1 & !SUB & S1.Q
+     # B1 & Ci1 & SUB & !S1.Q
+     # !B1 & !Ci1 & SUB & !S1.Q
+     # !B1 & Ci1 & !SUB & !S1.Q
+     # B1 & !Ci1 & !SUB & !S1.Q);
+
+S1.C = (CLK);
+
+S0.D = (!B0 & Ci0 & SUB & S0.Q
+     # B0 & !Ci0 & SUB & S0.Q
+     # B0 & Ci0 & !SUB & S0.Q
+     # !B0 & !Ci0 & !SUB & S0.Q
+     # B0 & Ci0 & SUB & !S0.Q
+     # !B0 & !Ci0 & SUB & !S0.Q
+     # !B0 & Ci0 & !SUB & !S0.Q
+     # B0 & !Ci0 & !SUB & !S0.Q);
+
+S0.C = (CLK);
+
+
+Reverse-Polarity Equations:
+
+!Co3 = (!Ci3 & !S3.Q
+     # B3 & !Ci3 & SUB
+     # !B3 & !Ci3 & !SUB
+     # B3 & SUB & !S3.Q
+     # !B3 & !SUB & !S3.Q);
+
+!Co2 = (!Ci2 & !S2.Q
+     # B2 & !Ci2 & SUB
+     # !B2 & !Ci2 & !SUB
+     # B2 & SUB & !S2.Q
+     # !B2 & !SUB & !S2.Q);
+
+!Co1 = (!Ci1 & !S1.Q
+     # B1 & !Ci1 & SUB
+     # !B1 & !Ci1 & !SUB
+     # B1 & SUB & !S1.Q
+     # !B1 & !SUB & !S1.Q);
+
+!Co0 = (!Ci0 & !S0.Q
+     # B0 & !Ci0 & SUB
+     # !B0 & !Ci0 & !SUB
+     # B0 & SUB & !S0.Q
+     # !B0 & !SUB & !S0.Q);
+
+!S3.D = (B3 & Ci3 & SUB & S3.Q
+     # !B3 & !Ci3 & SUB & S3.Q
+     # !B3 & Ci3 & !SUB & S3.Q
+     # B3 & !Ci3 & !SUB & S3.Q
+     # !B3 & Ci3 & SUB & !S3.Q
+     # B3 & !Ci3 & SUB & !S3.Q
+     # B3 & Ci3 & !SUB & !S3.Q
+     # !B3 & !Ci3 & !SUB & !S3.Q);
+
+!S3.C = (!CLK);
+
+!S2.D = (B2 & Ci2 & SUB & S2.Q
+     # !B2 & !Ci2 & SUB & S2.Q
+     # !B2 & Ci2 & !SUB & S2.Q
+     # B2 & !Ci2 & !SUB & S2.Q
+     # !B2 & Ci2 & SUB & !S2.Q
+     # B2 & !Ci2 & SUB & !S2.Q
+     # B2 & Ci2 & !SUB & !S2.Q
+     # !B2 & !Ci2 & !SUB & !S2.Q);
+
+!S2.C = (!CLK);
+
+!S1.D = (B1 & Ci1 & SUB & S1.Q
+     # !B1 & !Ci1 & SUB & S1.Q
+     # !B1 & Ci1 & !SUB & S1.Q
+     # B1 & !Ci1 & !SUB & S1.Q
+     # !B1 & Ci1 & SUB & !S1.Q
+     # B1 & !Ci1 & SUB & !S1.Q
+     # B1 & Ci1 & !SUB & !S1.Q
+     # !B1 & !Ci1 & !SUB & !S1.Q);
+
+!S1.C = (!CLK);
+
+!S0.D = (B0 & Ci0 & SUB & S0.Q
+     # !B0 & !Ci0 & SUB & S0.Q
+     # !B0 & Ci0 & !SUB & S0.Q
+     # B0 & !Ci0 & !SUB & S0.Q
+     # !B0 & Ci0 & SUB & !S0.Q
+     # B0 & !Ci0 & SUB & !S0.Q
+     # B0 & Ci0 & !SUB & !S0.Q
+     # !B0 & !Ci0 & !SUB & !S0.Q);
+
+!S0.C = (!CLK);
+

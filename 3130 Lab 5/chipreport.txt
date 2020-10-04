@@ -1,0 +1,234 @@
+
+
+                                                                      Page 1
+ispLEVER 6.1.00.37.42.06  -  Device Utilization Chart         Mon Feb 15 17:02:19 2016
+
+
+
+--------------------------------------------------------------------------------
+
+Module                   : 'addersubtractor'
+
+--------------------------------------------------------------------------------
+
+Input files:
+
+    ABEL PLA file        : untitled.tt3
+    Device library       : P22V10G.dev
+
+Output files:
+
+    Report file          : untitled.rpt
+    Programmer load file : untitled.jed
+
+--------------------------------------------------------------------------------
+
+
+                                                                      Page 2
+ispLEVER 6.1.00.37.42.06  -  Device Utilization Chart         Mon Feb 15 17:02:19 2016
+
+P22V10G Programmed Logic:
+--------------------------------------------------------------------------------
+
+
+
+Co3     = (  !B3 & Ci3 & SUB 
+           #   B3 & Ci3 & !SUB 
+           #   Ci3 & S3.Q 
+           #   !B3 & SUB & S3.Q 
+           #   B3 & !SUB & S3.Q );
+
+Co2     = (  !B2 & Ci2 & SUB 
+           #   B2 & Ci2 & !SUB 
+           #   Ci2 & S2.Q 
+           #   !B2 & SUB & S2.Q 
+           #   B2 & !SUB & S2.Q );
+
+Co1     = (  !B1 & Ci1 & SUB 
+           #   B1 & Ci1 & !SUB 
+           #   Ci1 & S1.Q 
+           #   !B1 & SUB & S1.Q 
+           #   B1 & !SUB & S1.Q );
+
+Co0     = (  !B0 & Ci0 & SUB 
+           #   B0 & Ci0 & !SUB 
+           #   Ci0 & S0.Q 
+           #   !B0 & SUB & S0.Q 
+           #   B0 & !SUB & S0.Q );
+
+S0.D   = (  !B0 & Ci0 & SUB & S0.Q 
+          #   B0 & !Ci0 & SUB & S0.Q 
+          #   B0 & Ci0 & !SUB & S0.Q 
+          #   !B0 & !Ci0 & !SUB & S0.Q 
+          #   B0 & Ci0 & SUB & !S0.Q 
+          #   !B0 & !Ci0 & SUB & !S0.Q 
+          #   !B0 & Ci0 & !SUB & !S0.Q 
+          #   B0 & !Ci0 & !SUB & !S0.Q ); " ISTYPE 'BUFFER'
+S0.C   = (  CLK );
+
+S1.D   = (  !B1 & Ci1 & SUB & S1.Q 
+          #   B1 & !Ci1 & SUB & S1.Q 
+          #   B1 & Ci1 & !SUB & S1.Q 
+          #   !B1 & !Ci1 & !SUB & S1.Q 
+          #   B1 & Ci1 & SUB & !S1.Q 
+          #   !B1 & !Ci1 & SUB & !S1.Q 
+          #   !B1 & Ci1 & !SUB & !S1.Q 
+          #   B1 & !Ci1 & !SUB & !S1.Q ); " ISTYPE 'BUFFER'
+S1.C   = (  CLK );
+
+S2.D   = (  !B2 & Ci2 & SUB & S2.Q 
+          #   B2 & !Ci2 & SUB & S2.Q 
+          #   B2 & Ci2 & !SUB & S2.Q 
+          #   !B2 & !Ci2 & !SUB & S2.Q 
+          #   B2 & Ci2 & SUB & !S2.Q 
+          #   !B2 & !Ci2 & SUB & !S2.Q 
+          #   !B2 & Ci2 & !SUB & !S2.Q 
+          #   B2 & !Ci2 & !SUB & !S2.Q ); " ISTYPE 'BUFFER'
+
+
+                                                                      Page 3
+ispLEVER 6.1.00.37.42.06  -  Device Utilization Chart         Mon Feb 15 17:02:19 2016
+
+P22V10G Programmed Logic:
+--------------------------------------------------------------------------------
+
+
+
+S2.C   = (  CLK );
+
+S3.D   = (  !B3 & Ci3 & SUB & S3.Q 
+          #   B3 & !Ci3 & SUB & S3.Q 
+          #   B3 & Ci3 & !SUB & S3.Q 
+          #   !B3 & !Ci3 & !SUB & S3.Q 
+          #   B3 & Ci3 & SUB & !S3.Q 
+          #   !B3 & !Ci3 & SUB & !S3.Q 
+          #   !B3 & Ci3 & !SUB & !S3.Q 
+          #   B3 & !Ci3 & !SUB & !S3.Q ); " ISTYPE 'BUFFER'
+S3.C   = (  CLK );
+
+
+
+                                                                      Page 4
+ispLEVER 6.1.00.37.42.06  -  Device Utilization Chart         Mon Feb 15 17:02:19 2016
+
+P22V10G Chip Diagram:
+--------------------------------------------------------------------------------
+
+
+
+
+                                   P22V10G
+
+                         +---------\       /---------+
+                         |          \     /          |
+                         |           -----           |
+                     CLK |  1                    24  | Vcc                     
+                         |                           |
+                      B3 |  2                    23  | S3                      
+                         |                           |
+                      B2 |  3                    22  | S2                      
+                         |                           |
+                      B1 |  4                    21  | S1                      
+                         |                           |
+                      B0 |  5                    20  | S0                      
+                         |                           |
+                         |  6                    19  | Co3                     
+                         |                           |
+                     Ci3 |  7                    18  | Co2                     
+                         |                           |
+                     Ci2 |  8                    17  | Co1                     
+                         |                           |
+                     Ci1 |  9                    16  | Co0                     
+                         |                           |
+                     Ci0 | 10                    15  |                         
+                         |                           |
+                     SUB | 11                    14  |                         
+                         |                           |
+                     GND | 12                    13  |                         
+                         |                           |
+                         |                           |
+                         `---------------------------'
+
+                        SIGNATURE: N/A
+
+
+                                                                      Page 5
+ispLEVER 6.1.00.37.42.06  -  Device Utilization Chart         Mon Feb 15 17:02:19 2016
+
+P22V10G Resource Allocations:
+--------------------------------------------------------------------------------
+
+
+
+        Device        | Resource  |   Design    |
+       Resources      | Available | Requirement | Unused
+======================|===========|=============|==============
+                      |           |             |
+Input Pins:           |           |             |
+                      |           |             |
+          Input:      |     12    |     10      |    2 ( 16 %)
+                      |           |             |
+Output Pins:          |           |             |
+                      |           |             |
+          In/Out:     |     10    |      8      |    2 ( 20 %)
+          Output:     |      -    |      -      |    -
+                      |           |             |
+Buried Nodes:         |           |             |
+                      |           |             |
+          Input Reg:  |      -    |      -      |    -
+          Pin Reg:    |     10    |      4      |    6 ( 60 %)
+          Buried Reg: |      -    |      -      |    -
+
+
+                                                                      Page 6
+ispLEVER 6.1.00.37.42.06  -  Device Utilization Chart         Mon Feb 15 17:02:19 2016
+
+P22V10G Product Terms Distribution:
+--------------------------------------------------------------------------------
+
+
+
+            Signal                       |    Pin   | Terms | Terms | Terms
+             Name                        | Assigned | Used  |  Max  | Unused
+=========================================|==========|=======|=======|=======
+Co3                                      |   19     |   5   |  16   |  11
+Co2                                      |   18     |   5   |  16   |  11
+Co1                                      |   17     |   5   |  14   |   9
+Co0                                      |   16     |   5   |  12   |   7
+S0.D                                     |   20     |   8   |  14   |   6
+S1.D                                     |   21     |   8   |  12   |   4
+S2.D                                     |   22     |   8   |  10   |   2
+S3.D                                     |   23     |   8   |   8   |   0
+
+
+     ==== List of Inputs/Feedbacks ====
+
+Signal Name                              | Pin      | Pin Type
+=========================================|==========|=========
+B3                                       |    2     | INPUT
+B2                                       |    3     | INPUT
+B1                                       |    4     | INPUT
+B0                                       |    5     | INPUT
+Ci0                                      |   10     | INPUT
+Ci1                                      |    9     | INPUT
+Ci2                                      |    8     | INPUT
+Ci3                                      |    7     | INPUT
+SUB                                      |   11     | INPUT
+CLK                                      |    1     | CLK/IN
+
+
+                                                                      Page 7
+ispLEVER 6.1.00.37.42.06  -  Device Utilization Chart         Mon Feb 15 17:02:19 2016
+
+P22V10G Unused Resources:
+--------------------------------------------------------------------------------
+
+
+
+ Pin   |  Pin   |   Product   | Flip-flop
+Number |  Type  |   Terms     |   Type
+=======|========|=============|==========
+    6  |  INPUT |      -      |    -   
+   13  |  INPUT |      -      |    -   
+   14  |  BIDIR | NORMAL  8   |    D
+   15  |  BIDIR | NORMAL 10   |    D

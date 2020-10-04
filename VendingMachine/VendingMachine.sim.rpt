@@ -1,0 +1,533 @@
+Simulator report for VendingMachine
+Tue Apr 19 22:50:27 2016
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 2.0 us       ;
+; Simulation Netlist Size     ; 293 nodes    ;
+; Simulation Coverage         ;      72.70 % ;
+; Total Number of Transitions ; 2324         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
++-----------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                              ;
++--------------------------------------------------------------------------------------------+--------------------+---------------+
+; Option                                                                                     ; Setting            ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------------+---------------+
+; Simulation mode                                                                            ; Functional         ; Timing        ;
+; Start time                                                                                 ; 0 ns               ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF               ;               ;
+; Vector input source                                                                        ; VendingMachine.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                 ; On            ;
+; Check outputs                                                                              ; Off                ; Off           ;
+; Report simulation coverage                                                                 ; On                 ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                 ; On            ;
+; Display missing 1-value coverage report                                                    ; On                 ; On            ;
+; Display missing 0-value coverage report                                                    ; On                 ; On            ;
+; Detect setup and hold time violations                                                      ; Off                ; Off           ;
+; Detect glitches                                                                            ; Off                ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                ; Off           ;
+; Generate Signal Activity File                                                              ; Off                ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                 ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE         ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto               ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      72.70 % ;
+; Total nodes checked                                 ; 293          ;
+; Total output ports checked                          ; 293          ;
+; Total output ports with complete 1/0-value coverage ; 213          ;
+; Total output ports with no 1/0-value coverage       ; 77           ;
+; Total output ports with no 1-value coverage         ; 79           ;
+; Total output ports with no 0-value coverage         ; 78           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                            ;
++----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+
+; Node Name                                                                        ; Output Port Name                                                                 ; Output Port Type ;
++----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+
+; |Block1|VALID                                                                    ; |Block1|VALID                                                                    ; pin_out          ;
+; |Block1|CLK                                                                      ; |Block1|CLK                                                                      ; out              ;
+; |Block1|C                                                                        ; |Block1|C                                                                        ; out              ;
+; |Block1|S                                                                        ; |Block1|S                                                                        ; out              ;
+; |Block1|D                                                                        ; |Block1|D                                                                        ; out              ;
+; |Block1|N                                                                        ; |Block1|N                                                                        ; out              ;
+; |Block1|Q                                                                        ; |Block1|Q                                                                        ; out              ;
+; |Block1|SUB                                                                      ; |Block1|SUB                                                                      ; pin_out          ;
+; |Block1|CLR                                                                      ; |Block1|CLR                                                                      ; pin_out          ;
+; |Block1|Do                                                                       ; |Block1|Do                                                                       ; pin_out          ;
+; |Block1|No                                                                       ; |Block1|No                                                                       ; pin_out          ;
+; |Block1|Qo                                                                       ; |Block1|Qo                                                                       ; pin_out          ;
+; |Block1|RET                                                                      ; |Block1|RET                                                                      ; pin_out          ;
+; |Block1|COINvalue[4]                                                             ; |Block1|COINvalue[4]                                                             ; pin_out          ;
+; |Block1|COINvalue[3]                                                             ; |Block1|COINvalue[3]                                                             ; pin_out          ;
+; |Block1|COINvalue[2]                                                             ; |Block1|COINvalue[2]                                                             ; pin_out          ;
+; |Block1|COINvalue[1]                                                             ; |Block1|COINvalue[1]                                                             ; pin_out          ;
+; |Block1|COINvalue[0]                                                             ; |Block1|COINvalue[0]                                                             ; pin_out          ;
+; |Block1|TOTAL[5]                                                                 ; |Block1|TOTAL[5]                                                                 ; pin_out          ;
+; |Block1|TOTAL[4]                                                                 ; |Block1|TOTAL[4]                                                                 ; pin_out          ;
+; |Block1|TOTAL[3]                                                                 ; |Block1|TOTAL[3]                                                                 ; pin_out          ;
+; |Block1|TOTAL[2]                                                                 ; |Block1|TOTAL[2]                                                                 ; pin_out          ;
+; |Block1|TOTAL[1]                                                                 ; |Block1|TOTAL[1]                                                                 ; pin_out          ;
+; |Block1|TOTAL[0]                                                                 ; |Block1|TOTAL[0]                                                                 ; pin_out          ;
+; |Block1|ADDSUB:inst3|TOTAL[7]                                                    ; |Block1|ADDSUB:inst3|TOTAL[7]                                                    ; out              ;
+; |Block1|ADDSUB:inst3|TOTAL[6]                                                    ; |Block1|ADDSUB:inst3|TOTAL[6]                                                    ; out              ;
+; |Block1|ADDSUB:inst3|TOTAL[5]                                                    ; |Block1|ADDSUB:inst3|TOTAL[5]                                                    ; out              ;
+; |Block1|ADDSUB:inst3|TOTAL[4]                                                    ; |Block1|ADDSUB:inst3|TOTAL[4]                                                    ; out              ;
+; |Block1|ADDSUB:inst3|TOTAL[3]                                                    ; |Block1|ADDSUB:inst3|TOTAL[3]                                                    ; out              ;
+; |Block1|ADDSUB:inst3|TOTAL[2]                                                    ; |Block1|ADDSUB:inst3|TOTAL[2]                                                    ; out              ;
+; |Block1|ADDSUB:inst3|TOTAL[1]                                                    ; |Block1|ADDSUB:inst3|TOTAL[1]                                                    ; out              ;
+; |Block1|ADDSUB:inst3|TOTAL[0]                                                    ; |Block1|ADDSUB:inst3|TOTAL[0]                                                    ; out              ;
+; |Block1|STORE:inst4|TMP[5]                                                       ; |Block1|STORE:inst4|TMP[5]                                                       ; regout           ;
+; |Block1|STORE:inst4|TMP[4]                                                       ; |Block1|STORE:inst4|TMP[4]                                                       ; regout           ;
+; |Block1|STORE:inst4|TMP[3]                                                       ; |Block1|STORE:inst4|TMP[3]                                                       ; regout           ;
+; |Block1|STORE:inst4|TMP[2]                                                       ; |Block1|STORE:inst4|TMP[2]                                                       ; regout           ;
+; |Block1|STORE:inst4|TMP[1]                                                       ; |Block1|STORE:inst4|TMP[1]                                                       ; regout           ;
+; |Block1|STORE:inst4|TMP[0]                                                       ; |Block1|STORE:inst4|TMP[0]                                                       ; regout           ;
+; |Block1|VendingMachine:inst|y~0                                                  ; |Block1|VendingMachine:inst|y~0                                                  ; out              ;
+; |Block1|VendingMachine:inst|y~1                                                  ; |Block1|VendingMachine:inst|y~1                                                  ; out              ;
+; |Block1|VendingMachine:inst|y~2                                                  ; |Block1|VendingMachine:inst|y~2                                                  ; out              ;
+; |Block1|VendingMachine:inst|process_0~0                                          ; |Block1|VendingMachine:inst|process_0~0                                          ; out0             ;
+; |Block1|VendingMachine:inst|process_0~1                                          ; |Block1|VendingMachine:inst|process_0~1                                          ; out0             ;
+; |Block1|VendingMachine:inst|y~3                                                  ; |Block1|VendingMachine:inst|y~3                                                  ; out              ;
+; |Block1|VendingMachine:inst|y~4                                                  ; |Block1|VendingMachine:inst|y~4                                                  ; out              ;
+; |Block1|VendingMachine:inst|y~5                                                  ; |Block1|VendingMachine:inst|y~5                                                  ; out              ;
+; |Block1|VendingMachine:inst|y~6                                                  ; |Block1|VendingMachine:inst|y~6                                                  ; out              ;
+; |Block1|VendingMachine:inst|y~7                                                  ; |Block1|VendingMachine:inst|y~7                                                  ; out              ;
+; |Block1|VendingMachine:inst|y~8                                                  ; |Block1|VendingMachine:inst|y~8                                                  ; out              ;
+; |Block1|VendingMachine:inst|y~9                                                  ; |Block1|VendingMachine:inst|y~9                                                  ; out              ;
+; |Block1|VendingMachine:inst|y~11                                                 ; |Block1|VendingMachine:inst|y~11                                                 ; out              ;
+; |Block1|VendingMachine:inst|y.S0                                                 ; |Block1|VendingMachine:inst|y.S0                                                 ; regout           ;
+; |Block1|VendingMachine:inst|y.S1                                                 ; |Block1|VendingMachine:inst|y.S1                                                 ; regout           ;
+; |Block1|VendingMachine:inst|CLR                                                  ; |Block1|VendingMachine:inst|CLR                                                  ; out              ;
+; |Block1|VendingMachine:inst|y.S2                                                 ; |Block1|VendingMachine:inst|y.S2                                                 ; regout           ;
+; |Block1|VendingMachine:inst|Do                                                   ; |Block1|VendingMachine:inst|Do                                                   ; out              ;
+; |Block1|VendingMachine:inst|Qo                                                   ; |Block1|VendingMachine:inst|Qo                                                   ; out              ;
+; |Block1|VendingMachine:inst|SUB                                                  ; |Block1|VendingMachine:inst|SUB                                                  ; out              ;
+; |Block1|VendingMachine:inst|y~12                                                 ; |Block1|VendingMachine:inst|y~12                                                 ; out0             ;
+; |Block1|VendingMachine:inst|y.S0~0                                               ; |Block1|VendingMachine:inst|y.S0~0                                               ; out0             ;
+; |Block1|VendingMachine:inst|VALID                                                ; |Block1|VendingMachine:inst|VALID                                                ; out0             ;
+; |Block1|VendingMachine:inst|y.S1~0                                               ; |Block1|VendingMachine:inst|y.S1~0                                               ; out0             ;
+; |Block1|VendingMachine:inst|y~17                                                 ; |Block1|VendingMachine:inst|y~17                                                 ; out0             ;
+; |Block1|VendingMachine:inst|y.S2~0                                               ; |Block1|VendingMachine:inst|y.S2~0                                               ; out0             ;
+; |Block1|VendingMachine:inst|y~19                                                 ; |Block1|VendingMachine:inst|y~19                                                 ; out0             ;
+; |Block1|VendingMachine:inst|y~23                                                 ; |Block1|VendingMachine:inst|y~23                                                 ; out0             ;
+; |Block1|VendingMachine:inst|Selector0~0                                          ; |Block1|VendingMachine:inst|Selector0~0                                          ; out              ;
+; |Block1|VendingMachine:inst|Selector0~1                                          ; |Block1|VendingMachine:inst|Selector0~1                                          ; out              ;
+; |Block1|VendingMachine:inst|Selector1~0                                          ; |Block1|VendingMachine:inst|Selector1~0                                          ; out              ;
+; |Block1|VendingMachine:inst|Selector1~1                                          ; |Block1|VendingMachine:inst|Selector1~1                                          ; out              ;
+; |Block1|VendingMachine:inst|Selector2~0                                          ; |Block1|VendingMachine:inst|Selector2~0                                          ; out              ;
+; |Block1|VendingMachine:inst|Selector2~1                                          ; |Block1|VendingMachine:inst|Selector2~1                                          ; out              ;
+; |Block1|VendingMachine:inst|Selector3~0                                          ; |Block1|VendingMachine:inst|Selector3~0                                          ; out0             ;
+; |Block1|VendingMachine:inst|Selector3~1                                          ; |Block1|VendingMachine:inst|Selector3~1                                          ; out0             ;
+; |Block1|VendingMachine:inst|Selector3~2                                          ; |Block1|VendingMachine:inst|Selector3~2                                          ; out0             ;
+; |Block1|COMPAR:inst1|LessThan0~0                                                 ; |Block1|COMPAR:inst1|LessThan0~0                                                 ; out0             ;
+; |Block1|COMPAR:inst1|LessThan0~1                                                 ; |Block1|COMPAR:inst1|LessThan0~1                                                 ; out0             ;
+; |Block1|COMPAR:inst1|LessThan0~2                                                 ; |Block1|COMPAR:inst1|LessThan0~2                                                 ; out0             ;
+; |Block1|COMPAR:inst1|LessThan0~3                                                 ; |Block1|COMPAR:inst1|LessThan0~3                                                 ; out0             ;
+; |Block1|COMPAR:inst1|LessThan0~4                                                 ; |Block1|COMPAR:inst1|LessThan0~4                                                 ; out0             ;
+; |Block1|COMPAR:inst1|LessThan0~5                                                 ; |Block1|COMPAR:inst1|LessThan0~5                                                 ; out0             ;
+; |Block1|COMPAR:inst1|LessThan0~6                                                 ; |Block1|COMPAR:inst1|LessThan0~6                                                 ; out0             ;
+; |Block1|COMPAR:inst1|LessThan0~7                                                 ; |Block1|COMPAR:inst1|LessThan0~7                                                 ; out0             ;
+; |Block1|COMPAR:inst1|LessThan0~8                                                 ; |Block1|COMPAR:inst1|LessThan0~8                                                 ; out0             ;
+; |Block1|COMPAR:inst1|LessThan0~9                                                 ; |Block1|COMPAR:inst1|LessThan0~9                                                 ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~0                                                      ; |Block1|ADDSUB:inst3|Add0~0                                                      ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~1                                                      ; |Block1|ADDSUB:inst3|Add0~1                                                      ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~2                                                      ; |Block1|ADDSUB:inst3|Add0~2                                                      ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~3                                                      ; |Block1|ADDSUB:inst3|Add0~3                                                      ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~5                                                      ; |Block1|ADDSUB:inst3|Add0~5                                                      ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~6                                                      ; |Block1|ADDSUB:inst3|Add0~6                                                      ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~7                                                      ; |Block1|ADDSUB:inst3|Add0~7                                                      ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~8                                                      ; |Block1|ADDSUB:inst3|Add0~8                                                      ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~9                                                      ; |Block1|ADDSUB:inst3|Add0~9                                                      ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~10                                                     ; |Block1|ADDSUB:inst3|Add0~10                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~11                                                     ; |Block1|ADDSUB:inst3|Add0~11                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~12                                                     ; |Block1|ADDSUB:inst3|Add0~12                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~13                                                     ; |Block1|ADDSUB:inst3|Add0~13                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~14                                                     ; |Block1|ADDSUB:inst3|Add0~14                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~15                                                     ; |Block1|ADDSUB:inst3|Add0~15                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~16                                                     ; |Block1|ADDSUB:inst3|Add0~16                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~17                                                     ; |Block1|ADDSUB:inst3|Add0~17                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~18                                                     ; |Block1|ADDSUB:inst3|Add0~18                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~19                                                     ; |Block1|ADDSUB:inst3|Add0~19                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~20                                                     ; |Block1|ADDSUB:inst3|Add0~20                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~21                                                     ; |Block1|ADDSUB:inst3|Add0~21                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~22                                                     ; |Block1|ADDSUB:inst3|Add0~22                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~23                                                     ; |Block1|ADDSUB:inst3|Add0~23                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~24                                                     ; |Block1|ADDSUB:inst3|Add0~24                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~0                                                      ; |Block1|ADDSUB:inst3|Add1~0                                                      ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~1                                                      ; |Block1|ADDSUB:inst3|Add1~1                                                      ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~2                                                      ; |Block1|ADDSUB:inst3|Add1~2                                                      ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~3                                                      ; |Block1|ADDSUB:inst3|Add1~3                                                      ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~4                                                      ; |Block1|ADDSUB:inst3|Add1~4                                                      ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~5                                                      ; |Block1|ADDSUB:inst3|Add1~5                                                      ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~6                                                      ; |Block1|ADDSUB:inst3|Add1~6                                                      ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~7                                                      ; |Block1|ADDSUB:inst3|Add1~7                                                      ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~8                                                      ; |Block1|ADDSUB:inst3|Add1~8                                                      ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~9                                                      ; |Block1|ADDSUB:inst3|Add1~9                                                      ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~10                                                     ; |Block1|ADDSUB:inst3|Add1~10                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~11                                                     ; |Block1|ADDSUB:inst3|Add1~11                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~12                                                     ; |Block1|ADDSUB:inst3|Add1~12                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~13                                                     ; |Block1|ADDSUB:inst3|Add1~13                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~14                                                     ; |Block1|ADDSUB:inst3|Add1~14                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~15                                                     ; |Block1|ADDSUB:inst3|Add1~15                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~16                                                     ; |Block1|ADDSUB:inst3|Add1~16                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~17                                                     ; |Block1|ADDSUB:inst3|Add1~17                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~18                                                     ; |Block1|ADDSUB:inst3|Add1~18                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~19                                                     ; |Block1|ADDSUB:inst3|Add1~19                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~20                                                     ; |Block1|ADDSUB:inst3|Add1~20                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~21                                                     ; |Block1|ADDSUB:inst3|Add1~21                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~22                                                     ; |Block1|ADDSUB:inst3|Add1~22                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~23                                                     ; |Block1|ADDSUB:inst3|Add1~23                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~24                                                     ; |Block1|ADDSUB:inst3|Add1~24                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~25                                                     ; |Block1|ADDSUB:inst3|Add1~25                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~26                                                     ; |Block1|ADDSUB:inst3|Add1~26                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~27                                                     ; |Block1|ADDSUB:inst3|Add1~27                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~29                                                     ; |Block1|ADDSUB:inst3|Add1~29                                                     ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|_~0                    ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|_~0                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|_~1                    ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|_~1                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n1_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n1_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|_~2                    ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|_~2                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n2_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n2_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|_~3                    ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|_~3                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|_~4                    ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|_~4                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l2_w0_n0_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l2_w0_n0_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|_~5                    ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|_~5                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l2_w0_n1_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l2_w0_n1_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|_~6                    ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|_~6                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l3_w0_n0_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l3_w0_n0_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|_~0                    ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|_~0                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n0_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n0_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|_~1                    ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|_~1                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|_~2                    ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|_~2                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|_~3                    ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|_~3                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|_~4                    ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|_~4                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l2_w0_n0_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l2_w0_n0_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|_~5                    ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|_~5                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|_~6                    ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|_~6                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l3_w0_n0_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l3_w0_n0_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|_~0                    ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|_~0                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|_~1                    ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|_~1                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n1_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n1_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|_~2                    ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|_~2                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|_~3                    ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|_~3                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|_~4                    ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|_~4                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l2_w0_n0_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l2_w0_n0_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|_~5                    ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|_~5                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|_~6                    ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|_~6                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l3_w0_n0_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l3_w0_n0_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|_~0                    ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|_~0                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n0_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n0_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|_~1                    ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|_~1                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|_~2                    ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|_~2                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n2_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n2_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|_~3                    ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|_~3                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|_~4                    ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|_~4                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l2_w0_n0_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l2_w0_n0_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|_~5                    ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|_~5                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l2_w0_n1_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l2_w0_n1_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|_~6                    ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|_~6                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l3_w0_n0_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l3_w0_n0_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|_~0                    ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|_~0                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|_~1                    ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|_~1                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|_~2                    ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|_~2                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n2_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n2_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|_~3                    ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|_~3                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|_~4                    ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|_~4                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|_~5                    ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|_~5                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l2_w0_n1_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l2_w0_n1_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|_~6                    ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|_~6                    ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l3_w0_n0_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l3_w0_n0_mux_dataout   ; out0             ;
++----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                               ;
++----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+
+; Node Name                                                                        ; Output Port Name                                                                 ; Output Port Type ;
++----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+
+; |Block1|COINvalue[7]                                                             ; |Block1|COINvalue[7]                                                             ; pin_out          ;
+; |Block1|COINvalue[6]                                                             ; |Block1|COINvalue[6]                                                             ; pin_out          ;
+; |Block1|COINvalue[5]                                                             ; |Block1|COINvalue[5]                                                             ; pin_out          ;
+; |Block1|TOTAL[7]                                                                 ; |Block1|TOTAL[7]                                                                 ; pin_out          ;
+; |Block1|TOTAL[6]                                                                 ; |Block1|TOTAL[6]                                                                 ; pin_out          ;
+; |Block1|STORE:inst4|TMP[7]                                                       ; |Block1|STORE:inst4|TMP[7]                                                       ; regout           ;
+; |Block1|STORE:inst4|TMP[6]                                                       ; |Block1|STORE:inst4|TMP[6]                                                       ; regout           ;
+; |Block1|VendingMachine:inst|y~10                                                 ; |Block1|VendingMachine:inst|y~10                                                 ; out              ;
+; |Block1|VendingMachine:inst|y~13                                                 ; |Block1|VendingMachine:inst|y~13                                                 ; out0             ;
+; |Block1|VendingMachine:inst|y~27                                                 ; |Block1|VendingMachine:inst|y~27                                                 ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~4                                                      ; |Block1|ADDSUB:inst3|Add0~4                                                      ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~25                                                     ; |Block1|ADDSUB:inst3|Add0~25                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~26                                                     ; |Block1|ADDSUB:inst3|Add0~26                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~28                                                     ; |Block1|ADDSUB:inst3|Add1~28                                                     ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n0_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n0_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n3_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n3_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n1_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n1_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n2_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n2_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n3_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n3_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l2_w0_n1_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l2_w0_n1_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n0_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n0_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n2_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n2_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n3_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n3_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l2_w0_n1_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l2_w0_n1_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n1_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n1_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n3_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n3_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n0_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n0_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n1_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n1_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n3_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n3_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l2_w0_n0_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l2_w0_n0_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~1 ; out0             ;
++----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                               ;
++----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+
+; Node Name                                                                        ; Output Port Name                                                                 ; Output Port Type ;
++----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+
+; |Block1|RESETn                                                                   ; |Block1|RESETn                                                                   ; out              ;
+; |Block1|COINvalue[7]                                                             ; |Block1|COINvalue[7]                                                             ; pin_out          ;
+; |Block1|COINvalue[6]                                                             ; |Block1|COINvalue[6]                                                             ; pin_out          ;
+; |Block1|COINvalue[5]                                                             ; |Block1|COINvalue[5]                                                             ; pin_out          ;
+; |Block1|TOTAL[7]                                                                 ; |Block1|TOTAL[7]                                                                 ; pin_out          ;
+; |Block1|TOTAL[6]                                                                 ; |Block1|TOTAL[6]                                                                 ; pin_out          ;
+; |Block1|STORE:inst4|TMP[7]                                                       ; |Block1|STORE:inst4|TMP[7]                                                       ; regout           ;
+; |Block1|STORE:inst4|TMP[6]                                                       ; |Block1|STORE:inst4|TMP[6]                                                       ; regout           ;
+; |Block1|VendingMachine:inst|y~10                                                 ; |Block1|VendingMachine:inst|y~10                                                 ; out              ;
+; |Block1|ADDSUB:inst3|Add0~4                                                      ; |Block1|ADDSUB:inst3|Add0~4                                                      ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~25                                                     ; |Block1|ADDSUB:inst3|Add0~25                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add0~26                                                     ; |Block1|ADDSUB:inst3|Add0~26                                                     ; out0             ;
+; |Block1|ADDSUB:inst3|Add1~28                                                     ; |Block1|ADDSUB:inst3|Add1~28                                                     ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n0_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n0_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n3_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l1_w0_n3_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux4|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n1_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n1_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n2_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n2_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n3_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l1_w0_n3_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l2_w0_n1_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l2_w0_n1_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux3|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n0_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n0_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n2_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n2_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n3_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l1_w0_n3_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l2_w0_n1_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l2_w0_n1_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux2|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n1_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n1_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n3_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l1_w0_n3_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux1|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n0_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n0_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n1_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n1_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n1_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n2_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n3_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n3_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l1_w0_n3_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l2_w0_n0_mux_dataout~1 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l2_w0_n0_mux_dataout   ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l2_w0_n0_mux_dataout   ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~0 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l2_w0_n1_mux_dataout~0 ; out0             ;
+; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~1 ; |Block1|DECODER:inst2|lpm_mux:Mux0|mux_5oc:auto_generated|l3_w0_n0_mux_dataout~1 ; out0             ;
++----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
+    Info: Processing started: Tue Apr 19 22:50:26 2016
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off VendingMachine -c VendingMachine
+Info: Using vector source file "C:/Users/Tyler/Documents/CEEN 3130/VendingMachine/VendingMachine.vwf"
+Warning: Wrong node type and/or width for node "|Block1|VendingMachine:inst|y" in vector source file. Node in design is of type Enum and of width 1, but node in vector source file is of type 9-Level and of width 1.
+Warning: Signal name "|Block1|VendingMachine:inst|y" changed to enum type
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      72.70 %
+Info: Number of transitions in simulation is 2324
+Info: Quartus II Simulator was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 169 megabytes
+    Info: Processing ended: Tue Apr 19 22:50:27 2016
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

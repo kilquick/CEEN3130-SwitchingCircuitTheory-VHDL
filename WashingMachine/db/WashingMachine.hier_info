@@ -1,0 +1,84 @@
+|WashingMachineSchematic
+H <= WashingMachine:inst.H
+CLK => WashingMachine:inst.CLK
+CLK => COUNTER:inst2.CLK
+RESETn => WashingMachine:inst.RESETn
+START => WashingMachine:inst.START
+FULL => WashingMachine:inst.FULL
+C <= WashingMachine:inst.C
+AGIT <= WashingMachine:inst.AGIT
+SPIN <= WashingMachine:inst.SPIN
+N7 <= WashingMachine:inst.N7
+LD <= WashingMachine:inst.LD
+EC <= WashingMachine:inst.EC
+TCD <= COUNTER:inst2.TCD
+DATA[0] <= MULTIPLEXER:inst14.OUTPUT[0]
+DATA[1] <= MULTIPLEXER:inst14.OUTPUT[1]
+DATA[2] <= MULTIPLEXER:inst14.OUTPUT[2]
+DATA[3] <= MULTIPLEXER:inst14.OUTPUT[3]
+TIMER[0] <= COUNTER:inst2.OUTPUT[0]
+TIMER[1] <= COUNTER:inst2.OUTPUT[1]
+TIMER[2] <= COUNTER:inst2.OUTPUT[2]
+TIMER[3] <= COUNTER:inst2.OUTPUT[3]
+
+
+|WashingMachineSchematic|WashingMachine:inst
+CLK => y~8.DATAIN
+RESETn => y~12.DATAIN
+START => Selector1.IN3
+START => Selector0.IN1
+FULL => Selector2.IN3
+FULL => Selector5.IN4
+FULL => N7~0.DATAB
+FULL => Selector6.IN2
+FULL => y~0.OUTPUTSELECT
+FULL => y~1.OUTPUTSELECT
+FULL => Selector1.IN1
+FULL => Selector3.IN1
+TCD => y~1.DATAA
+TCD => Selector0.IN3
+TCD => Selector6.IN3
+TCD => y~0.DATAA
+TCD => Selector4.IN1
+H <= H~0.DB_MAX_OUTPUT_PORT_TYPE
+C <= C~0.DB_MAX_OUTPUT_PORT_TYPE
+AGIT <= AGIT~0.DB_MAX_OUTPUT_PORT_TYPE
+SPIN <= SPIN~0.DB_MAX_OUTPUT_PORT_TYPE
+N7 <= N7~0.DB_MAX_OUTPUT_PORT_TYPE
+LD <= Selector6.DB_MAX_OUTPUT_PORT_TYPE
+EC <= Selector5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|WashingMachineSchematic|COUNTER:inst2
+CLK => COUNTER[0].CLK
+CLK => COUNTER[1].CLK
+CLK => COUNTER[2].CLK
+CLK => COUNTER[3].CLK
+LOAD => process_0~1.IN0
+LOAD => process_0~2.IN0
+LOAD => process_0~0.IN0
+EN => process_0~1.IN1
+EN => process_0~2.IN1
+EN => process_0~0.IN1
+DATA[0] => COUNTER~7.DATAB
+DATA[1] => COUNTER~6.DATAB
+DATA[2] => COUNTER~5.DATAB
+DATA[3] => COUNTER~4.DATAB
+TCD <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[0] <= COUNTER[0].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[1] <= COUNTER[1].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[2] <= COUNTER[2].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[3] <= COUNTER[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|WashingMachineSchematic|MULTIPLEXER:inst14
+SEL => OUTPUT[3].DATAIN
+SEL => OUTPUT[2].DATAIN
+SEL => OUTPUT[1].DATAIN
+LOAD => ~NO_FANOUT~
+OUTPUT[0] <= <VCC>
+OUTPUT[1] <= SEL.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[2] <= SEL.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[3] <= SEL.DB_MAX_OUTPUT_PORT_TYPE
+
+

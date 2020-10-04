@@ -1,0 +1,8 @@
+
+State Machine - |Block1|PowerComputer:inst|Y
+Name Y.S4 Y.S3 Y.S2 Y.S1 Y.S0 
+Y.S0 0 0 0 0 0 
+Y.S1 0 0 0 1 1 
+Y.S2 0 0 1 0 1 
+Y.S3 0 1 0 0 1 
+Y.S4 1 0 0 0 1 

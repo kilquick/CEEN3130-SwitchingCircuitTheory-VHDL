@@ -1,0 +1,38 @@
+|MooreState
+X => input1.IN1
+X => input1.IN0
+X => input2.IN0
+X => input2.IN0
+Y1 => input1.IN0
+Y1 => input1.IN1
+Y1 => input2.IN1
+Y1 => input2.IN1
+Y1 => Z.IN0
+Y2 => input1.IN0
+Y2 => input1.IN1
+Y2 => input2.IN0
+Y2 => input2.IN1
+Y2 => Z.IN1
+Clk => flipflop:ff0.CLK
+Clk => flipflop:ff1.CLK
+RESET => flipflop:ff0.RESETn
+RESET => flipflop:ff1.RESETn
+Dy1 <= flipflop:ff0.Q
+Dy2 <= flipflop:ff1.Q
+Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MooreState|flipflop:ff0
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RESETn => process_0.IN0
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MooreState|flipflop:ff1
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+RESETn => process_0.IN0
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

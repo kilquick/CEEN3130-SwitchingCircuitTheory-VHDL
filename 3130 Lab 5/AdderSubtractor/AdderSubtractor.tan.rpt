@@ -1,0 +1,296 @@
+Classic Timing Analyzer report for AdderSubtractor
+Fri Feb 19 00:16:13 2016
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'Clk'
+  7. tsu
+  8. tco
+  9. tpd
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                  ;
++------------------------------+-------+---------------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                                    ; From                                ; To                                  ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 4.938 ns                                       ; B0                                  ; AdderSubtractor:inst|flipflop:ff3|Q ; --         ; Clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 8.207 ns                                       ; AdderSubtractor:inst|flipflop:ff0|Q ; Co                                  ; Clk        ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 11.192 ns                                      ; B0                                  ; Co                                  ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 0.750 ns                                       ; ~ADD/SUB                            ; AdderSubtractor:inst|flipflop:ff2|Q ; --         ; Clk      ; 0            ;
+; Clock Setup: 'Clk'           ; N/A   ; None          ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; AdderSubtractor:inst|flipflop:ff0|Q ; AdderSubtractor:inst|flipflop:ff3|Q ; Clk        ; Clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                                ;                                     ;                                     ;            ;          ; 0            ;
++------------------------------+-------+---------------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C5T144C6        ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'Clk'                                                                                                                                                                                                                             ;
++-------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                ; To                                  ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; AdderSubtractor:inst|flipflop:ff0|Q ; AdderSubtractor:inst|flipflop:ff3|Q ; Clk        ; Clk      ; None                        ; None                      ; 1.739 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; AdderSubtractor:inst|flipflop:ff1|Q ; AdderSubtractor:inst|flipflop:ff3|Q ; Clk        ; Clk      ; None                        ; None                      ; 1.621 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; AdderSubtractor:inst|flipflop:ff0|Q ; AdderSubtractor:inst|flipflop:ff2|Q ; Clk        ; Clk      ; None                        ; None                      ; 1.341 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; AdderSubtractor:inst|flipflop:ff1|Q ; AdderSubtractor:inst|flipflop:ff2|Q ; Clk        ; Clk      ; None                        ; None                      ; 1.223 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; AdderSubtractor:inst|flipflop:ff2|Q ; AdderSubtractor:inst|flipflop:ff3|Q ; Clk        ; Clk      ; None                        ; None                      ; 1.067 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; AdderSubtractor:inst|flipflop:ff0|Q ; AdderSubtractor:inst|flipflop:ff1|Q ; Clk        ; Clk      ; None                        ; None                      ; 0.941 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; AdderSubtractor:inst|flipflop:ff0|Q ; AdderSubtractor:inst|flipflop:ff0|Q ; Clk        ; Clk      ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; AdderSubtractor:inst|flipflop:ff1|Q ; AdderSubtractor:inst|flipflop:ff1|Q ; Clk        ; Clk      ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; AdderSubtractor:inst|flipflop:ff2|Q ; AdderSubtractor:inst|flipflop:ff2|Q ; Clk        ; Clk      ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; AdderSubtractor:inst|flipflop:ff3|Q ; AdderSubtractor:inst|flipflop:ff3|Q ; Clk        ; Clk      ; None                        ; None                      ; 0.407 ns                ;
++-------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; tsu                                                                                           ;
++-------+--------------+------------+----------+-------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From     ; To                                  ; To Clock ;
++-------+--------------+------------+----------+-------------------------------------+----------+
+; N/A   ; None         ; 4.938 ns   ; B0       ; AdderSubtractor:inst|flipflop:ff3|Q ; Clk      ;
+; N/A   ; None         ; 4.676 ns   ; B1       ; AdderSubtractor:inst|flipflop:ff3|Q ; Clk      ;
+; N/A   ; None         ; 4.540 ns   ; B0       ; AdderSubtractor:inst|flipflop:ff2|Q ; Clk      ;
+; N/A   ; None         ; 4.278 ns   ; B1       ; AdderSubtractor:inst|flipflop:ff2|Q ; Clk      ;
+; N/A   ; None         ; 4.140 ns   ; B0       ; AdderSubtractor:inst|flipflop:ff1|Q ; Clk      ;
+; N/A   ; None         ; 4.052 ns   ; B1       ; AdderSubtractor:inst|flipflop:ff1|Q ; Clk      ;
+; N/A   ; None         ; 3.458 ns   ; B0       ; AdderSubtractor:inst|flipflop:ff0|Q ; Clk      ;
+; N/A   ; None         ; 0.534 ns   ; ~ADD/SUB ; AdderSubtractor:inst|flipflop:ff3|Q ; Clk      ;
+; N/A   ; None         ; 0.136 ns   ; ~ADD/SUB ; AdderSubtractor:inst|flipflop:ff2|Q ; Clk      ;
+; N/A   ; None         ; -0.121 ns  ; B2       ; AdderSubtractor:inst|flipflop:ff3|Q ; Clk      ;
+; N/A   ; None         ; -0.264 ns  ; ~ADD/SUB ; AdderSubtractor:inst|flipflop:ff1|Q ; Clk      ;
+; N/A   ; None         ; -0.478 ns  ; B3       ; AdderSubtractor:inst|flipflop:ff3|Q ; Clk      ;
+; N/A   ; None         ; -0.511 ns  ; B2       ; AdderSubtractor:inst|flipflop:ff2|Q ; Clk      ;
++-------+--------------+------------+----------+-------------------------------------+----------+
+
+
++-------------------------------------------------------------------------------------------+
+; tco                                                                                       ;
++-------+--------------+------------+-------------------------------------+----+------------+
+; Slack ; Required tco ; Actual tco ; From                                ; To ; From Clock ;
++-------+--------------+------------+-------------------------------------+----+------------+
+; N/A   ; None         ; 8.207 ns   ; AdderSubtractor:inst|flipflop:ff0|Q ; Co ; Clk        ;
+; N/A   ; None         ; 8.089 ns   ; AdderSubtractor:inst|flipflop:ff1|Q ; Co ; Clk        ;
+; N/A   ; None         ; 7.535 ns   ; AdderSubtractor:inst|flipflop:ff2|Q ; Co ; Clk        ;
+; N/A   ; None         ; 6.743 ns   ; AdderSubtractor:inst|flipflop:ff3|Q ; Co ; Clk        ;
+; N/A   ; None         ; 6.354 ns   ; AdderSubtractor:inst|flipflop:ff2|Q ; S2 ; Clk        ;
+; N/A   ; None         ; 6.343 ns   ; AdderSubtractor:inst|flipflop:ff3|Q ; S3 ; Clk        ;
+; N/A   ; None         ; 6.343 ns   ; AdderSubtractor:inst|flipflop:ff0|Q ; S0 ; Clk        ;
+; N/A   ; None         ; 6.038 ns   ; AdderSubtractor:inst|flipflop:ff1|Q ; S1 ; Clk        ;
++-------+--------------+------------+-------------------------------------+----+------------+
+
+
++-------------------------------------------------------------+
+; tpd                                                         ;
++-------+-------------------+-----------------+----------+----+
+; Slack ; Required P2P Time ; Actual P2P Time ; From     ; To ;
++-------+-------------------+-----------------+----------+----+
+; N/A   ; None              ; 11.192 ns       ; B0       ; Co ;
+; N/A   ; None              ; 10.930 ns       ; B1       ; Co ;
+; N/A   ; None              ; 6.788 ns        ; ~ADD/SUB ; Co ;
+; N/A   ; None              ; 6.133 ns        ; B2       ; Co ;
+; N/A   ; None              ; 5.325 ns        ; B3       ; Co ;
++-------+-------------------+-----------------+----------+----+
+
+
++-----------------------------------------------------------------------------------------------------+
+; th                                                                                                  ;
++---------------+-------------+-----------+----------+-------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From     ; To                                  ; To Clock ;
++---------------+-------------+-----------+----------+-------------------------------------+----------+
+; N/A           ; None        ; 0.750 ns  ; ~ADD/SUB ; AdderSubtractor:inst|flipflop:ff2|Q ; Clk      ;
+; N/A           ; None        ; 0.748 ns  ; ~ADD/SUB ; AdderSubtractor:inst|flipflop:ff3|Q ; Clk      ;
+; N/A           ; None        ; 0.747 ns  ; ~ADD/SUB ; AdderSubtractor:inst|flipflop:ff1|Q ; Clk      ;
+; N/A           ; None        ; 0.741 ns  ; B2       ; AdderSubtractor:inst|flipflop:ff2|Q ; Clk      ;
+; N/A           ; None        ; 0.708 ns  ; B3       ; AdderSubtractor:inst|flipflop:ff3|Q ; Clk      ;
+; N/A           ; None        ; 0.351 ns  ; B2       ; AdderSubtractor:inst|flipflop:ff3|Q ; Clk      ;
+; N/A           ; None        ; -3.228 ns ; B0       ; AdderSubtractor:inst|flipflop:ff0|Q ; Clk      ;
+; N/A           ; None        ; -3.822 ns ; B1       ; AdderSubtractor:inst|flipflop:ff1|Q ; Clk      ;
+; N/A           ; None        ; -3.910 ns ; B0       ; AdderSubtractor:inst|flipflop:ff1|Q ; Clk      ;
+; N/A           ; None        ; -4.048 ns ; B1       ; AdderSubtractor:inst|flipflop:ff2|Q ; Clk      ;
+; N/A           ; None        ; -4.310 ns ; B0       ; AdderSubtractor:inst|flipflop:ff2|Q ; Clk      ;
+; N/A           ; None        ; -4.446 ns ; B1       ; AdderSubtractor:inst|flipflop:ff3|Q ; Clk      ;
+; N/A           ; None        ; -4.708 ns ; B0       ; AdderSubtractor:inst|flipflop:ff3|Q ; Clk      ;
++---------------+-------------+-----------+----------+-------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
+    Info: Processing started: Fri Feb 19 00:16:13 2016
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off AdderSubtractor -c AdderSubtractor --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "Clk" is an undefined clock
+Info: Clock "Clk" Internal fmax is restricted to 420.17 MHz between source register "AdderSubtractor:inst|flipflop:ff0|Q" and destination register "AdderSubtractor:inst|flipflop:ff3|Q"
+    Info: fmax restricted to clock pin edge rate 2.38 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 1.739 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X1_Y6_N1; Fanout = 3; REG Node = 'AdderSubtractor:inst|flipflop:ff0|Q'
+            Info: 2: + IC(0.306 ns) + CELL(0.150 ns) = 0.456 ns; Loc. = LCCOMB_X1_Y6_N10; Fanout = 2; COMB Node = 'AdderSubtractor:inst|adder:stage0|Cout~0'
+            Info: 3: + IC(0.250 ns) + CELL(0.150 ns) = 0.856 ns; Loc. = LCCOMB_X1_Y6_N30; Fanout = 2; COMB Node = 'AdderSubtractor:inst|adder:stage1|Cout~0'
+            Info: 4: + IC(0.251 ns) + CELL(0.150 ns) = 1.257 ns; Loc. = LCCOMB_X1_Y6_N18; Fanout = 2; COMB Node = 'AdderSubtractor:inst|adder:stage2|Cout~0'
+            Info: 5: + IC(0.248 ns) + CELL(0.150 ns) = 1.655 ns; Loc. = LCCOMB_X1_Y6_N12; Fanout = 1; COMB Node = 'AdderSubtractor:inst|adder:stage3|S~0'
+            Info: 6: + IC(0.000 ns) + CELL(0.084 ns) = 1.739 ns; Loc. = LCFF_X1_Y6_N13; Fanout = 3; REG Node = 'AdderSubtractor:inst|flipflop:ff3|Q'
+            Info: Total cell delay = 0.684 ns ( 39.33 % )
+            Info: Total interconnect delay = 1.055 ns ( 60.67 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "Clk" to destination register is 2.333 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.989 ns) = 0.989 ns; Loc. = PIN_17; Fanout = 1; CLK Node = 'Clk'
+                Info: 2: + IC(0.122 ns) + CELL(0.000 ns) = 1.111 ns; Loc. = CLKCTRL_G2; Fanout = 4; COMB Node = 'Clk~clkctrl'
+                Info: 3: + IC(0.685 ns) + CELL(0.537 ns) = 2.333 ns; Loc. = LCFF_X1_Y6_N13; Fanout = 3; REG Node = 'AdderSubtractor:inst|flipflop:ff3|Q'
+                Info: Total cell delay = 1.526 ns ( 65.41 % )
+                Info: Total interconnect delay = 0.807 ns ( 34.59 % )
+            Info: - Longest clock path from clock "Clk" to source register is 2.333 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.989 ns) = 0.989 ns; Loc. = PIN_17; Fanout = 1; CLK Node = 'Clk'
+                Info: 2: + IC(0.122 ns) + CELL(0.000 ns) = 1.111 ns; Loc. = CLKCTRL_G2; Fanout = 4; COMB Node = 'Clk~clkctrl'
+                Info: 3: + IC(0.685 ns) + CELL(0.537 ns) = 2.333 ns; Loc. = LCFF_X1_Y6_N1; Fanout = 3; REG Node = 'AdderSubtractor:inst|flipflop:ff0|Q'
+                Info: Total cell delay = 1.526 ns ( 65.41 % )
+                Info: Total interconnect delay = 0.807 ns ( 34.59 % )
+        Info: + Micro clock to output delay of source is 0.250 ns
+        Info: + Micro setup delay of destination is -0.036 ns
+Info: tsu for register "AdderSubtractor:inst|flipflop:ff3|Q" (data pin = "B0", clock pin = "Clk") is 4.938 ns
+    Info: + Longest pin to register delay is 7.307 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.862 ns) = 0.862 ns; Loc. = PIN_27; Fanout = 2; PIN Node = 'B0'
+        Info: 2: + IC(4.749 ns) + CELL(0.413 ns) = 6.024 ns; Loc. = LCCOMB_X1_Y6_N10; Fanout = 2; COMB Node = 'AdderSubtractor:inst|adder:stage0|Cout~0'
+        Info: 3: + IC(0.250 ns) + CELL(0.150 ns) = 6.424 ns; Loc. = LCCOMB_X1_Y6_N30; Fanout = 2; COMB Node = 'AdderSubtractor:inst|adder:stage1|Cout~0'
+        Info: 4: + IC(0.251 ns) + CELL(0.150 ns) = 6.825 ns; Loc. = LCCOMB_X1_Y6_N18; Fanout = 2; COMB Node = 'AdderSubtractor:inst|adder:stage2|Cout~0'
+        Info: 5: + IC(0.248 ns) + CELL(0.150 ns) = 7.223 ns; Loc. = LCCOMB_X1_Y6_N12; Fanout = 1; COMB Node = 'AdderSubtractor:inst|adder:stage3|S~0'
+        Info: 6: + IC(0.000 ns) + CELL(0.084 ns) = 7.307 ns; Loc. = LCFF_X1_Y6_N13; Fanout = 3; REG Node = 'AdderSubtractor:inst|flipflop:ff3|Q'
+        Info: Total cell delay = 1.809 ns ( 24.76 % )
+        Info: Total interconnect delay = 5.498 ns ( 75.24 % )
+    Info: + Micro setup delay of destination is -0.036 ns
+    Info: - Shortest clock path from clock "Clk" to destination register is 2.333 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.989 ns) = 0.989 ns; Loc. = PIN_17; Fanout = 1; CLK Node = 'Clk'
+        Info: 2: + IC(0.122 ns) + CELL(0.000 ns) = 1.111 ns; Loc. = CLKCTRL_G2; Fanout = 4; COMB Node = 'Clk~clkctrl'
+        Info: 3: + IC(0.685 ns) + CELL(0.537 ns) = 2.333 ns; Loc. = LCFF_X1_Y6_N13; Fanout = 3; REG Node = 'AdderSubtractor:inst|flipflop:ff3|Q'
+        Info: Total cell delay = 1.526 ns ( 65.41 % )
+        Info: Total interconnect delay = 0.807 ns ( 34.59 % )
+Info: tco from clock "Clk" to destination pin "Co" through register "AdderSubtractor:inst|flipflop:ff0|Q" is 8.207 ns
+    Info: + Longest clock path from clock "Clk" to source register is 2.333 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.989 ns) = 0.989 ns; Loc. = PIN_17; Fanout = 1; CLK Node = 'Clk'
+        Info: 2: + IC(0.122 ns) + CELL(0.000 ns) = 1.111 ns; Loc. = CLKCTRL_G2; Fanout = 4; COMB Node = 'Clk~clkctrl'
+        Info: 3: + IC(0.685 ns) + CELL(0.537 ns) = 2.333 ns; Loc. = LCFF_X1_Y6_N1; Fanout = 3; REG Node = 'AdderSubtractor:inst|flipflop:ff0|Q'
+        Info: Total cell delay = 1.526 ns ( 65.41 % )
+        Info: Total interconnect delay = 0.807 ns ( 34.59 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 5.624 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X1_Y6_N1; Fanout = 3; REG Node = 'AdderSubtractor:inst|flipflop:ff0|Q'
+        Info: 2: + IC(0.306 ns) + CELL(0.150 ns) = 0.456 ns; Loc. = LCCOMB_X1_Y6_N10; Fanout = 2; COMB Node = 'AdderSubtractor:inst|adder:stage0|Cout~0'
+        Info: 3: + IC(0.250 ns) + CELL(0.150 ns) = 0.856 ns; Loc. = LCCOMB_X1_Y6_N30; Fanout = 2; COMB Node = 'AdderSubtractor:inst|adder:stage1|Cout~0'
+        Info: 4: + IC(0.251 ns) + CELL(0.150 ns) = 1.257 ns; Loc. = LCCOMB_X1_Y6_N18; Fanout = 2; COMB Node = 'AdderSubtractor:inst|adder:stage2|Cout~0'
+        Info: 5: + IC(0.251 ns) + CELL(0.420 ns) = 1.928 ns; Loc. = LCCOMB_X1_Y6_N22; Fanout = 1; COMB Node = 'AdderSubtractor:inst|adder:stage3|Cout~0'
+        Info: 6: + IC(1.054 ns) + CELL(2.642 ns) = 5.624 ns; Loc. = PIN_7; Fanout = 0; PIN Node = 'Co'
+        Info: Total cell delay = 3.512 ns ( 62.45 % )
+        Info: Total interconnect delay = 2.112 ns ( 37.55 % )
+Info: Longest tpd from source pin "B0" to destination pin "Co" is 11.192 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.862 ns) = 0.862 ns; Loc. = PIN_27; Fanout = 2; PIN Node = 'B0'
+    Info: 2: + IC(4.749 ns) + CELL(0.413 ns) = 6.024 ns; Loc. = LCCOMB_X1_Y6_N10; Fanout = 2; COMB Node = 'AdderSubtractor:inst|adder:stage0|Cout~0'
+    Info: 3: + IC(0.250 ns) + CELL(0.150 ns) = 6.424 ns; Loc. = LCCOMB_X1_Y6_N30; Fanout = 2; COMB Node = 'AdderSubtractor:inst|adder:stage1|Cout~0'
+    Info: 4: + IC(0.251 ns) + CELL(0.150 ns) = 6.825 ns; Loc. = LCCOMB_X1_Y6_N18; Fanout = 2; COMB Node = 'AdderSubtractor:inst|adder:stage2|Cout~0'
+    Info: 5: + IC(0.251 ns) + CELL(0.420 ns) = 7.496 ns; Loc. = LCCOMB_X1_Y6_N22; Fanout = 1; COMB Node = 'AdderSubtractor:inst|adder:stage3|Cout~0'
+    Info: 6: + IC(1.054 ns) + CELL(2.642 ns) = 11.192 ns; Loc. = PIN_7; Fanout = 0; PIN Node = 'Co'
+    Info: Total cell delay = 4.637 ns ( 41.43 % )
+    Info: Total interconnect delay = 6.555 ns ( 58.57 % )
+Info: th for register "AdderSubtractor:inst|flipflop:ff2|Q" (data pin = "~ADD/SUB", clock pin = "Clk") is 0.750 ns
+    Info: + Longest clock path from clock "Clk" to destination register is 2.333 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.989 ns) = 0.989 ns; Loc. = PIN_17; Fanout = 1; CLK Node = 'Clk'
+        Info: 2: + IC(0.122 ns) + CELL(0.000 ns) = 1.111 ns; Loc. = CLKCTRL_G2; Fanout = 4; COMB Node = 'Clk~clkctrl'
+        Info: 3: + IC(0.685 ns) + CELL(0.537 ns) = 2.333 ns; Loc. = LCFF_X1_Y6_N9; Fanout = 3; REG Node = 'AdderSubtractor:inst|flipflop:ff2|Q'
+        Info: Total cell delay = 1.526 ns ( 65.41 % )
+        Info: Total interconnect delay = 0.807 ns ( 34.59 % )
+    Info: + Micro hold delay of destination is 0.266 ns
+    Info: - Shortest pin to register delay is 1.849 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_18; Fanout = 7; PIN Node = '~ADD/SUB'
+        Info: 2: + IC(0.348 ns) + CELL(0.438 ns) = 1.765 ns; Loc. = LCCOMB_X1_Y6_N8; Fanout = 1; COMB Node = 'AdderSubtractor:inst|adder:stage2|S~0'
+        Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 1.849 ns; Loc. = LCFF_X1_Y6_N9; Fanout = 3; REG Node = 'AdderSubtractor:inst|flipflop:ff2|Q'
+        Info: Total cell delay = 1.501 ns ( 81.18 % )
+        Info: Total interconnect delay = 0.348 ns ( 18.82 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 202 megabytes
+    Info: Processing ended: Fri Feb 19 00:16:13 2016
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,13 @@
+|CombinationLock
+X2 => y2~1.IN1
+X2 => y2~4.IN0
+X2 => y1~2.IN0
+X2 => y0~0.IN0
+X2 => y0~2.IN1
+X1 => y1~5.IN0
+X1 => y0~0.IN1
+X1 => y0~5.IN1
+X1 => y2~2.IN1
+Z <= Z~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

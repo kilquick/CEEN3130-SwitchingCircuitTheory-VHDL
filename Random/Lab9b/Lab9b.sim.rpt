@@ -1,0 +1,219 @@
+Simulator report for Lab9b
+Wed Mar 16 14:34:31 2016
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.52 us      ;
+; Simulation Netlist Size     ; 58 nodes     ;
+; Simulation Coverage         ;      98.25 % ;
+; Total Number of Transitions ; 540          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
+; Device                      ; EP2S15F484C3 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      98.25 % ;
+; Total nodes checked                                 ; 58           ;
+; Total output ports checked                          ; 57           ;
+; Total output ports with complete 1/0-value coverage ; 56           ;
+; Total output ports with no 1/0-value coverage       ; 1            ;
+; Total output ports with no 1-value coverage         ; 1            ;
+; Total output ports with no 0-value coverage         ; 1            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                  ;
++-----------------------------+-----------------------------+------------------+
+; Node Name                   ; Output Port Name            ; Output Port Type ;
++-----------------------------+-----------------------------+------------------+
+; |Lab9b|N0                   ; |Lab9b|N0                   ; regout           ;
+; |Lab9b|D0                   ; |Lab9b|D0                   ; regout           ;
+; |Lab9b|Q0                   ; |Lab9b|Q0                   ; regout           ;
+; |Lab9b|state.R5             ; |Lab9b|state.R5             ; regout           ;
+; |Lab9b|state.R15            ; |Lab9b|state.R15            ; regout           ;
+; |Lab9b|Z5~0                 ; |Lab9b|Z5~0                 ; combout          ;
+; |Lab9b|state.R10            ; |Lab9b|state.R10            ; regout           ;
+; |Lab9b|Z10~0                ; |Lab9b|Z10~0                ; combout          ;
+; |Lab9b|N1                   ; |Lab9b|N1                   ; regout           ;
+; |Lab9b|N0~0                 ; |Lab9b|N0~0                 ; combout          ;
+; |Lab9b|N1~0                 ; |Lab9b|N1~0                 ; combout          ;
+; |Lab9b|D1                   ; |Lab9b|D1                   ; regout           ;
+; |Lab9b|D0~0                 ; |Lab9b|D0~0                 ; combout          ;
+; |Lab9b|D1~0                 ; |Lab9b|D1~0                 ; combout          ;
+; |Lab9b|Q1                   ; |Lab9b|Q1                   ; regout           ;
+; |Lab9b|Q0~0                 ; |Lab9b|Q0~0                 ; combout          ;
+; |Lab9b|state.S20            ; |Lab9b|state.S20            ; regout           ;
+; |Lab9b|state.S30            ; |Lab9b|state.S30            ; regout           ;
+; |Lab9b|state.S25            ; |Lab9b|state.S25            ; regout           ;
+; |Lab9b|Selector7~0          ; |Lab9b|Selector7~0          ; combout          ;
+; |Lab9b|state~12             ; |Lab9b|state~12             ; combout          ;
+; |Lab9b|Selector8~0          ; |Lab9b|Selector8~0          ; combout          ;
+; |Lab9b|D1~1                 ; |Lab9b|D1~1                 ; combout          ;
+; |Lab9b|Selector4~0          ; |Lab9b|Selector4~0          ; combout          ;
+; |Lab9b|state.S15            ; |Lab9b|state.S15            ; regout           ;
+; |Lab9b|Selector4~1          ; |Lab9b|Selector4~1          ; combout          ;
+; |Lab9b|state.S10            ; |Lab9b|state.S10            ; regout           ;
+; |Lab9b|Selector4~2          ; |Lab9b|Selector4~2          ; combout          ;
+; |Lab9b|state.S5             ; |Lab9b|state.S5             ; regout           ;
+; |Lab9b|Selector6~0          ; |Lab9b|Selector6~0          ; combout          ;
+; |Lab9b|Selector4~3          ; |Lab9b|Selector4~3          ; combout          ;
+; |Lab9b|state.S0             ; |Lab9b|state.S0             ; regout           ;
+; |Lab9b|Selector5~0          ; |Lab9b|Selector5~0          ; combout          ;
+; |Lab9b|Selector3~0          ; |Lab9b|Selector3~0          ; combout          ;
+; |Lab9b|Selector2~0          ; |Lab9b|Selector2~0          ; combout          ;
+; |Lab9b|Selector1~0          ; |Lab9b|Selector1~0          ; combout          ;
+; |Lab9b|Selector0~1          ; |Lab9b|Selector0~1          ; combout          ;
+; |Lab9b|Selector5~1          ; |Lab9b|Selector5~1          ; combout          ;
+; |Lab9b|Selector5~2          ; |Lab9b|Selector5~2          ; combout          ;
+; |Lab9b|Selector6~1          ; |Lab9b|Selector6~1          ; combout          ;
+; |Lab9b|Selector6~2          ; |Lab9b|Selector6~2          ; combout          ;
+; |Lab9b|No                   ; |Lab9b|No                   ; padio            ;
+; |Lab9b|Do                   ; |Lab9b|Do                   ; padio            ;
+; |Lab9b|Qo                   ; |Lab9b|Qo                   ; padio            ;
+; |Lab9b|Z5                   ; |Lab9b|Z5                   ; padio            ;
+; |Lab9b|Z10                  ; |Lab9b|Z10                  ; padio            ;
+; |Lab9b|N                    ; |Lab9b|N~corein             ; combout          ;
+; |Lab9b|clk                  ; |Lab9b|clk~corein           ; combout          ;
+; |Lab9b|D                    ; |Lab9b|D~corein             ; combout          ;
+; |Lab9b|Q                    ; |Lab9b|Q~corein             ; combout          ;
+; |Lab9b|P15                  ; |Lab9b|P15~corein           ; combout          ;
+; |Lab9b|P20                  ; |Lab9b|P20~corein           ; combout          ;
+; |Lab9b|P25                  ; |Lab9b|P25~corein           ; combout          ;
+; |Lab9b|clk~clkctrl          ; |Lab9b|clk~clkctrl          ; outclk           ;
+; |Lab9b|Selector4~2DUPLICATE ; |Lab9b|Selector4~2DUPLICATE ; combout          ;
+; |Lab9b|state.S20~DUPLICATE  ; |Lab9b|state.S20~DUPLICATE  ; regout           ;
++-----------------------------+-----------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------+
+; Missing 1-Value Coverage                                   ;
++--------------------+--------------------+------------------+
+; Node Name          ; Output Port Name   ; Output Port Type ;
++--------------------+--------------------+------------------+
+; |Lab9b|Selector0~0 ; |Lab9b|Selector0~0 ; combout          ;
++--------------------+--------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------+
+; Missing 0-Value Coverage                                   ;
++--------------------+--------------------+------------------+
+; Node Name          ; Output Port Name   ; Output Port Type ;
++--------------------+--------------------+------------------+
+; |Lab9b|Selector0~0 ; |Lab9b|Selector0~0 ; combout          ;
++--------------------+--------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
+    Info: Processing started: Wed Mar 16 14:34:31 2016
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Lab9b -c Lab9b
+Info: Using vector source file "C:/Users/Tyler/Desktop/Lab9b/Lab9b.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      98.25 %
+Info: Number of transitions in simulation is 540
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 174 megabytes
+    Info: Processing ended: Wed Mar 16 14:34:31 2016
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

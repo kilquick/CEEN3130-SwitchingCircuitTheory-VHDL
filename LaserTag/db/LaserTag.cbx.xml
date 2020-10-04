@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="LaserTag">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|COUNTER5:inst7|lpm_mux:Mux0" CBX_FILE_NAME="mux_kpc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|DECODER:inst2|lpm_mux:Mux0" CBX_FILE_NAME="mux_0oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|DECODER:inst2|lpm_mux:Mux1" CBX_FILE_NAME="mux_0oc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,452 @@
+Simulator report for Divider
+Wed Apr 20 01:56:51 2016
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.5 us       ;
+; Simulation Netlist Size     ; 230 nodes    ;
+; Simulation Coverage         ;      72.17 % ;
+; Total Number of Transitions ; 1736         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                       ;
++--------------------------------------------------------------------------------------------+-------------+---------------+
+; Option                                                                                     ; Setting     ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------+---------------+
+; Simulation mode                                                                            ; Functional  ; Timing        ;
+; Start time                                                                                 ; 0 ns        ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF        ;               ;
+; Vector input source                                                                        ; Divider.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On          ; On            ;
+; Check outputs                                                                              ; Off         ; Off           ;
+; Report simulation coverage                                                                 ; On          ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On          ; On            ;
+; Display missing 1-value coverage report                                                    ; On          ; On            ;
+; Display missing 0-value coverage report                                                    ; On          ; On            ;
+; Detect setup and hold time violations                                                      ; Off         ; Off           ;
+; Detect glitches                                                                            ; Off         ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off         ; Off           ;
+; Generate Signal Activity File                                                              ; Off         ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off         ; Off           ;
+; Group bus channels in simulation results                                                   ; Off         ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On          ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE  ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off         ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto        ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      72.17 % ;
+; Total nodes checked                                 ; 230          ;
+; Total output ports checked                          ; 230          ;
+; Total output ports with complete 1/0-value coverage ; 166          ;
+; Total output ports with no 1/0-value coverage       ; 59           ;
+; Total output ports with no 1-value coverage         ; 63           ;
+; Total output ports with no 0-value coverage         ; 60           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                            ;
++----------------------------------+----------------------------------+------------------+
+; Node Name                        ; Output Port Name                 ; Output Port Type ;
++----------------------------------+----------------------------------+------------------+
+; |Block1|DONE                     ; |Block1|DONE                     ; pin_out          ;
+; |Block1|CLK                      ; |Block1|CLK                      ; out              ;
+; |Block1|S                        ; |Block1|S                        ; out              ;
+; |Block1|REMAINDER[7]             ; |Block1|REMAINDER[7]             ; pin_out          ;
+; |Block1|REMAINDER[6]             ; |Block1|REMAINDER[6]             ; pin_out          ;
+; |Block1|REMAINDER[5]             ; |Block1|REMAINDER[5]             ; pin_out          ;
+; |Block1|REMAINDER[4]             ; |Block1|REMAINDER[4]             ; pin_out          ;
+; |Block1|REMAINDER[3]             ; |Block1|REMAINDER[3]             ; pin_out          ;
+; |Block1|REMAINDER[2]             ; |Block1|REMAINDER[2]             ; pin_out          ;
+; |Block1|REMAINDER[1]             ; |Block1|REMAINDER[1]             ; pin_out          ;
+; |Block1|REMAINDER[0]             ; |Block1|REMAINDER[0]             ; pin_out          ;
+; |Block1|DIVISOR[2]               ; |Block1|DIVISOR[2]               ; out              ;
+; |Block1|DIVISOR[1]               ; |Block1|DIVISOR[1]               ; out              ;
+; |Block1|DIVISOR[0]               ; |Block1|DIVISOR[0]               ; out              ;
+; |Block1|DIVIDEND[2]              ; |Block1|DIVIDEND[2]              ; out              ;
+; |Block1|DIVIDEND[0]              ; |Block1|DIVIDEND[0]              ; out              ;
+; |Block1|ENCNT                    ; |Block1|ENCNT                    ; pin_out          ;
+; |Block1|SUB                      ; |Block1|SUB                      ; pin_out          ;
+; |Block1|DVD                      ; |Block1|DVD                      ; pin_out          ;
+; |Block1|DSR                      ; |Block1|DSR                      ; pin_out          ;
+; |Block1|CLR                      ; |Block1|CLR                      ; pin_out          ;
+; |Block1|SEL                      ; |Block1|SEL                      ; pin_out          ;
+; |Block1|MSB                      ; |Block1|MSB                      ; pin_out          ;
+; |Block1|QUOTIENT[1]              ; |Block1|QUOTIENT[1]              ; pin_out          ;
+; |Block1|QUOTIENT[0]              ; |Block1|QUOTIENT[0]              ; pin_out          ;
+; |Block1|COUNT:inst4|TMP~5        ; |Block1|COUNT:inst4|TMP~5        ; out              ;
+; |Block1|COUNT:inst4|TMP~6        ; |Block1|COUNT:inst4|TMP~6        ; out              ;
+; |Block1|COUNT:inst4|TMP~7        ; |Block1|COUNT:inst4|TMP~7        ; out              ;
+; |Block1|COUNT:inst4|TMP~13       ; |Block1|COUNT:inst4|TMP~13       ; out              ;
+; |Block1|COUNT:inst4|TMP~14       ; |Block1|COUNT:inst4|TMP~14       ; out              ;
+; |Block1|COUNT:inst4|TMP~15       ; |Block1|COUNT:inst4|TMP~15       ; out              ;
+; |Block1|COUNT:inst4|TMP[0]       ; |Block1|COUNT:inst4|TMP[0]       ; regout           ;
+; |Block1|COUNT:inst4|TMP[1]       ; |Block1|COUNT:inst4|TMP[1]       ; regout           ;
+; |Block1|STORE:inst3|TMP~5        ; |Block1|STORE:inst3|TMP~5        ; out              ;
+; |Block1|STORE:inst3|TMP~6        ; |Block1|STORE:inst3|TMP~6        ; out              ;
+; |Block1|STORE:inst3|TMP~7        ; |Block1|STORE:inst3|TMP~7        ; out              ;
+; |Block1|STORE:inst3|TMP~13       ; |Block1|STORE:inst3|TMP~13       ; out              ;
+; |Block1|STORE:inst3|TMP~14       ; |Block1|STORE:inst3|TMP~14       ; out              ;
+; |Block1|STORE:inst3|TMP~15       ; |Block1|STORE:inst3|TMP~15       ; out              ;
+; |Block1|STORE:inst3|TMP[0]       ; |Block1|STORE:inst3|TMP[0]       ; regout           ;
+; |Block1|STORE:inst3|TMP[1]       ; |Block1|STORE:inst3|TMP[1]       ; regout           ;
+; |Block1|STORE:inst3|TMP[2]       ; |Block1|STORE:inst3|TMP[2]       ; regout           ;
+; |Block1|ADDSUB:inst5|TOTAL[7]    ; |Block1|ADDSUB:inst5|TOTAL[7]    ; out              ;
+; |Block1|ADDSUB:inst5|TOTAL[6]    ; |Block1|ADDSUB:inst5|TOTAL[6]    ; out              ;
+; |Block1|ADDSUB:inst5|TOTAL[5]    ; |Block1|ADDSUB:inst5|TOTAL[5]    ; out              ;
+; |Block1|ADDSUB:inst5|TOTAL[4]    ; |Block1|ADDSUB:inst5|TOTAL[4]    ; out              ;
+; |Block1|ADDSUB:inst5|TOTAL[3]    ; |Block1|ADDSUB:inst5|TOTAL[3]    ; out              ;
+; |Block1|ADDSUB:inst5|TOTAL[2]    ; |Block1|ADDSUB:inst5|TOTAL[2]    ; out              ;
+; |Block1|ADDSUB:inst5|TOTAL[1]    ; |Block1|ADDSUB:inst5|TOTAL[1]    ; out              ;
+; |Block1|ADDSUB:inst5|TOTAL[0]    ; |Block1|ADDSUB:inst5|TOTAL[0]    ; out              ;
+; |Block1|MUX:inst6|Dout[7]        ; |Block1|MUX:inst6|Dout[7]        ; out              ;
+; |Block1|MUX:inst6|Dout[6]        ; |Block1|MUX:inst6|Dout[6]        ; out              ;
+; |Block1|MUX:inst6|Dout[5]        ; |Block1|MUX:inst6|Dout[5]        ; out              ;
+; |Block1|MUX:inst6|Dout[4]        ; |Block1|MUX:inst6|Dout[4]        ; out              ;
+; |Block1|MUX:inst6|Dout[3]        ; |Block1|MUX:inst6|Dout[3]        ; out              ;
+; |Block1|MUX:inst6|Dout[2]        ; |Block1|MUX:inst6|Dout[2]        ; out              ;
+; |Block1|MUX:inst6|Dout[1]        ; |Block1|MUX:inst6|Dout[1]        ; out              ;
+; |Block1|MUX:inst6|Dout[0]        ; |Block1|MUX:inst6|Dout[0]        ; out              ;
+; |Block1|STORE:inst2|TMP~0        ; |Block1|STORE:inst2|TMP~0        ; out              ;
+; |Block1|STORE:inst2|TMP~1        ; |Block1|STORE:inst2|TMP~1        ; out              ;
+; |Block1|STORE:inst2|TMP~2        ; |Block1|STORE:inst2|TMP~2        ; out              ;
+; |Block1|STORE:inst2|TMP~3        ; |Block1|STORE:inst2|TMP~3        ; out              ;
+; |Block1|STORE:inst2|TMP~4        ; |Block1|STORE:inst2|TMP~4        ; out              ;
+; |Block1|STORE:inst2|TMP~5        ; |Block1|STORE:inst2|TMP~5        ; out              ;
+; |Block1|STORE:inst2|TMP~6        ; |Block1|STORE:inst2|TMP~6        ; out              ;
+; |Block1|STORE:inst2|TMP~7        ; |Block1|STORE:inst2|TMP~7        ; out              ;
+; |Block1|STORE:inst2|TMP~8        ; |Block1|STORE:inst2|TMP~8        ; out              ;
+; |Block1|STORE:inst2|TMP~9        ; |Block1|STORE:inst2|TMP~9        ; out              ;
+; |Block1|STORE:inst2|TMP~10       ; |Block1|STORE:inst2|TMP~10       ; out              ;
+; |Block1|STORE:inst2|TMP~11       ; |Block1|STORE:inst2|TMP~11       ; out              ;
+; |Block1|STORE:inst2|TMP~12       ; |Block1|STORE:inst2|TMP~12       ; out              ;
+; |Block1|STORE:inst2|TMP~13       ; |Block1|STORE:inst2|TMP~13       ; out              ;
+; |Block1|STORE:inst2|TMP~14       ; |Block1|STORE:inst2|TMP~14       ; out              ;
+; |Block1|STORE:inst2|TMP~15       ; |Block1|STORE:inst2|TMP~15       ; out              ;
+; |Block1|STORE:inst2|TMP[0]       ; |Block1|STORE:inst2|TMP[0]       ; regout           ;
+; |Block1|STORE:inst2|TMP[1]       ; |Block1|STORE:inst2|TMP[1]       ; regout           ;
+; |Block1|STORE:inst2|TMP[2]       ; |Block1|STORE:inst2|TMP[2]       ; regout           ;
+; |Block1|STORE:inst2|TMP[3]       ; |Block1|STORE:inst2|TMP[3]       ; regout           ;
+; |Block1|STORE:inst2|TMP[4]       ; |Block1|STORE:inst2|TMP[4]       ; regout           ;
+; |Block1|STORE:inst2|TMP[5]       ; |Block1|STORE:inst2|TMP[5]       ; regout           ;
+; |Block1|STORE:inst2|TMP[6]       ; |Block1|STORE:inst2|TMP[6]       ; regout           ;
+; |Block1|STORE:inst2|TMP[7]       ; |Block1|STORE:inst2|TMP[7]       ; regout           ;
+; |Block1|DIVIDER:inst|Y.S0        ; |Block1|DIVIDER:inst|Y.S0        ; regout           ;
+; |Block1|DIVIDER:inst|Y.S1        ; |Block1|DIVIDER:inst|Y.S1        ; regout           ;
+; |Block1|DIVIDER:inst|Y.S2        ; |Block1|DIVIDER:inst|Y.S2        ; regout           ;
+; |Block1|DIVIDER:inst|SEL         ; |Block1|DIVIDER:inst|SEL         ; out              ;
+; |Block1|DIVIDER:inst|DVD~0       ; |Block1|DIVIDER:inst|DVD~0       ; out0             ;
+; |Block1|DIVIDER:inst|DSR         ; |Block1|DIVIDER:inst|DSR         ; out              ;
+; |Block1|DIVIDER:inst|Y.S3        ; |Block1|DIVIDER:inst|Y.S3        ; regout           ;
+; |Block1|DIVIDER:inst|ENCNT       ; |Block1|DIVIDER:inst|ENCNT       ; out              ;
+; |Block1|DIVIDER:inst|CLR         ; |Block1|DIVIDER:inst|CLR         ; out              ;
+; |Block1|DIVIDER:inst|Y~1         ; |Block1|DIVIDER:inst|Y~1         ; out0             ;
+; |Block1|DIVIDER:inst|Y~4         ; |Block1|DIVIDER:inst|Y~4         ; out0             ;
+; |Block1|DIVIDER:inst|Y.S1~0      ; |Block1|DIVIDER:inst|Y.S1~0      ; out0             ;
+; |Block1|DIVIDER:inst|Y~6         ; |Block1|DIVIDER:inst|Y~6         ; out0             ;
+; |Block1|DIVIDER:inst|Selector1~0 ; |Block1|DIVIDER:inst|Selector1~0 ; out0             ;
+; |Block1|DIVIDER:inst|DONE        ; |Block1|DIVIDER:inst|DONE        ; out0             ;
+; |Block1|DIVIDER:inst|Y~10        ; |Block1|DIVIDER:inst|Y~10        ; out0             ;
+; |Block1|DIVIDER:inst|Selector0~0 ; |Block1|DIVIDER:inst|Selector0~0 ; out0             ;
+; |Block1|DIVIDER:inst|Selector1~2 ; |Block1|DIVIDER:inst|Selector1~2 ; out0             ;
+; |Block1|DIVIDER:inst|Selector1~3 ; |Block1|DIVIDER:inst|Selector1~3 ; out0             ;
+; |Block1|DIVIDER:inst|Selector1~4 ; |Block1|DIVIDER:inst|Selector1~4 ; out0             ;
+; |Block1|DIVIDER:inst|Selector2~0 ; |Block1|DIVIDER:inst|Selector2~0 ; out0             ;
+; |Block1|DIVIDER:inst|Selector2~1 ; |Block1|DIVIDER:inst|Selector2~1 ; out0             ;
+; |Block1|DIVIDER:inst|Selector3~0 ; |Block1|DIVIDER:inst|Selector3~0 ; out0             ;
+; |Block1|DIVIDER:inst|Selector3~1 ; |Block1|DIVIDER:inst|Selector3~1 ; out0             ;
+; |Block1|COUNT:inst4|Add0~0       ; |Block1|COUNT:inst4|Add0~0       ; out0             ;
+; |Block1|COUNT:inst4|Add0~1       ; |Block1|COUNT:inst4|Add0~1       ; out0             ;
+; |Block1|COUNT:inst4|Add0~2       ; |Block1|COUNT:inst4|Add0~2       ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~0      ; |Block1|ADDSUB:inst5|Add0~0      ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~1      ; |Block1|ADDSUB:inst5|Add0~1      ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~2      ; |Block1|ADDSUB:inst5|Add0~2      ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~3      ; |Block1|ADDSUB:inst5|Add0~3      ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~5      ; |Block1|ADDSUB:inst5|Add0~5      ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~6      ; |Block1|ADDSUB:inst5|Add0~6      ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~7      ; |Block1|ADDSUB:inst5|Add0~7      ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~8      ; |Block1|ADDSUB:inst5|Add0~8      ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~9      ; |Block1|ADDSUB:inst5|Add0~9      ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~10     ; |Block1|ADDSUB:inst5|Add0~10     ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~11     ; |Block1|ADDSUB:inst5|Add0~11     ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~12     ; |Block1|ADDSUB:inst5|Add0~12     ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~13     ; |Block1|ADDSUB:inst5|Add0~13     ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~14     ; |Block1|ADDSUB:inst5|Add0~14     ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~17     ; |Block1|ADDSUB:inst5|Add0~17     ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~18     ; |Block1|ADDSUB:inst5|Add0~18     ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~19     ; |Block1|ADDSUB:inst5|Add0~19     ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~22     ; |Block1|ADDSUB:inst5|Add0~22     ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~23     ; |Block1|ADDSUB:inst5|Add0~23     ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~24     ; |Block1|ADDSUB:inst5|Add0~24     ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~27     ; |Block1|ADDSUB:inst5|Add0~27     ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~28     ; |Block1|ADDSUB:inst5|Add0~28     ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~29     ; |Block1|ADDSUB:inst5|Add0~29     ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~32     ; |Block1|ADDSUB:inst5|Add0~32     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~0      ; |Block1|ADDSUB:inst5|Add1~0      ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~1      ; |Block1|ADDSUB:inst5|Add1~1      ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~2      ; |Block1|ADDSUB:inst5|Add1~2      ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~3      ; |Block1|ADDSUB:inst5|Add1~3      ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~4      ; |Block1|ADDSUB:inst5|Add1~4      ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~5      ; |Block1|ADDSUB:inst5|Add1~5      ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~6      ; |Block1|ADDSUB:inst5|Add1~6      ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~7      ; |Block1|ADDSUB:inst5|Add1~7      ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~8      ; |Block1|ADDSUB:inst5|Add1~8      ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~9      ; |Block1|ADDSUB:inst5|Add1~9      ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~10     ; |Block1|ADDSUB:inst5|Add1~10     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~12     ; |Block1|ADDSUB:inst5|Add1~12     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~13     ; |Block1|ADDSUB:inst5|Add1~13     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~14     ; |Block1|ADDSUB:inst5|Add1~14     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~15     ; |Block1|ADDSUB:inst5|Add1~15     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~16     ; |Block1|ADDSUB:inst5|Add1~16     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~17     ; |Block1|ADDSUB:inst5|Add1~17     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~18     ; |Block1|ADDSUB:inst5|Add1~18     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~19     ; |Block1|ADDSUB:inst5|Add1~19     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~20     ; |Block1|ADDSUB:inst5|Add1~20     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~21     ; |Block1|ADDSUB:inst5|Add1~21     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~22     ; |Block1|ADDSUB:inst5|Add1~22     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~23     ; |Block1|ADDSUB:inst5|Add1~23     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~24     ; |Block1|ADDSUB:inst5|Add1~24     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~25     ; |Block1|ADDSUB:inst5|Add1~25     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~26     ; |Block1|ADDSUB:inst5|Add1~26     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~27     ; |Block1|ADDSUB:inst5|Add1~27     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~28     ; |Block1|ADDSUB:inst5|Add1~28     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~29     ; |Block1|ADDSUB:inst5|Add1~29     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~30     ; |Block1|ADDSUB:inst5|Add1~30     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~31     ; |Block1|ADDSUB:inst5|Add1~31     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~32     ; |Block1|ADDSUB:inst5|Add1~32     ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~33     ; |Block1|ADDSUB:inst5|Add1~33     ; out0             ;
++----------------------------------+----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                       ;
++------------------------------+------------------------------+------------------+
+; Node Name                    ; Output Port Name             ; Output Port Type ;
++------------------------------+------------------------------+------------------+
+; |Block1|DIVISOR[3]           ; |Block1|DIVISOR[3]           ; out              ;
+; |Block1|DIVIDEND[4]          ; |Block1|DIVIDEND[4]          ; out              ;
+; |Block1|DIVIDEND[3]          ; |Block1|DIVIDEND[3]          ; out              ;
+; |Block1|DIVIDEND[1]          ; |Block1|DIVIDEND[1]          ; out              ;
+; |Block1|QUOTIENT[7]          ; |Block1|QUOTIENT[7]          ; pin_out          ;
+; |Block1|QUOTIENT[6]          ; |Block1|QUOTIENT[6]          ; pin_out          ;
+; |Block1|QUOTIENT[5]          ; |Block1|QUOTIENT[5]          ; pin_out          ;
+; |Block1|QUOTIENT[4]          ; |Block1|QUOTIENT[4]          ; pin_out          ;
+; |Block1|QUOTIENT[3]          ; |Block1|QUOTIENT[3]          ; pin_out          ;
+; |Block1|QUOTIENT[2]          ; |Block1|QUOTIENT[2]          ; pin_out          ;
+; |Block1|COUNT:inst4|TMP~0    ; |Block1|COUNT:inst4|TMP~0    ; out              ;
+; |Block1|COUNT:inst4|TMP~1    ; |Block1|COUNT:inst4|TMP~1    ; out              ;
+; |Block1|COUNT:inst4|TMP~2    ; |Block1|COUNT:inst4|TMP~2    ; out              ;
+; |Block1|COUNT:inst4|TMP~3    ; |Block1|COUNT:inst4|TMP~3    ; out              ;
+; |Block1|COUNT:inst4|TMP~4    ; |Block1|COUNT:inst4|TMP~4    ; out              ;
+; |Block1|COUNT:inst4|TMP~8    ; |Block1|COUNT:inst4|TMP~8    ; out              ;
+; |Block1|COUNT:inst4|TMP~9    ; |Block1|COUNT:inst4|TMP~9    ; out              ;
+; |Block1|COUNT:inst4|TMP~10   ; |Block1|COUNT:inst4|TMP~10   ; out              ;
+; |Block1|COUNT:inst4|TMP~11   ; |Block1|COUNT:inst4|TMP~11   ; out              ;
+; |Block1|COUNT:inst4|TMP~12   ; |Block1|COUNT:inst4|TMP~12   ; out              ;
+; |Block1|COUNT:inst4|TMP[2]   ; |Block1|COUNT:inst4|TMP[2]   ; regout           ;
+; |Block1|COUNT:inst4|TMP[3]   ; |Block1|COUNT:inst4|TMP[3]   ; regout           ;
+; |Block1|COUNT:inst4|TMP[4]   ; |Block1|COUNT:inst4|TMP[4]   ; regout           ;
+; |Block1|COUNT:inst4|TMP[5]   ; |Block1|COUNT:inst4|TMP[5]   ; regout           ;
+; |Block1|COUNT:inst4|TMP[6]   ; |Block1|COUNT:inst4|TMP[6]   ; regout           ;
+; |Block1|COUNT:inst4|TMP[7]   ; |Block1|COUNT:inst4|TMP[7]   ; regout           ;
+; |Block1|STORE:inst3|TMP~0    ; |Block1|STORE:inst3|TMP~0    ; out              ;
+; |Block1|STORE:inst3|TMP~1    ; |Block1|STORE:inst3|TMP~1    ; out              ;
+; |Block1|STORE:inst3|TMP~2    ; |Block1|STORE:inst3|TMP~2    ; out              ;
+; |Block1|STORE:inst3|TMP~3    ; |Block1|STORE:inst3|TMP~3    ; out              ;
+; |Block1|STORE:inst3|TMP~4    ; |Block1|STORE:inst3|TMP~4    ; out              ;
+; |Block1|STORE:inst3|TMP~8    ; |Block1|STORE:inst3|TMP~8    ; out              ;
+; |Block1|STORE:inst3|TMP~9    ; |Block1|STORE:inst3|TMP~9    ; out              ;
+; |Block1|STORE:inst3|TMP~10   ; |Block1|STORE:inst3|TMP~10   ; out              ;
+; |Block1|STORE:inst3|TMP~11   ; |Block1|STORE:inst3|TMP~11   ; out              ;
+; |Block1|STORE:inst3|TMP~12   ; |Block1|STORE:inst3|TMP~12   ; out              ;
+; |Block1|STORE:inst3|TMP[3]   ; |Block1|STORE:inst3|TMP[3]   ; regout           ;
+; |Block1|STORE:inst3|TMP[4]   ; |Block1|STORE:inst3|TMP[4]   ; regout           ;
+; |Block1|STORE:inst3|TMP[5]   ; |Block1|STORE:inst3|TMP[5]   ; regout           ;
+; |Block1|STORE:inst3|TMP[6]   ; |Block1|STORE:inst3|TMP[6]   ; regout           ;
+; |Block1|STORE:inst3|TMP[7]   ; |Block1|STORE:inst3|TMP[7]   ; regout           ;
+; |Block1|DIVIDER:inst|Y~2     ; |Block1|DIVIDER:inst|Y~2     ; out0             ;
+; |Block1|DIVIDER:inst|Y~14    ; |Block1|DIVIDER:inst|Y~14    ; out0             ;
+; |Block1|COUNT:inst4|Add0~3   ; |Block1|COUNT:inst4|Add0~3   ; out0             ;
+; |Block1|COUNT:inst4|Add0~4   ; |Block1|COUNT:inst4|Add0~4   ; out0             ;
+; |Block1|COUNT:inst4|Add0~5   ; |Block1|COUNT:inst4|Add0~5   ; out0             ;
+; |Block1|COUNT:inst4|Add0~6   ; |Block1|COUNT:inst4|Add0~6   ; out0             ;
+; |Block1|COUNT:inst4|Add0~7   ; |Block1|COUNT:inst4|Add0~7   ; out0             ;
+; |Block1|COUNT:inst4|Add0~8   ; |Block1|COUNT:inst4|Add0~8   ; out0             ;
+; |Block1|COUNT:inst4|Add0~9   ; |Block1|COUNT:inst4|Add0~9   ; out0             ;
+; |Block1|COUNT:inst4|Add0~10  ; |Block1|COUNT:inst4|Add0~10  ; out0             ;
+; |Block1|COUNT:inst4|Add0~11  ; |Block1|COUNT:inst4|Add0~11  ; out0             ;
+; |Block1|COUNT:inst4|Add0~12  ; |Block1|COUNT:inst4|Add0~12  ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~4  ; |Block1|ADDSUB:inst5|Add0~4  ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~15 ; |Block1|ADDSUB:inst5|Add0~15 ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~16 ; |Block1|ADDSUB:inst5|Add0~16 ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~20 ; |Block1|ADDSUB:inst5|Add0~20 ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~21 ; |Block1|ADDSUB:inst5|Add0~21 ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~25 ; |Block1|ADDSUB:inst5|Add0~25 ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~26 ; |Block1|ADDSUB:inst5|Add0~26 ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~30 ; |Block1|ADDSUB:inst5|Add0~30 ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~31 ; |Block1|ADDSUB:inst5|Add0~31 ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~11 ; |Block1|ADDSUB:inst5|Add1~11 ; out0             ;
++------------------------------+------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                       ;
++------------------------------+------------------------------+------------------+
+; Node Name                    ; Output Port Name             ; Output Port Type ;
++------------------------------+------------------------------+------------------+
+; |Block1|RESETn               ; |Block1|RESETn               ; out              ;
+; |Block1|DIVISOR[3]           ; |Block1|DIVISOR[3]           ; out              ;
+; |Block1|DIVIDEND[4]          ; |Block1|DIVIDEND[4]          ; out              ;
+; |Block1|QUOTIENT[7]          ; |Block1|QUOTIENT[7]          ; pin_out          ;
+; |Block1|QUOTIENT[6]          ; |Block1|QUOTIENT[6]          ; pin_out          ;
+; |Block1|QUOTIENT[5]          ; |Block1|QUOTIENT[5]          ; pin_out          ;
+; |Block1|QUOTIENT[4]          ; |Block1|QUOTIENT[4]          ; pin_out          ;
+; |Block1|QUOTIENT[3]          ; |Block1|QUOTIENT[3]          ; pin_out          ;
+; |Block1|QUOTIENT[2]          ; |Block1|QUOTIENT[2]          ; pin_out          ;
+; |Block1|COUNT:inst4|TMP~0    ; |Block1|COUNT:inst4|TMP~0    ; out              ;
+; |Block1|COUNT:inst4|TMP~1    ; |Block1|COUNT:inst4|TMP~1    ; out              ;
+; |Block1|COUNT:inst4|TMP~2    ; |Block1|COUNT:inst4|TMP~2    ; out              ;
+; |Block1|COUNT:inst4|TMP~3    ; |Block1|COUNT:inst4|TMP~3    ; out              ;
+; |Block1|COUNT:inst4|TMP~4    ; |Block1|COUNT:inst4|TMP~4    ; out              ;
+; |Block1|COUNT:inst4|TMP~8    ; |Block1|COUNT:inst4|TMP~8    ; out              ;
+; |Block1|COUNT:inst4|TMP~9    ; |Block1|COUNT:inst4|TMP~9    ; out              ;
+; |Block1|COUNT:inst4|TMP~10   ; |Block1|COUNT:inst4|TMP~10   ; out              ;
+; |Block1|COUNT:inst4|TMP~11   ; |Block1|COUNT:inst4|TMP~11   ; out              ;
+; |Block1|COUNT:inst4|TMP~12   ; |Block1|COUNT:inst4|TMP~12   ; out              ;
+; |Block1|COUNT:inst4|TMP[2]   ; |Block1|COUNT:inst4|TMP[2]   ; regout           ;
+; |Block1|COUNT:inst4|TMP[3]   ; |Block1|COUNT:inst4|TMP[3]   ; regout           ;
+; |Block1|COUNT:inst4|TMP[4]   ; |Block1|COUNT:inst4|TMP[4]   ; regout           ;
+; |Block1|COUNT:inst4|TMP[5]   ; |Block1|COUNT:inst4|TMP[5]   ; regout           ;
+; |Block1|COUNT:inst4|TMP[6]   ; |Block1|COUNT:inst4|TMP[6]   ; regout           ;
+; |Block1|COUNT:inst4|TMP[7]   ; |Block1|COUNT:inst4|TMP[7]   ; regout           ;
+; |Block1|STORE:inst3|TMP~0    ; |Block1|STORE:inst3|TMP~0    ; out              ;
+; |Block1|STORE:inst3|TMP~1    ; |Block1|STORE:inst3|TMP~1    ; out              ;
+; |Block1|STORE:inst3|TMP~2    ; |Block1|STORE:inst3|TMP~2    ; out              ;
+; |Block1|STORE:inst3|TMP~3    ; |Block1|STORE:inst3|TMP~3    ; out              ;
+; |Block1|STORE:inst3|TMP~4    ; |Block1|STORE:inst3|TMP~4    ; out              ;
+; |Block1|STORE:inst3|TMP~8    ; |Block1|STORE:inst3|TMP~8    ; out              ;
+; |Block1|STORE:inst3|TMP~9    ; |Block1|STORE:inst3|TMP~9    ; out              ;
+; |Block1|STORE:inst3|TMP~10   ; |Block1|STORE:inst3|TMP~10   ; out              ;
+; |Block1|STORE:inst3|TMP~11   ; |Block1|STORE:inst3|TMP~11   ; out              ;
+; |Block1|STORE:inst3|TMP~12   ; |Block1|STORE:inst3|TMP~12   ; out              ;
+; |Block1|STORE:inst3|TMP[3]   ; |Block1|STORE:inst3|TMP[3]   ; regout           ;
+; |Block1|STORE:inst3|TMP[4]   ; |Block1|STORE:inst3|TMP[4]   ; regout           ;
+; |Block1|STORE:inst3|TMP[5]   ; |Block1|STORE:inst3|TMP[5]   ; regout           ;
+; |Block1|STORE:inst3|TMP[6]   ; |Block1|STORE:inst3|TMP[6]   ; regout           ;
+; |Block1|STORE:inst3|TMP[7]   ; |Block1|STORE:inst3|TMP[7]   ; regout           ;
+; |Block1|COUNT:inst4|Add0~3   ; |Block1|COUNT:inst4|Add0~3   ; out0             ;
+; |Block1|COUNT:inst4|Add0~4   ; |Block1|COUNT:inst4|Add0~4   ; out0             ;
+; |Block1|COUNT:inst4|Add0~5   ; |Block1|COUNT:inst4|Add0~5   ; out0             ;
+; |Block1|COUNT:inst4|Add0~6   ; |Block1|COUNT:inst4|Add0~6   ; out0             ;
+; |Block1|COUNT:inst4|Add0~7   ; |Block1|COUNT:inst4|Add0~7   ; out0             ;
+; |Block1|COUNT:inst4|Add0~8   ; |Block1|COUNT:inst4|Add0~8   ; out0             ;
+; |Block1|COUNT:inst4|Add0~9   ; |Block1|COUNT:inst4|Add0~9   ; out0             ;
+; |Block1|COUNT:inst4|Add0~10  ; |Block1|COUNT:inst4|Add0~10  ; out0             ;
+; |Block1|COUNT:inst4|Add0~11  ; |Block1|COUNT:inst4|Add0~11  ; out0             ;
+; |Block1|COUNT:inst4|Add0~12  ; |Block1|COUNT:inst4|Add0~12  ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~4  ; |Block1|ADDSUB:inst5|Add0~4  ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~15 ; |Block1|ADDSUB:inst5|Add0~15 ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~16 ; |Block1|ADDSUB:inst5|Add0~16 ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~20 ; |Block1|ADDSUB:inst5|Add0~20 ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~21 ; |Block1|ADDSUB:inst5|Add0~21 ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~25 ; |Block1|ADDSUB:inst5|Add0~25 ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~26 ; |Block1|ADDSUB:inst5|Add0~26 ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~30 ; |Block1|ADDSUB:inst5|Add0~30 ; out0             ;
+; |Block1|ADDSUB:inst5|Add0~31 ; |Block1|ADDSUB:inst5|Add0~31 ; out0             ;
+; |Block1|ADDSUB:inst5|Add1~11 ; |Block1|ADDSUB:inst5|Add1~11 ; out0             ;
++------------------------------+------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
+    Info: Processing started: Wed Apr 20 01:56:51 2016
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Divider -c Divider
+Info: Using vector source file "C:/Users/Tyler/Documents/CEEN 3130/Divider/Divider.vwf"
+Warning: Wrong node type and/or width for node "|Block1|DIVIDER:inst|Y" in vector source file. Node in design is of type Enum and of width 1, but node in vector source file is of type 9-Level and of width 1.
+Warning: Signal name "|Block1|DIVIDER:inst|Y" changed to enum type
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      72.17 %
+Info: Number of transitions in simulation is 1736
+Info: Quartus II Simulator was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 170 megabytes
+    Info: Processing ended: Wed Apr 20 01:56:51 2016
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

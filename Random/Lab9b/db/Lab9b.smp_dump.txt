@@ -1,0 +1,13 @@
+
+State Machine - |Lab9b|state
+Name state.R15 state.R10 state.R5 state.S30 state.S25 state.S20 state.S15 state.S10 state.S5 state.S0 
+state.S0 0 0 0 0 0 0 0 0 0 0 
+state.S5 0 0 0 0 0 0 0 0 1 1 
+state.S10 0 0 0 0 0 0 0 1 0 1 
+state.S15 0 0 0 0 0 0 1 0 0 1 
+state.S20 0 0 0 0 0 1 0 0 0 1 
+state.S25 0 0 0 0 1 0 0 0 0 1 
+state.S30 0 0 0 1 0 0 0 0 0 1 
+state.R5 0 0 1 0 0 0 0 0 0 1 
+state.R10 0 1 0 0 0 0 0 0 0 1 
+state.R15 1 0 0 0 0 0 0 0 0 1 

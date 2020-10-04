@@ -1,0 +1,99 @@
+Quartus II
+Version 9.1 Build 222 10/21/2009 SJ Web Edition
+7
+3500
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+74169
+# storage
+db|SlowMult169.(2).cnf
+db|SlowMult169.(2).cnf
+# case_insensitive
+# source_file
+|altera|91|quartus|libraries|others|maxplus2|74169.bdf
+ac35fe71e8796eff259d8161548f1a26
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+74169:inst1
+74169:inst2
+74169:inst3
+74169:inst4
+}
+# macro_sequence
+
+# end
+# entity
+Block1
+# storage
+db|SlowMult169.(0).cnf
+db|SlowMult169.(0).cnf
+# case_insensitive
+# source_file
+block1.bdf
+613254b3ae544ffd5b8408e13f660c3
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+SlowMult169
+# storage
+db|SlowMult169.(1).cnf
+db|SlowMult169.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+slowmult169.vhd
+3624f0bc14f7e3f479eb1d7a6dce4d
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+SlowMult169:inst
+}
+# lmf
+|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+

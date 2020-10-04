@@ -1,0 +1,9 @@
+Fitter Status : Successful - Wed Mar 02 10:56:47 2016
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Web Edition
+Revision Name : MealyState
+Top-level Entity Name : MealyState
+Family : MAX7000S
+Device : EPM7128SLC84-7
+Timing Models : Final
+Total macrocells : 3 / 128 ( 2 % )
+Total pins : 10 / 68 ( 15 % )

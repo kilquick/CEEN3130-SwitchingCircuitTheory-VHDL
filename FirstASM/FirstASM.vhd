@@ -1,0 +1,198 @@
+-- Tyler Zoucha
+-- CEEN 3130-001
+-- FirstASM
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+ENTITY FirstASM IS 
+	PORT (RESETn, CLK, MUL, SUB, ADD, RESTART, CNT	: IN STD_LOGIC;
+		  EnMul, EnCnt, ClCnt, ClMul				: OUT STD_LOGIC;
+		  DONE, FULL, EnAddSub, SUBout				: OUT STD_LOGIC);
+END FirstASM;
+
+ARCHITECTURE STRUCTURE OF FirstASM IS
+TYPE state_type IS (S0, S1, S2, S3);
+SIGNAL y		: state_type;
+BEGIN
+	PROCESS (CLK, RESETn)
+	BEGIN
+		IF (RESETn = '0') THEN
+			y <= S0;
+		ELSIF (CLK'EVENT AND CLK = '1') THEN
+			CASE y IS
+				WHEN S0 =>
+					IF CNT = '1' THEN
+						y <= S0;
+					ELSIF ADD = '1' THEN
+						y <= S1;
+					ELSIF SUB = '1' THEN
+						y <= S2;
+					ELSIF MUL = '1' THEN
+						y <= S3;
+					END IF;
+				WHEN S1 =>
+					IF ADD = '0' THEN
+						y <= S0;
+					END IF;
+				WHEN S2 =>
+					IF SUB = '0' THEN
+						y <= S0;
+					END IF;
+				WHEN S3 =>
+					IF MUL = '0' THEN
+						y <= S0;
+					END IF;
+			END CASE;
+		END IF;
+	END PROCESS;
+	
+	PROCESS (y, RESTART, CNT, ADD, SUB, MUL)
+	BEGIN
+		EnMul <= '0';
+		EnCnt <= '0';
+		ClCnt <= '0';
+		ClMul <= '0';
+		EnAddSub <= '0';
+		SUBout <= '0';
+		DONE <= '0';
+		FULL <= '0';
+		
+		CASE y IS
+			WHEN S0 =>
+				IF RESTART = '1' THEN
+					ClCnt <= '1';
+					ClMul <= '1';
+				ELSIF CNT = '1' THEN
+					FULL <= '1';
+				ELSIF ADD = '1' THEN
+					EnAddSub <= '1';
+					EnCnt <= '1';
+				ELSIF SUB = '1' THEN
+					SUBout <= '1';
+					EnAddSub <= '1';
+					EnCnt <= '1';
+				ELSIF MUL = '1' THEN
+					EnMul <= '1';
+					EnCnt <= '1';
+				END IF;
+			WHEN S1 =>
+				DONE <= '1';
+			WHEN S2 =>
+				DONE <= '1';
+			WHEN S3 =>
+				DONE <= '1';
+		END CASE;
+	END PROCESS;
+END STRUCTURE;
+
+-------------------------------------------------------
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY COUNT IS
+	PORT (CLK, CLCNT, ENCNT		: IN STD_LOGIC;
+		  COUNT					: OUT STD_LOGIC_VECTOR (3 DOWNTO 0));
+END COUNT;
+
+ARCHITECTURE BEHAVIOR OF COUNT IS
+SIGNAL TMP		: STD_LOGIC_VECTOR (3 DOWNTO 0);
+BEGIN
+	PROCESS (CLK, CLCNT, ENCNT)
+	BEGIN
+		IF (CLK'EVENT AND CLK = '1') THEN
+			IF CLCNT = '1' THEN
+				TMP <= "0000";
+			ELSIF ENCNT = '1' THEN
+				TMP <= TMP + "0001";
+			END IF;
+		END IF;
+	END PROCESS;
+	
+	COUNT <= TMP;
+END BEHAVIOR;
+
+--------------------------------------------------------
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY ADDSUB IS
+	PORT (DATA, PREVDATA		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+		  SUB 					: IN STD_LOGIC;
+		  TOTAL					: OUT STD_LOGIC_VECTOR (7 DOWNTO 0));
+END ADDSUB;
+
+ARCHITECTURE BEHAVIOR OF ADDSUB IS
+BEGIN
+	PROCESS (DATA, PREVDATA, SUB)
+	BEGIN
+		IF SUB = '0' THEN
+			TOTAL <= DATA + PREVDATA;
+		ELSE
+			TOTAL <= PREVDATA - DATA;
+		END IF;
+	END PROCESS;
+END BEHAVIOR;
+
+---------------------------------------------------------
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY MUL IS
+	PORT (CLK, ENMUL, CLR, LOAD		: IN STD_LOGIC;
+		  DIN						: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+		  DOUT						: OUT STD_LOGIC_VECTOR (7 DOWNTO 0));
+END MUL;
+
+ARCHITECTURE BEHAVIOR OF MUL IS
+SIGNAL TMPMUL		: STD_LOGIC_VECTOR (6 DOWNTO 0);
+SIGNAL TMPOUT		: STD_LOGIC_VECTOR (7 DOWNTO 0);
+BEGIN
+	PROCESS (CLK, ENMUL)
+	BEGIN
+		TMPMUL <= TMPOUT(6 DOWNTO 0);
+		IF (CLK'EVENT AND CLK = '1') THEN
+			IF ENMUL = '1' THEN
+				TMPOUT <= TMPMUL & '0';
+			ELSIF CLR = '1' THEN
+				TMPOUT <= "00000000";
+			ELSIF LOAD = '1' THEN
+				TMPOUT <= DIN;
+			ELSIF LOAD = '0' THEN
+			END IF;
+		END IF;
+	END PROCESS;
+	DOUT <= TMPOUT;
+END BEHAVIOR;
+
+---------------------------------------------------------
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY COMPAR IS
+	PORT (DATA						: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+		  MATCH						: OUT STD_LOGIC);
+END COMPAR;
+
+ARCHITECTURE BEHAVIOR OF COMPAR IS
+SIGNAL TMP							: STD_LOGIC;
+BEGIN
+	PROCESS (DATA)
+	BEGIN
+		IF DATA = "0100" THEN
+			TMP <= '1';
+		ELSE
+			TMP <= '0';
+		END IF;
+	END PROCESS;
+	MATCH <= TMP;
+END BEHAVIOR;

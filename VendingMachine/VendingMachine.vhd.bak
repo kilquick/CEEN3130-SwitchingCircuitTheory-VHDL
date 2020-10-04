@@ -1,0 +1,171 @@
+-- Tyler Zoucha
+-- CEEN 3130-001
+-- VENDING MACHINE
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY VendingMachine IS 
+	PORT (RESETn, CLK, C, S, D, N, Q, RET			: IN STD_LOGIC;
+		  VALID, SUB, CLR							: OUT STD_LOGIC;
+		  Do, No, Qo								: OUT STD_LOGIC);
+END VendingMachine;
+
+ARCHITECTURE STRUCTURE OF VendingMachine IS
+TYPE state_type IS (S0, S1, S2);
+SIGNAL y		: state_type;
+BEGIN
+	PROCESS (CLK, RESETn)
+	BEGIN
+		IF (RESETn = '0') THEN
+			y <= S0;
+		ELSIF (CLK'EVENT AND CLK = '1') THEN
+			CASE y IS
+				WHEN S0 =>
+					IF S = '1' THEN
+						y <= S1;
+					END IF;
+				WHEN S1 =>
+					IF S = '0' THEN
+						IF D = '1' OR N = '1' OR Q = '1' THEN
+							y <= S2;
+						END IF;
+					ELSE
+						y <= S1;
+					END IF;
+				WHEN S2 =>
+					IF RET = '0' THEN
+						y <= S0;
+					END IF;
+			END CASE;
+		END IF;
+	END PROCESS;
+	
+	PROCESS (y, C, RET, D, N, Q)
+	BEGIN
+		VALID <= '0';
+		SUB <= '0';
+		CLR <= '0';
+		Do <= '0';
+		No <= '0';
+		Qo <= '0';
+		
+		CASE y IS
+			WHEN S0 =>
+				VALID <= '1';
+				CLR <= C;
+				CLR <= NOT RESETn;
+			WHEN S1 =>
+				Do <= D;
+				No <= N;
+				Qo <= Q;
+			WHEN S2 =>
+				No <= RET;
+				SUB <= RET;
+		END CASE;
+	END PROCESS;
+END STRUCTURE;
+
+--------------------------------------------------------
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY ADDSUB IS
+	PORT (DATA, PREVDATA		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+		  SUB 					: IN STD_LOGIC;
+		  TOTAL					: OUT STD_LOGIC_VECTOR (7 DOWNTO 0));
+END ADDSUB;
+
+ARCHITECTURE BEHAVIOR OF ADDSUB IS
+SIGNAL TMP						: STD_LOGIC_VECTOR (7 DOWNTO 0);
+BEGIN
+	PROCESS (DATA, PREVDATA, SUB)
+	BEGIN
+		IF SUB = '0' THEN
+			TMP <= DATA + PREVDATA;
+		ELSE
+			TMP <= PREVDATA - DATA;
+		END IF;
+	END PROCESS;
+	TOTAL <= TMP;
+END BEHAVIOR;
+
+---------------------------------------------------------
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY COMPAR IS
+	PORT (DATA						: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+		  MATCH						: OUT STD_LOGIC);
+END COMPAR;
+
+ARCHITECTURE BEHAVIOR OF COMPAR IS
+SIGNAL TMP							: STD_LOGIC;
+BEGIN
+	PROCESS (DATA)
+	BEGIN
+		IF DATA > "00011110" THEN
+			TMP <= '1';
+		ELSE
+			TMP <= '0';
+		END IF;
+	END PROCESS;
+	MATCH <= TMP;
+END BEHAVIOR;
+
+---------------------------------------------------------
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY STORE IS
+	PORT (CLK, CLR					: IN STD_LOGIC;
+		  Din						: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+		  Dout						: OUT STD_LOGIC_VECTOR (7 DOWNTO 0));
+END STORE;
+
+ARCHITECTURE BEHAVIOR OF STORE IS
+SIGNAL TMP							: STD_LOGIC_VECTOR (7 DOWNTO 0);
+BEGIN
+	PROCESS (CLR, CLK)
+	BEGIN
+		IF CLR = '1' THEN
+			TMP <= "00000000";
+		ELSIF (CLK'EVENT AND CLK = '1') THEN
+			TMP <= Din;
+		END IF;
+	END PROCESS;
+	
+	Dout <= TMP;
+END BEHAVIOR;
+
+---------------------------------------------------------
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY DECODER IS
+	PORT (D, N, Q					: IN STD_LOGIC;
+		  COINvalue					: OUT STD_LOGIC_VECTOR (7 DOWNTO 0));
+END DECODER;
+
+ARCHITECTURE BEHAVIOR OF DECODER IS
+SIGNAL COIN							: STD_LOGIC_VECTOR (2 DOWNTO 0);
+BEGIN
+	COIN(0) <= D;
+	COIN(1) <= N;
+	COIN(2) <= Q;
+	
+	WITH COIN SELECT
+		COINvalue <= "00001010" WHEN "001",
+					 "00000101" WHEN "010",
+					 "00011001" WHEN "100",
+					 "00000000" WHEN OTHERS;
+END BEHAVIOR;

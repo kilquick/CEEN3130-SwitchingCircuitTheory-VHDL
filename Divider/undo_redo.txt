@@ -1,0 +1,170 @@
+RPW
+
+	Undo Commands
+	     1.	||Compilation Report||Flow Summary
+
+
+GED
+
+	Undo Commands
+	     1.	Page Setup
+	     2.	Move
+	     3.	Properties
+	     4.	Properties
+	     5.	Properties
+	     6.	Update Symbol or Block
+	     7.	Properties
+	     8.	Resize
+	     9.	Delete
+	    10.	Update Symbol or Block
+	    11.	Move
+	    12.	Delete
+	    13.	Update Symbol or Block
+	    14.	Update Symbol or Block
+	    15.	Update Symbol or Block
+	    16.	Move
+	    17.	Insert Node
+	    18.	Properties
+	    19.	Copy
+	    20.	Move
+	    21.	Resize
+	    22.	Resize
+	    23.	Properties
+	    24.	Properties
+	    25.	Properties
+	    26.	Move
+	    27.	Properties
+	    28.	Move
+	    29.	Move
+	    30.	Properties
+	    31.	Move
+	    32.	Move
+	    33.	Move
+	    34.	Properties
+	    35.	Properties
+	    36.	Move
+	    37.	Move
+	    38.	Move
+	    39.	Move
+	    40.	Properties
+	    41.	Move
+	    42.	Bus Line Style
+	    43.	Bus Line Style
+	    44.	Bus Line Style
+	    45.	Bus Line Style
+	    46.	Properties
+	    47.	Resize
+	    48.	Insert Node
+	    49.	Move
+	    50.	Resize
+	    51.	Insert Node
+	    52.	Move
+	    53.	Delete
+	    54.	Delete
+	    55.	Delete
+	    56.	Move
+	    57.	Resize
+	    58.	Insert Node
+	    59.	Move
+	    60.	Move
+	    61.	Copy
+	    62.	Insert Symbol
+	    63.	Properties
+	    64.	Properties
+	    65.	Properties
+	    66.	Properties
+	    67.	Insert Node
+	    68.	Properties
+	    69.	Copy
+	    70.	Properties
+	    71.	Copy
+	    72.	Move
+	    73.	Insert Bus
+	    74.	Properties
+	    75.	Copy
+	    76.	Move
+	    77.	Properties
+	    78.	Properties
+	    79.	Move
+	    80.	Move
+	    81.	Move
+	    82.	Move
+	    83.	Move
+	    84.	Resize
+	    85.	Resize
+	    86.	Resize
+	    87.	Move
+	    88.	Move
+	    89.	Move
+	    90.	Move
+
+
+WED
+
+	Undo Commands
+	     1.	Drop Node
+			 *** 
+	     2.	Drop Node
+			 *** 
+	     3.	Drop Node
+			 *** 
+	     4.	Drop Node
+			 *** 
+	     5.	Drop Node
+			 *** 
+	     6.	Drop Node
+			 *** 
+	     7.	Insert Node or Bus
+	     8.	Edit Waveform
+	     9.	Edit Waveform
+	    10.	Edit Waveform
+	    11.	Edit Waveform
+	    12.	Edit Waveform
+	    13.	Edit Waveform
+	    14.	Edit Waveform
+	    15.	Edit Waveform
+	    16.	Edit Waveform
+	    17.	Edit Waveform
+	    18.	Edit Waveform
+	    19.	Edit Waveform
+	    20.	Edit Waveform
+	    21.	Drop Node
+			 *** 
+	    22.	Drop Node
+			 *** 
+	    23.	Drop Node
+			 *** 
+	    24.	Insert Node or Bus
+	    25.	Delete Node, Bus or Waveform Divider
+	    26.	Delete Node, Bus or Waveform Divider
+	    27.	Edit Waveform
+	    28.	Edit Waveform
+	    29.	Edit Waveform
+	    30.	Move Time Bar
+			 ***  *** 
+	    31.	Edit Waveform
+	    32.	Edit Waveform
+	    33.	Edit Waveform
+	    34.	Edit Waveform
+	    35.	Edit Waveform
+	    36.	Edit Waveform
+	    37.	Clock
+	    38.	End Time
+	    39.	Insert Node or Bus
+	    40.	Insert Node or Bus
+	    41.	Insert Node or Bus
+
+
+RPW
+
+	Undo Commands
+	     1.	||Simulation Report||Simulator||Simulation Waveforms
+
+
+WED
+
+	Undo Commands
+	     1.	Page Setup
+	     2.	Print Options
+
+

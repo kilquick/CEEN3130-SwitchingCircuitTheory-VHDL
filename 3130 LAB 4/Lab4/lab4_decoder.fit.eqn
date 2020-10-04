@@ -1,0 +1,154 @@
+-- Copyright (C) 1991-2009 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L30 is sign~0 at LCCOMB_X1_Y5_N0
+A1L30 = (bcd[3] & !hex);
+
+
+--A1L19 is Mux6~0 at LCCOMB_X1_Y5_N10
+A1L19 = (bcd[3] & ((hex & ((bcd[2]))) # (!hex & (bcd[0] & !bcd[2])))) # (!bcd[3] & (((!bcd[2]))));
+
+
+--A1L20 is Mux6~1 at LCCOMB_X1_Y5_N4
+A1L20 = (A1L19 & (((!bcd[1])))) # (!A1L19 & (bcd[0] & (bcd[1] & bcd[2])));
+
+
+--A1L17 is Mux5~0 at LCCOMB_X1_Y5_N22
+A1L17 = (bcd[1] & ((bcd[3] & ((bcd[2]))) # (!bcd[3] & ((bcd[0]) # (!bcd[2]))))) # (!bcd[1] & (bcd[0] & ((bcd[3]) # (!bcd[2]))));
+
+
+--A1L18 is Mux5~1 at LCCOMB_X1_Y5_N24
+A1L18 = (A1L17 & ((!hex) # (!bcd[3])));
+
+
+--A1L15 is Mux4~0 at LCCOMB_X1_Y5_N18
+A1L15 = (bcd[3] & hex);
+
+
+--A1L16 is Mux4~1 at LCCOMB_X1_Y5_N28
+A1L16 = (bcd[1] & (bcd[0] & (!A1L15))) # (!bcd[1] & ((bcd[2] & ((!A1L15))) # (!bcd[2] & (bcd[0]))));
+
+
+--A1L13 is Mux3~0 at LCCOMB_X1_Y5_N6
+A1L13 = (bcd[3] & hex);
+
+
+--A1L14 is Mux3~1 at LCCOMB_X1_Y5_N16
+A1L14 = (bcd[1] & ((bcd[0] & ((bcd[2]))) # (!bcd[0] & (A1L13 & !bcd[2])))) # (!bcd[1] & (!A1L13 & (bcd[0] $ (bcd[2]))));
+
+
+--A1L11 is Mux2~0 at LCCOMB_X1_Y5_N26
+A1L11 = (bcd[1] & (((bcd[3] & hex)) # (!bcd[0]))) # (!bcd[1] & (bcd[3] & (hex & !bcd[0])));
+
+
+--A1L12 is Mux2~1 at LCCOMB_X1_Y5_N12
+A1L12 = (A1L11 & (bcd[3] $ (!bcd[2])));
+
+
+--A1L9 is Mux1~0 at LCCOMB_X1_Y5_N30
+A1L9 = (bcd[3] & (hex & ((bcd[1]) # (!bcd[0])))) # (!bcd[3] & ((bcd[1] $ (bcd[0]))));
+
+
+--A1L10 is Mux1~1 at LCCOMB_X1_Y5_N8
+A1L10 = (bcd[2] & (((A1L9)))) # (!bcd[2] & (A1L30 & ((bcd[1]))));
+
+
+--A1L7 is Mux0~0 at LCCOMB_X1_Y5_N2
+A1L7 = (bcd[2] & ((!hex) # (!bcd[3])));
+
+
+--A1L8 is Mux0~1 at LCCOMB_X1_Y5_N20
+A1L8 = (bcd[3] & (A1L7 & (bcd[0] $ (!bcd[1])))) # (!bcd[3] & (!bcd[1] & (bcd[0] $ (A1L7))));
+
+
+--sign is sign at PIN_25
+--operation mode is output
+
+sign = OUTPUT(!A1L30);
+
+
+--seg[0] is seg[0] at PIN_104
+--operation mode is output
+
+seg[0] = OUTPUT(A1L20);
+
+
+--seg[1] is seg[1] at PIN_30
+--operation mode is output
+
+seg[1] = OUTPUT(A1L18);
+
+
+--seg[2] is seg[2] at PIN_24
+--operation mode is output
+
+seg[2] = OUTPUT(A1L16);
+
+
+--seg[3] is seg[3] at PIN_47
+--operation mode is output
+
+seg[3] = OUTPUT(A1L14);
+
+
+--seg[4] is seg[4] at PIN_8
+--operation mode is output
+
+seg[4] = OUTPUT(A1L12);
+
+
+--seg[5] is seg[5] at PIN_27
+--operation mode is output
+
+seg[5] = OUTPUT(A1L10);
+
+
+--seg[6] is seg[6] at PIN_26
+--operation mode is output
+
+seg[6] = OUTPUT(A1L8);
+
+
+--bcd[3] is bcd[3] at PIN_17
+--operation mode is input
+
+bcd[3] = INPUT();
+
+
+--hex is hex at PIN_18
+--operation mode is input
+
+hex = INPUT();
+
+
+--bcd[1] is bcd[1] at PIN_21
+--operation mode is input
+
+bcd[1] = INPUT();
+
+
+--bcd[0] is bcd[0] at PIN_22
+--operation mode is input
+
+bcd[0] = INPUT();
+
+
+--bcd[2] is bcd[2] at PIN_120
+--operation mode is input
+
+bcd[2] = INPUT();
+
+
+
+
+

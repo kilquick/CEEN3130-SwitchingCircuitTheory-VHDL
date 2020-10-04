@@ -1,0 +1,187 @@
+|Block1
+VALID <= VendingMachine:inst.VALID
+RESETn => VendingMachine:inst.RESETn
+CLK => VendingMachine:inst.CLK
+CLK => STORE:inst4.CLK
+C => VendingMachine:inst.C
+S => VendingMachine:inst.S
+D => VendingMachine:inst.D
+N => VendingMachine:inst.N
+Q => VendingMachine:inst.Q
+SUB <= VendingMachine:inst.SUB
+CLR <= VendingMachine:inst.CLR
+Do <= VendingMachine:inst.Do
+No <= VendingMachine:inst.No
+Qo <= VendingMachine:inst.Qo
+RET <= COMPAR:inst1.MATCH
+COINvalue[0] <= DECODER:inst2.COINvalue[0]
+COINvalue[1] <= DECODER:inst2.COINvalue[1]
+COINvalue[2] <= DECODER:inst2.COINvalue[2]
+COINvalue[3] <= DECODER:inst2.COINvalue[3]
+COINvalue[4] <= DECODER:inst2.COINvalue[4]
+COINvalue[5] <= DECODER:inst2.COINvalue[5]
+COINvalue[6] <= DECODER:inst2.COINvalue[6]
+COINvalue[7] <= DECODER:inst2.COINvalue[7]
+TOTAL[0] <= STORE:inst4.Dout[0]
+TOTAL[1] <= STORE:inst4.Dout[1]
+TOTAL[2] <= STORE:inst4.Dout[2]
+TOTAL[3] <= STORE:inst4.Dout[3]
+TOTAL[4] <= STORE:inst4.Dout[4]
+TOTAL[5] <= STORE:inst4.Dout[5]
+TOTAL[6] <= STORE:inst4.Dout[6]
+TOTAL[7] <= STORE:inst4.Dout[7]
+
+
+|Block1|VendingMachine:inst
+RESETn => y~27.DATAIN
+CLK => y~23.DATAIN
+C => CLR~0.DATAB
+S => y~0.OUTPUTSELECT
+S => y~1.OUTPUTSELECT
+S => y~2.OUTPUTSELECT
+S => y~6.OUTPUTSELECT
+S => y~7.OUTPUTSELECT
+S => y~8.OUTPUTSELECT
+D => process_0~0.IN0
+D => Do~0.DATAB
+N => process_0~0.IN1
+N => Selector3.IN1
+Q => process_0~1.IN1
+Q => Qo~0.DATAB
+RET => Selector3.IN2
+RET => SUB~0.DATAB
+RET => y~9.OUTPUTSELECT
+RET => y~10.OUTPUTSELECT
+RET => y~11.OUTPUTSELECT
+VALID <= VALID~0.DB_MAX_OUTPUT_PORT_TYPE
+SUB <= SUB~0.DB_MAX_OUTPUT_PORT_TYPE
+CLR <= CLR~0.DB_MAX_OUTPUT_PORT_TYPE
+Do <= Do~0.DB_MAX_OUTPUT_PORT_TYPE
+No <= Selector3.DB_MAX_OUTPUT_PORT_TYPE
+Qo <= Qo~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block1|COMPAR:inst1
+DATA[0] => LessThan0.IN16
+DATA[1] => LessThan0.IN15
+DATA[2] => LessThan0.IN14
+DATA[3] => LessThan0.IN13
+DATA[4] => LessThan0.IN12
+DATA[5] => LessThan0.IN11
+DATA[6] => LessThan0.IN10
+DATA[7] => LessThan0.IN9
+MATCH <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block1|STORE:inst4
+CLK => TMP[0].CLK
+CLK => TMP[1].CLK
+CLK => TMP[2].CLK
+CLK => TMP[3].CLK
+CLK => TMP[4].CLK
+CLK => TMP[5].CLK
+CLK => TMP[6].CLK
+CLK => TMP[7].CLK
+CLR => TMP[0].ACLR
+CLR => TMP[1].ACLR
+CLR => TMP[2].ACLR
+CLR => TMP[3].ACLR
+CLR => TMP[4].ACLR
+CLR => TMP[5].ACLR
+CLR => TMP[6].ACLR
+CLR => TMP[7].ACLR
+Din[0] => TMP[0].DATAIN
+Din[1] => TMP[1].DATAIN
+Din[2] => TMP[2].DATAIN
+Din[3] => TMP[3].DATAIN
+Din[4] => TMP[4].DATAIN
+Din[5] => TMP[5].DATAIN
+Din[6] => TMP[6].DATAIN
+Din[7] => TMP[7].DATAIN
+Dout[0] <= TMP[0].DB_MAX_OUTPUT_PORT_TYPE
+Dout[1] <= TMP[1].DB_MAX_OUTPUT_PORT_TYPE
+Dout[2] <= TMP[2].DB_MAX_OUTPUT_PORT_TYPE
+Dout[3] <= TMP[3].DB_MAX_OUTPUT_PORT_TYPE
+Dout[4] <= TMP[4].DB_MAX_OUTPUT_PORT_TYPE
+Dout[5] <= TMP[5].DB_MAX_OUTPUT_PORT_TYPE
+Dout[6] <= TMP[6].DB_MAX_OUTPUT_PORT_TYPE
+Dout[7] <= TMP[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block1|ADDSUB:inst3
+DATA[0] => Add0.IN8
+DATA[0] => Add1.IN8
+DATA[1] => Add0.IN7
+DATA[1] => Add1.IN7
+DATA[2] => Add0.IN6
+DATA[2] => Add1.IN6
+DATA[3] => Add0.IN5
+DATA[3] => Add1.IN5
+DATA[4] => Add0.IN4
+DATA[4] => Add1.IN4
+DATA[5] => Add0.IN3
+DATA[5] => Add1.IN3
+DATA[6] => Add0.IN2
+DATA[6] => Add1.IN2
+DATA[7] => Add0.IN1
+DATA[7] => Add1.IN1
+PREVDATA[0] => Add0.IN16
+PREVDATA[0] => Add1.IN16
+PREVDATA[1] => Add0.IN15
+PREVDATA[1] => Add1.IN15
+PREVDATA[2] => Add0.IN14
+PREVDATA[2] => Add1.IN14
+PREVDATA[3] => Add0.IN13
+PREVDATA[3] => Add1.IN13
+PREVDATA[4] => Add0.IN12
+PREVDATA[4] => Add1.IN12
+PREVDATA[5] => Add0.IN11
+PREVDATA[5] => Add1.IN11
+PREVDATA[6] => Add0.IN10
+PREVDATA[6] => Add1.IN10
+PREVDATA[7] => Add0.IN9
+PREVDATA[7] => Add1.IN9
+SUB => TMP~0.OUTPUTSELECT
+SUB => TMP~1.OUTPUTSELECT
+SUB => TMP~2.OUTPUTSELECT
+SUB => TMP~3.OUTPUTSELECT
+SUB => TMP~4.OUTPUTSELECT
+SUB => TMP~5.OUTPUTSELECT
+SUB => TMP~6.OUTPUTSELECT
+SUB => TMP~7.OUTPUTSELECT
+TOTAL[0] <= TMP~7.DB_MAX_OUTPUT_PORT_TYPE
+TOTAL[1] <= TMP~6.DB_MAX_OUTPUT_PORT_TYPE
+TOTAL[2] <= TMP~5.DB_MAX_OUTPUT_PORT_TYPE
+TOTAL[3] <= TMP~4.DB_MAX_OUTPUT_PORT_TYPE
+TOTAL[4] <= TMP~3.DB_MAX_OUTPUT_PORT_TYPE
+TOTAL[5] <= TMP~2.DB_MAX_OUTPUT_PORT_TYPE
+TOTAL[6] <= TMP~1.DB_MAX_OUTPUT_PORT_TYPE
+TOTAL[7] <= TMP~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block1|DECODER:inst2
+D => Mux0.IN10
+D => Mux1.IN10
+D => Mux2.IN10
+D => Mux3.IN10
+D => Mux4.IN10
+N => Mux0.IN9
+N => Mux1.IN9
+N => Mux2.IN9
+N => Mux3.IN9
+N => Mux4.IN9
+Q => Mux0.IN8
+Q => Mux1.IN8
+Q => Mux2.IN8
+Q => Mux3.IN8
+Q => Mux4.IN8
+COINvalue[0] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+COINvalue[1] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+COINvalue[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+COINvalue[3] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+COINvalue[4] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+COINvalue[5] <= <GND>
+COINvalue[6] <= <GND>
+COINvalue[7] <= <GND>
+
+
